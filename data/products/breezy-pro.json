@@ -1,0 +1,62 @@
+{
+  "slug": "breezy-pro",
+  "name": "Breezy Pro",
+  "collection": "BREEZI Collection",
+  "subtitle": "Profi-Luftenergizer",
+  "designer": "Jörg Klemm",
+  "price": 249900,
+  "priceDisplay": "2.499,00",
+  "currency": "EUR",
+  "taxNote": "inkl. MwSt. zzgl. Versandkosten",
+  "freeShipping": true,
+  "inStock": false,
+  "maxQuantity": 3,
+  "featured": false,
+  "description": "Der BREEZY Pro ist die leistungsstärkste Variante unserer Luftenergizer-Serie — entwickelt für große Räume und professionelle Anwendungen.",
+  "heroTagline": "Demnächst verfügbar",
+  "heroHeading": "Maximale Leistung<br/>für <em>große Räume</em>",
+  "heroDescription": "Der BREEZY Pro bietet maximale Luftenergie-Leistung für große Wohnräume, Büros und gewerbliche Anwendungen.",
+  "images": {
+    "hero": "BREEZY-Front-Redlight.png",
+    "gallery": [
+      { "file": "BREEZY-Front-NoCap.png", "alt": "BREEZY Pro Frontansicht" }
+    ],
+    "basePath": "/images/products/breezy-original"
+  },
+  "specs": [
+    { "label": "Material", "value": "Premium Edelstahl, gebürstet" },
+    { "label": "Abmessungen", "value": "Ø 22 cm × 38 cm Höhe" },
+    { "label": "Gewicht", "value": "4,8 kg" },
+    { "label": "Lautstärke", "value": "< 30 dB — flüsterleise" },
+    { "label": "Raumgröße", "value": "Bis zu 80 m²" },
+    { "label": "Energieverbrauch", "value": "20 Watt" }
+  ],
+  "details": [
+    {
+      "tag": "Technologie",
+      "heading": "Professionelle Leistung",
+      "text": "Der BREEZY Pro bietet die dreifache Ionisierungsleistung und ist für den Einsatz in großen Räumen und gewerblichen Umgebungen konzipiert.",
+      "image": "BreezyCloseupRed-HQ.jpg",
+      "bullets": [
+        "Für Räume bis 80 m²",
+        "Dreifache Ionisierungsleistung",
+        "Smart-Home kompatibel",
+        "Professioneller Einsatzbereich"
+      ],
+      "reverse": false
+    }
+  ],
+  "marqueeItems": [
+    "Professionell",
+    "Leistungsstark",
+    "Smart-Home",
+    "Großraumtauglich",
+    "Premium Edelstahl",
+    "Designed by Jörg Klemm"
+  ],
+  "trustBadges": [
+    { "icon": "shield", "text": "3 Jahre Garantie" },
+    { "icon": "truck", "text": "Kostenloser Versand" },
+    { "icon": "refresh", "text": "30 Tage Rückgabe" }
+  ]
+}

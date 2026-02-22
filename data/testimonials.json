@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "product": "breezy-original",
+    "stars": 5,
+    "text": "Seit ich den BREEZY im Schlafzimmer stehen habe, schlafe ich deutlich tiefer. Mein Partner hat die gleiche Erfahrung gemacht. Ein echtes Qualitätsprodukt.",
+    "author": "Martina S.",
+    "location": "München"
+  },
+  {
+    "id": 2,
+    "product": "breezy-original",
+    "stars": 5,
+    "text": "Das Design ist absolut fantastisch — der BREEZY sieht aus wie ein Kunstobjekt. Und die Luftqualität in meinem Büro hat sich merklich verbessert.",
+    "author": "Thomas K.",
+    "location": "Berlin"
+  },
+  {
+    "id": 3,
+    "product": "breezy-original",
+    "stars": 5,
+    "text": "Als Allergiker bin ich begeistert. Die Luft fühlt sich so frisch an wie nach einem Waldspaziergang. Der BREEZY läuft bei uns rund um die Uhr.",
+    "author": "Dr. Julia F.",
+    "location": "Hamburg"
+  }
+]

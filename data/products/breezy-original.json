@@ -1,0 +1,80 @@
+{
+  "slug": "breezy-original",
+  "name": "Breezy",
+  "collection": "BREEZI Collection",
+  "subtitle": "Luftenergizer",
+  "designer": "Jörg Klemm",
+  "price": 164900,
+  "priceDisplay": "1.649,00",
+  "currency": "EUR",
+  "taxNote": "inkl. MwSt. zzgl. Versandkosten",
+  "freeShipping": true,
+  "inStock": true,
+  "maxQuantity": 10,
+  "featured": true,
+  "description": "Der BREEZY Luftenergizer vereint fortschrittliche Ionisierungstechnologie mit zeitlosem Design aus gebürstetem Edelstahl. Er transformiert die Raumluft und bringt die erfrischende Energie der Natur direkt in dein Zuhause.",
+  "heroTagline": "Neu — Jetzt verfügbar",
+  "heroHeading": "Die natürliche<br/>Energie der <em>Natur</em><br/>für dein Zuhause",
+  "heroDescription": "BREEZY erzeugt energetische Luft, wie sie in der Natur vorkommt, und bringt die vorteilhafte Wirkung in deine Räume.",
+  "images": {
+    "hero": "BREEZY-Front-Redlight.png",
+    "gallery": [
+      { "file": "BREEZY-Front-NoCap.png", "alt": "BREEZY Frontansicht" },
+      { "file": "BREEZY-Front-Open.png", "alt": "BREEZY geöffnet" },
+      { "file": "BREEZY-Front-Redlight.png", "alt": "BREEZY Rotlichtmodus" },
+      { "file": "BreezyCloseup-HQ.jpg", "alt": "BREEZY Nahaufnahme" },
+      { "file": "BreezyCloseupRed-HQ.jpg", "alt": "BREEZY Ventilator Detail" }
+    ],
+    "basePath": "/images/products/breezy-original"
+  },
+  "specs": [
+    { "label": "Material", "value": "Premium Edelstahl, gebürstet" },
+    { "label": "Abmessungen", "value": "Ø 14 cm × 24 cm Höhe" },
+    { "label": "Gewicht", "value": "2,4 kg" },
+    { "label": "Lautstärke", "value": "< 25 dB — flüsterleise" },
+    { "label": "Raumgröße", "value": "Bis zu 40 m²" },
+    { "label": "Energieverbrauch", "value": "12 Watt" }
+  ],
+  "details": [
+    {
+      "tag": "Design",
+      "heading": "Perfektion in jedem Detail",
+      "text": "Jeder BREEZY wird aus einem einzigen Stück hochwertigem Edelstahl gefertigt. Der ikonische Power-Button mit blau leuchtendem LED-Ring vereint intuitive Bedienung mit skulpturalem Design.",
+      "image": "BreezyCloseup-HQ.jpg",
+      "bullets": [
+        "Gebürstetes Edelstahl-Gehäuse in Premiumqualität",
+        "Intuitive Ein-Knopf-Bedienung mit LED-Statusanzeige",
+        "Kompaktes, zylindrisches Design passt in jedes Interieur",
+        "Magnetischer Deckel für mühelose Wartung"
+      ],
+      "reverse": false
+    },
+    {
+      "tag": "Technologie",
+      "heading": "Die Kraft der Natur — technisch reproduziert",
+      "text": "Das patentierte Wirbelrotorsystem im Inneren des BREEZY erzeugt einen Luftstrom, der die natürliche Ionisierung nachbildet. Rote LED-Indikatoren zeigen den aktiven Reinigungsmodus an.",
+      "image": "BreezyCloseupRed-HQ.jpg",
+      "bullets": [
+        "Patentiertes 3-Flügel-Wirbelrotorsystem",
+        "Hochleistungs-Ionengenerator mit >10 Mio. Ionen/cm³",
+        "Feinmaschiges Edelstahl-Filtersystem",
+        "Energieeffizient mit nur 12 Watt Verbrauch"
+      ],
+      "reverse": true
+    }
+  ],
+  "marqueeItems": [
+    "Handgefertigt in Deutschland",
+    "Premium Edelstahl",
+    "Negative Ionen Technologie",
+    "Flüsterleise <25dB",
+    "Designed by Jörg Klemm",
+    "2 Jahre Garantie",
+    "Kostenloser Versand"
+  ],
+  "trustBadges": [
+    { "icon": "shield", "text": "2 Jahre Garantie" },
+    { "icon": "truck", "text": "Kostenloser Versand" },
+    { "icon": "refresh", "text": "30 Tage Rückgabe" }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "BREEZI",
+  "logoParts": {
+    "main": "BREEZI",
+    "accent": "."
+  },
+  "tagline": "Natürliche Energie für dein Zuhause",
+  "designer": "Jörg Klemm",
+  "companyLegal": "BREEZI by Jörg Klemm",
+  "language": "de",
+  "currency": {
+    "code": "EUR",
+    "symbol": "€",
+    "locale": "de-DE"
+  },
+  "colors": {
+    "bgDark": "#0a0a0a",
+    "bgLight": "#f5f3f0",
+    "bgCream": "#ebe8e3",
+    "textDark": "#0a0a0a",
+    "textLight": "#f5f3f0",
+    "textMuted": "#8a8680",
+    "accent": "#c8504f",
+    "accentGlow": "#e8706f",
+    "gold": "#b8a68a"
+  },
+  "fonts": {
+    "serif": "Cormorant Garamond",
+    "sans": "DM Sans"
+  },
+  "social": {
+    "email": "kontakt@breezi.de"
+  },
+  "seo": {
+    "titleTemplate": "%s | BREEZI by Jörg Klemm",
+    "defaultDescription": "BREEZI erzeugt energetische Luft, wie sie in der Natur vorkommt. Handgefertigt in Deutschland."
+  }
+}

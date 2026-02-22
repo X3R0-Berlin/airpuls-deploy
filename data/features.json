@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "icon": "sun",
+    "title": "Mehr Energie",
+    "description": "Spürbar mehr Vitalität und Wohlbefinden durch ionisierte Raumluft, wie an einem Wasserfall oder nach einem Gewitter."
+  },
+  {
+    "id": 2,
+    "icon": "moon",
+    "title": "Besserer Schlaf",
+    "description": "Die beruhigende Wirkung negativer Ionen fördert einen tiefen und erholsamen Schlaf für die ganze Familie."
+  },
+  {
+    "id": 3,
+    "icon": "sparkles",
+    "title": "Reine Luft",
+    "description": "Reduziert Feinstaub, Allergene und Gerüche — für ein sauberes und frisches Raumklima in jedem Zimmer."
+  }
+]

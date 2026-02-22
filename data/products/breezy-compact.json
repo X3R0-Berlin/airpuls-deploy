@@ -1,0 +1,62 @@
+{
+  "slug": "breezy-compact",
+  "name": "Breezy Compact",
+  "collection": "BREEZI Collection",
+  "subtitle": "Kompakter Luftenergizer",
+  "designer": "Jörg Klemm",
+  "price": 99900,
+  "priceDisplay": "999,00",
+  "currency": "EUR",
+  "taxNote": "inkl. MwSt. zzgl. Versandkosten",
+  "freeShipping": true,
+  "inStock": false,
+  "maxQuantity": 5,
+  "featured": false,
+  "description": "Der BREEZY Compact vereint die bewährte Luftenergie-Technologie in einem handlichen Format — perfekt für Büro, Schlafzimmer oder unterwegs.",
+  "heroTagline": "Demnächst verfügbar",
+  "heroHeading": "Kompakte Frische<br/>für <em>unterwegs</em>",
+  "heroDescription": "Die kompakte Variante des BREEZY Luftenergizers — gleiche Technologie, handliches Format.",
+  "images": {
+    "hero": "BREEZY-Front-Redlight.png",
+    "gallery": [
+      { "file": "BREEZY-Front-NoCap.png", "alt": "BREEZY Compact Frontansicht" }
+    ],
+    "basePath": "/images/products/breezy-original"
+  },
+  "specs": [
+    { "label": "Material", "value": "Premium Edelstahl, gebürstet" },
+    { "label": "Abmessungen", "value": "Ø 10 cm × 18 cm Höhe" },
+    { "label": "Gewicht", "value": "1,2 kg" },
+    { "label": "Lautstärke", "value": "< 20 dB — flüsterleise" },
+    { "label": "Raumgröße", "value": "Bis zu 25 m²" },
+    { "label": "Energieverbrauch", "value": "5 Watt" }
+  ],
+  "details": [
+    {
+      "tag": "Design",
+      "heading": "Klein, aber kraftvoll",
+      "text": "Der BREEZY Compact bringt die bewährte Luftenergie-Technologie in ein kompaktes, tragbares Format, das in jede Ecke passt.",
+      "image": "BreezyCloseup-HQ.jpg",
+      "bullets": [
+        "Platzsparend und leicht",
+        "Ideal für kleinere Räume",
+        "Tragbar und flexibel einsetzbar",
+        "Gleiche Edelstahl-Qualität"
+      ],
+      "reverse": false
+    }
+  ],
+  "marqueeItems": [
+    "Kompakt",
+    "Tragbar",
+    "Energieeffizient",
+    "Leise",
+    "Premium Edelstahl",
+    "Designed by Jörg Klemm"
+  ],
+  "trustBadges": [
+    { "icon": "shield", "text": "2 Jahre Garantie" },
+    { "icon": "truck", "text": "Kostenloser Versand" },
+    { "icon": "refresh", "text": "30 Tage Rückgabe" }
+  ]
+}

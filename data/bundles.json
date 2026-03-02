@@ -1,0 +1,35 @@
+{
+  "heading": "Häufig zusammen gekauft",
+  "items": [
+    {
+      "slug": "katalysator-set",
+      "name": "Ersatz-Katalysator-Set",
+      "description": "2× Katalysatorscheiben — Austausch alle 2 Jahre empfohlen",
+      "price": 14900,
+      "priceDisplay": "149,00",
+      "icon": "disc",
+      "image": null,
+      "forProducts": ["vitair"]
+    },
+    {
+      "slug": "atembrille",
+      "name": "Professionelle Atembrille",
+      "description": "Medizinische Nasenbrille für Solitair & Preventair",
+      "price": 8900,
+      "priceDisplay": "89,00",
+      "icon": "wind",
+      "image": null,
+      "forProducts": ["solitair", "preventair"]
+    },
+    {
+      "slug": "garantie-plus",
+      "name": "Garantie+ Verlängerung",
+      "description": "Verlängert die Garantie auf insgesamt 5 Jahre",
+      "price": 19900,
+      "priceDisplay": "199,00",
+      "icon": "shield-plus",
+      "image": null,
+      "forProducts": ["vitair", "solitair", "preventair"]
+    }
+  ]
+}

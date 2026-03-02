@@ -1,0 +1,52 @@
+{
+  "program": {
+    "name": "AIRIMPULSE Partnerprogramm",
+    "cookieDurationDays": 30,
+    "linkFormat": "?ref=PARTNER_CODE",
+    "payoutMinimum": 50,
+    "currency": "EUR"
+  },
+  "tiers": [
+    {
+      "id": "kunde",
+      "name": "Kunde",
+      "commission": 5,
+      "description": "Empfehle AIRIMPULSE an Freunde und Familie und erhalte 5% Provision auf jeden Verkauf.",
+      "benefits": [
+        "5% Provision pro Verkauf",
+        "Persönlicher Empfehlungslink",
+        "30 Tage Cookie-Laufzeit",
+        "Monatliche Auszahlung ab 50€"
+      ],
+      "estimatedEarning": "ca. 82€ pro Vitair"
+    },
+    {
+      "id": "therapeut",
+      "name": "Therapeut",
+      "commission": 8,
+      "description": "Für Heilpraktiker, Ärzte und Therapeuten: Profitieren Sie von erhöhter Provision und individueller Betreuung.",
+      "benefits": [
+        "8% Provision pro Verkauf",
+        "Eigene Partner-Landingpage",
+        "Persönlicher Ansprechpartner",
+        "Promo-Material für Praxis",
+        "Prioritäts-Support"
+      ],
+      "estimatedEarning": "ca. 132€ pro Vitair"
+    },
+    {
+      "id": "creator",
+      "name": "Creator",
+      "commission": 10,
+      "description": "Für Content Creator und Influencer: Höchste Provision und exklusive Partnerschaft.",
+      "benefits": [
+        "10% Provision pro Verkauf",
+        "Testgerät für Content-Erstellung",
+        "Co-Branded Landingpage",
+        "Exklusive Rabattcodes",
+        "Feature auf unserer Webseite"
+      ],
+      "estimatedEarning": "ca. 165€ pro Vitair"
+    }
+  ]
+}

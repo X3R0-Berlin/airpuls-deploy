@@ -1,0 +1,71 @@
+{
+  "heading": "Welches Gerät passt zu Ihnen?",
+  "subheading": "Alle drei Produkte im direkten Vergleich",
+  "products": ["vitair", "solitair", "preventair"],
+  "features": [
+    {
+      "label": "Anwendung",
+      "values": {
+        "vitair": "Raumluft-Aktivierung",
+        "solitair": "Persönliche Atembrille",
+        "preventair": "Professionelle Therapie"
+      }
+    },
+    {
+      "label": "Zielgruppe",
+      "values": {
+        "vitair": "Zuhause & Büro",
+        "solitair": "Bewusste Anwender",
+        "preventair": "Therapeuten & Kliniken"
+      }
+    },
+    {
+      "label": "Technologie",
+      "values": {
+        "vitair": "LED + Katalysator",
+        "solitair": "Reiner Katalysator",
+        "preventair": "Hochleistungs-Aktivierung"
+      }
+    },
+    {
+      "label": "Elektronik",
+      "check": {
+        "vitair": true,
+        "solitair": false,
+        "preventair": true
+      }
+    },
+    {
+      "label": "Atembrille",
+      "check": {
+        "vitair": false,
+        "solitair": true,
+        "preventair": true
+      }
+    },
+    {
+      "label": "Raumluft bis 40 m²",
+      "check": {
+        "vitair": true,
+        "solitair": false,
+        "preventair": false
+      }
+    },
+    {
+      "label": "Sitzungsdauer",
+      "values": {
+        "vitair": "Dauerbetrieb",
+        "solitair": "Nach Bedarf",
+        "preventair": "15–20 Min."
+      }
+    },
+    {
+      "label": "Nachhaltigkeit",
+      "values": {
+        "vitair": "Hoch",
+        "solitair": "Extrem hoch",
+        "preventair": "Hoch"
+      }
+    }
+  ]
+}

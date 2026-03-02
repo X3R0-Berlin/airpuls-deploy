@@ -1,0 +1,98 @@
+{
+  "slug": "preventair",
+  "name": "Preventair",
+  "collection": "AIRIMPULSE Collection",
+  "subtitle": "Professionelles Therapiegerät",
+  "designer": "Jörg Klemm",
+  "price": 699900,
+  "priceDisplay": "ab 6.999,00",
+  "currency": "EUR",
+  "taxNote": "inkl. MwSt., kostenloser Versand",
+  "freeShipping": true,
+  "inStock": false,
+  "comingSoon": true,
+  "maxQuantity": 0,
+  "featured": false,
+  "description": "Der PREVENTAIR ist ein professionelles Therapiegerät für die intensive Kurzzeit-Anwendung mit Atembrille. Seit über 25 Jahren als Therapiegerät bewährt, aktiviert er Sauerstoff für die gezielte Inhalation. Klinische Studien für die Zulassung als Medizinprodukt sind in Vorbereitung.",
+  "heroTagline": "Coming Soon — Klinische Studie in Vorbereitung",
+  "heroHeading": "Professionelle<br/><em>Atemtherapie</em><br/>seit 25 Jahren bewährt",
+  "heroDescription": "PREVENTAIR — das professionelle Therapiegerät für intensive Sauerstoff-Aktivierung. Anwendung mit Atembrille in 15–20 Minuten. Bewährt seit über 25 Jahren.",
+  "images": {
+    "hero": "preventair-front.png",
+    "gallery": [
+      { "file": "preventair-front.png", "alt": "Preventair Frontansicht — Produktfoto" },
+      { "file": "preventair-hero.jpg", "alt": "Preventair Therapiegerät mit blauer LED-Beleuchtung" },
+      { "file": "preventair-detail-led.jpg", "alt": "Preventair Nahaufnahme — Aktivierungskammer" },
+      { "file": "preventair-blue-light.jpg", "alt": "Preventair Sauerstoff-Aktivierung aktiv" },
+      { "file": "preventair-ambient.jpg", "alt": "Preventair im Anwendungsumfeld" },
+      { "file": "preventair-breezy-duo.jpg", "alt": "Preventair und Airimpulse — Komplettsystem" }
+    ],
+    "basePath": "/images/products/preventair"
+  },
+  "specs": [
+    { "label": "Anwendung", "value": "Intensive Kurzzeit-Therapie mit Atembrille" },
+    { "label": "Sitzungsdauer", "value": "15–20 Minuten" },
+    { "label": "Abmessungen", "value": "Ø 260 mm × 150 mm Höhe" },
+    { "label": "Gewicht", "value": "4,6 kg" },
+    { "label": "Stromversorgung", "value": "12V DC — 32,4 Watt" },
+    { "label": "Gehäuse", "value": "Premium Edelstahl, gebürstet" },
+    { "label": "Erfahrung", "value": "Seit über 25 Jahren bewährt" },
+    { "label": "Status", "value": "Klinische Studie in Vorbereitung" }
+  ],
+  "details": [
+    {
+      "tag": "Therapie",
+      "heading": "Professionelle Atemtherapie — seit über 25 Jahren bewährt",
+      "text": "Der PREVENTAIR ist für die intensive Kurzzeit-Anwendung mit Atembrille konzipiert. In 15–20 Minuten Sitzungen aktiviert das Gerät Sauerstoff gezielt für die Inhalation. Als Therapiegerät hat sich diese Technologie seit über 25 Jahren in der Praxis bewährt — bei chronischen Lungenerkrankungen (COPD) und Stoffwechselstörungen wie Diabetes mellitus.",
+      "image": "preventair-detail-led.jpg",
+      "bullets": [
+        "Intensive Kurzzeit-Anwendung: 15–20 Minuten pro Sitzung",
+        "Gezielte Inhalation über professionelle Atembrille",
+        "Bewährt bei COPD und Stoffwechselstörungen",
+        "Klinische Vorstudie mit Vorgängergeräten gestartet"
+      ],
+      "reverse": false,
+      "lottie": "/animations/breathing-cycle.json"
+    },
+    {
+      "tag": "Technologie",
+      "heading": "Sauerstoff-Aktivierung auf höchstem Niveau",
+      "text": "Die Kerntechnologie des PREVENTAIR überführt Sauerstoff von seinem gewöhnlichen Triplett-Zustand in den energetisch aktiven Singulett-Zustand. Dieser aktivierte Sauerstoff unterstützt die Mitochondrien — die Kraftwerke unserer Zellen — bei der lebenswichtigen Energieerzeugung. Die Aktivierungskammer visualisiert den Prozess mit beeindruckender LED-Illumination.",
+      "image": "preventair-blue-light.jpg",
+      "bullets": [
+        "Sauerstoff-Aktivierung: Triplett → Singulett",
+        "Unterstützt mitochondriale Energieproduktion",
+        "Leistungsstarke LED-Illumination der Aktivierungskammer",
+        "32,4 Watt für professionelle Anwendung"
+      ],
+      "reverse": true
+    },
+    {
+      "tag": "Qualität",
+      "heading": "Präzision in jedem Detail — jedes Gerät ein Unikat",
+      "text": "Jeder PREVENTAIR wird in sorgfältiger Handarbeit gefertigt. Das gebürstete Edelstahlgehäuse und die präzise eingepasste Aktivierungskammer machen jedes Gerät zu einem Präzisionsinstrument. Materialien und Verarbeitung entsprechen dem professionellen Anspruch eines Therapiegeräts.",
+      "image": "preventair-ambient.jpg",
+      "bullets": [
+        "Sorgfältige Handmontage in Deutschland",
+        "Premium-Edelstahlgehäuse",
+        "Medizinprodukt-Zulassung in Vorbereitung",
+        "Klinische Studie für COPD-Patienten geplant"
+      ],
+      "reverse": false
+    }
+  ],
+  "marqueeItems": [
+    "Coming Soon",
+    "Professionelles Therapiegerät",
+    "25 Jahre bewährt",
+    "Atembrille-Anwendung",
+    "Klinische Studie geplant",
+    "Designed by Jörg Klemm",
+    "Made in Germany"
+  ],
+  "trustBadges": [
+    { "icon": "shield", "text": "Medizinprodukt-Zulassung geplant" },
+    { "icon": "truck", "text": "Kostenloser Versand" },
+    { "icon": "refresh", "text": "30 Tage Rückgabe" }
+  ]
+}

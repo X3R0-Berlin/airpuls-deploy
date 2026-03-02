@@ -1,0 +1,79 @@
+{
+  "slug": "solitair",
+  "name": "Solitair",
+  "collection": "AIRIMPULSE Collection",
+  "subtitle": "Atemluft-Energizer ohne Elektronik",
+  "designer": "Jörg Klemm",
+  "price": 249900,
+  "priceDisplay": "2.499,00",
+  "currency": "EUR",
+  "taxNote": "inkl. MwSt. zzgl. Versandkosten",
+  "freeShipping": true,
+  "inStock": false,
+  "comingSoon": true,
+  "maxQuantity": 3,
+  "featured": false,
+  "description": "Der Solitair ist ein extrem nachhaltiges Endkundengerät für die persönliche Anwendung mit Atembrille — ohne elektronische Steuerung, rein auf die Kraft der Katalysator-Technologie reduziert. Ein Puristen-Instrument für bewusste Anwender.",
+  "heroTagline": "Demnächst verfügbar",
+  "heroHeading": "Reine <em>Sauerstoff-Aktivierung</em><br/>ohne Elektronik",
+  "heroDescription": "Der Solitair setzt auf das Wesentliche: Katalysator-Technologie ohne elektronische Steuerung. Nachhaltig, langlebig, für die persönliche Anwendung mit Atembrille.",
+  "images": {
+    "hero": "BREEZY-Front-Redlight.png",
+    "gallery": [
+      { "file": "BREEZY-Front-NoCap.png", "alt": "Solitair Frontansicht" }
+    ],
+    "basePath": "/images/products/breezy-original"
+  },
+  "specs": [
+    { "label": "Anwendung", "value": "Persönliche Nutzung mit Atembrille" },
+    { "label": "Technologie", "value": "Reine Katalysator-Aktivierung" },
+    { "label": "Elektronik", "value": "Keine — maximale Nachhaltigkeit" },
+    { "label": "Gehäuse", "value": "Premium Edelstahl, gebürstet" },
+    { "label": "Abmessungen", "value": "Ø 22 cm × 38 cm Höhe" },
+    { "label": "Gewicht", "value": "4,8 kg" },
+    { "label": "Nachhaltigkeit", "value": "Extrem langlebig, wartungsfrei" }
+  ],
+  "details": [
+    {
+      "tag": "Philosophie",
+      "heading": "Reduktion auf das Wesentliche",
+      "text": "Der Solitair verzichtet bewusst auf elektronische Steuerung. Keine Platine, keine Software, keine Verschleißteile. Reine Katalysator-Technologie, die Sauerstoff auf natürliche Weise aktiviert — für die persönliche Anwendung mit Atembrille. Ein extrem nachhaltiges Gerät, das Generationen überdauert.",
+      "image": "BreezyCloseup-HQ.jpg",
+      "bullets": [
+        "Keine Elektronik — maximale Langlebigkeit",
+        "Reine Katalysator-Aktivierung",
+        "Persönliche Anwendung mit Atembrille",
+        "Extrem nachhaltig und wartungsfrei"
+      ],
+      "reverse": false
+    },
+    {
+      "tag": "Anwendung",
+      "heading": "Wie das Preventair — für zu Hause",
+      "text": "Der Solitair nutzt dieselbe Atembrille-Technologie wie das professionelle Preventair-Therapiegerät, jedoch als Endkundengerät für den täglichen Gebrauch zu Hause. Die Sauerstoff-Aktivierung unterstützt die mitochondriale Energieproduktion und fördert das natürliche Wohlbefinden.",
+      "image": "BreezyCloseupRed-HQ.jpg",
+      "bullets": [
+        "Gleiche Technologie wie das Preventair",
+        "Für den täglichen Heimgebrauch konzipiert",
+        "Unterstützt die zelluläre Energieversorgung",
+        "Sorgfältige Handmontage in Deutschland"
+      ],
+      "reverse": true,
+      "lottie": "/animations/breathing-cycle.json"
+    }
+  ],
+  "marqueeItems": [
+    "Solitair-Prinzip",
+    "Keine Elektronik",
+    "Extrem nachhaltig",
+    "Atembrille-Anwendung",
+    "Premium Edelstahl",
+    "Designed by Jörg Klemm",
+    "Made in Germany"
+  ],
+  "trustBadges": [
+    { "icon": "shield", "text": "3 Jahre Garantie" },
+    { "icon": "truck", "text": "Kostenloser Versand" },
+    { "icon": "refresh", "text": "30 Tage Rückgabe" }
+  ]
+}

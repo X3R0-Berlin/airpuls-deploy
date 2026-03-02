@@ -1,13 +1,20 @@
 services:
-  app:
+  airimpulse-web:
     build:
       context: .
       target: runner
+    container_name: airimpulse-web
     ports:
       - "3000:3000"
     env_file:
       - .env.local
+    volumes:
+      - db-data:/app/data
     restart: unless-stopped
+    networks:
+      - matrix-net
+    profiles:
+      - prod
 
   app-dev:
     build:
@@ -24,3 +31,11 @@ services:
       - /app/.next
     profiles:
       - dev
+
+volumes:
+  db-data:
+
+networks:
+  matrix-net:
+    external: true
+    name: matrix-net

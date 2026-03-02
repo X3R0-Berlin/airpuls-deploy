@@ -58,6 +58,7 @@
   --color-brand-accent: var(--brand-accent);
   --color-brand-accent-glow: var(--brand-accent-glow);
   --color-brand-gold: var(--brand-gold);
+  --color-brand-mint: var(--brand-mint);
 
   --animate-shimmer-slide: shimmer-slide var(--speed) ease-in-out infinite alternate;
   --animate-spin-around: spin-around calc(var(--speed) * 2) infinite linear;
@@ -91,51 +92,53 @@
 :root {
   --radius: 0.625rem;
 
-  /* Brand Identity */
-  --brand-bg-dark: #0a0a0a;
-  --brand-bg-light: #f5f3f0;
-  --brand-bg-cream: #ebe8e3;
-  --brand-text-dark: #0a0a0a;
-  --brand-text-light: #f5f3f0;
-  --brand-text-muted: #8a8680;
-  --brand-accent: #c8504f;
-  --brand-accent-glow: #e8706f;
-  --brand-gold: #b8a68a;
-  --brand-border-light: rgba(255,255,255,0.08);
-  --brand-border-dark: rgba(0,0,0,0.08);
+  /* Brand Identity — AIRIMPULSE (Light Mode) */
+  --brand-bg-dark: #121416;
+  --brand-bg-light: #F8F9FA;
+  --brand-bg-cream: #EEF0F2;
+  --brand-text-dark: #222222;
+  --brand-text-light: #F8F9FA;
+  --brand-text-muted: #5f6773;
+  --brand-accent: #357868;
+  --brand-accent-glow: #2f7566;
+  --brand-gold: #E25A43;
+  --brand-waldrot: #AD584D;
+  --brand-mint: #6ABFC2;
+  --brand-border-light: rgba(0,0,0,0.08);
+  --brand-border-dark: rgba(0,0,0,0.15);
 
-  /* shadcn overrides mapped to brand */
-  --background: #0a0a0a;
-  --foreground: #f5f3f0;
-  --card: #111111;
-  --card-foreground: #f5f3f0;
-  --popover: #111111;
-  --popover-foreground: #f5f3f0;
-  --primary: #f5f3f0;
-  --primary-foreground: #0a0a0a;
-  --secondary: #1a1a1a;
-  --secondary-foreground: #f5f3f0;
-  --muted: #1a1a1a;
-  --muted-foreground: #8a8680;
-  --accent: #c8504f;
-  --accent-foreground: #f5f3f0;
-  --destructive: #e8706f;
-  --border: rgba(255,255,255,0.08);
-  --input: rgba(255,255,255,0.08);
-  --ring: #c8504f;
-  --chart-1: #c8504f;
-  --chart-2: #e8706f;
-  --chart-3: #b8a68a;
-  --chart-4: #8a8680;
-  --chart-5: #f5f3f0;
-  --sidebar: #0a0a0a;
-  --sidebar-foreground: #f5f3f0;
-  --sidebar-primary: #c8504f;
-  --sidebar-primary-foreground: #f5f3f0;
-  --sidebar-accent: #1a1a1a;
-  --sidebar-accent-foreground: #f5f3f0;
-  --sidebar-border: rgba(255,255,255,0.08);
-  --sidebar-ring: #c8504f;
+  /* shadcn overrides — Light Mode */
+  --background: #F8F9FA;
+  --foreground: #222222;
+  --card: #FFFFFF;
+  --card-foreground: #222222;
+  --popover: #FFFFFF;
+  --popover-foreground: #222222;
+  --primary: #222222;
+  --primary-foreground: #FFFFFF;
+  --secondary: #EEF0F2;
+  --secondary-foreground: #222222;
+  --muted: #EEF0F2;
+  --muted-foreground: #5f6773;
+  --accent: #357868;
+  --accent-foreground: #FFFFFF;
+  --destructive: #AD584D;
+  --border: rgba(0,0,0,0.08);
+  --input: rgba(0,0,0,0.08);
+  --ring: #357868;
+  --chart-1: #357868;
+  --chart-2: #6ABFC2;
+  --chart-3: #E25A43;
+  --chart-4: #8a9098;
+  --chart-5: #222222;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #222222;
+  --sidebar-primary: #357868;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #EEF0F2;
+  --sidebar-accent-foreground: #222222;
+  --sidebar-border: rgba(0,0,0,0.08);
+  --sidebar-ring: #357868;
 }
 
 @layer base {
@@ -150,6 +153,46 @@
   html {
     scroll-behavior: smooth;
   }
+}
+
+/* Film Grain Overlay for premium feel */
+.film-grain {
+  position: relative;
+}
+.film-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 128px 128px;
+  z-index: 1;
+}
+
+/* Ken Burns effect for hero image */
+.ken-burns-container {
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.ken-burns {
+  animation: ken-burns 20s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes ken-burns {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.08) translate(-1.5%, -1%);
+  }
+}
+
+/* Scrollytelling parallax and reveal helpers */
+.detail-sticky-image {
+  position: sticky;
+  top: 10vh;
+  align-self: start;
 }
 
 /* Reduced motion */

@@ -11,7 +11,7 @@ function getStripe() {
 export async function POST(req: NextRequest) {
   try {
     const stripe = getStripe();
-    const { items } = await req.json();
+    const { items, affiliateRef } = await req.json();
 
     if (!items || !Array.isArray(items) || items.length === 0) {
       return NextResponse.json(
@@ -56,7 +56,7 @@ export async function POST(req: NextRequest) {
 
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
-    const session = await stripe.checkout.sessions.create({
+    const sessionParams: Stripe.Checkout.SessionCreateParams = {
       payment_method_types: ["card"],
       line_items: lineItems,
       mode: "payment",
@@ -66,7 +66,14 @@ export async function POST(req: NextRequest) {
         allowed_countries: ["DE", "AT", "CH"],
       },
       locale: "de",
-    });
+    };
+
+    // Attach affiliate ref code as metadata for commission tracking
+    if (affiliateRef && typeof affiliateRef === "string" && affiliateRef.length <= 50) {
+      sessionParams.metadata = { affiliate_ref: affiliateRef };
+    }
+
+    const session = await stripe.checkout.sessions.create(sessionParams);
 
     return NextResponse.json({ url: session.url });
   } catch (err) {

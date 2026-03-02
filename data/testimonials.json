@@ -1,26 +1,68 @@
 [
   {
     "id": 1,
-    "product": "breezy-original",
+    "product": "vitair",
     "stars": 5,
-    "text": "Seit ich den BREEZY im Schlafzimmer stehen habe, schlafe ich deutlich tiefer. Mein Partner hat die gleiche Erfahrung gemacht. Ein echtes Qualitätsprodukt.",
+    "text": "Seit ich den Vitair im Schlafzimmer stehen habe, schlafe ich deutlich tiefer. Mein Partner hat die gleiche Erfahrung gemacht. Ein echtes Qualitätsprodukt.",
     "author": "Martina S.",
-    "location": "München"
+    "location": "München",
+    "avatar": "/images/testimonials/testimonial-martina.jpg",
+    "verified": true,
+    "purchaseDate": "2024-11"
   },
   {
     "id": 2,
-    "product": "breezy-original",
+    "product": "vitair",
     "stars": 5,
-    "text": "Das Design ist absolut fantastisch — der BREEZY sieht aus wie ein Kunstobjekt. Und die Luftqualität in meinem Büro hat sich merklich verbessert.",
+    "text": "Das Design ist absolut fantastisch — der Vitair sieht aus wie ein Kunstobjekt. Und die Luftqualität in meinem Büro hat sich merklich verbessert.",
     "author": "Thomas K.",
-    "location": "Berlin"
+    "location": "Berlin",
+    "avatar": "/images/testimonials/testimonial-thomas.jpg",
+    "verified": true,
+    "purchaseDate": "2024-09"
   },
   {
     "id": 3,
-    "product": "breezy-original",
+    "product": "vitair",
     "stars": 5,
-    "text": "Als Allergiker bin ich begeistert. Die Luft fühlt sich so frisch an wie nach einem Waldspaziergang. Der BREEZY läuft bei uns rund um die Uhr.",
+    "text": "Als Allergiker bin ich begeistert. Die Luft fühlt sich so frisch an wie nach einem Waldspaziergang. Der Vitair läuft bei uns rund um die Uhr.",
     "author": "Dr. Julia F.",
-    "location": "Hamburg"
+    "location": "Hamburg",
+    "avatar": "/images/testimonials/testimonial-julia.jpg",
+    "verified": true,
+    "purchaseDate": "2024-08"
+  },
+  {
+    "id": 4,
+    "product": "vitair",
+    "stars": 5,
+    "text": "Meine Praxis-Patienten spüren den Unterschied sofort. Die Raumluft fühlt sich lebendig an. Ich empfehle den Vitair jedem, der Wert auf Atemqualität legt.",
+    "author": "HP Michael R.",
+    "location": "Stuttgart",
+    "avatar": "/images/testimonials/testimonial-michael.jpg",
+    "verified": true,
+    "purchaseDate": "2025-01"
+  },
+  {
+    "id": 5,
+    "product": "vitair",
+    "stars": 4,
+    "text": "Wunderschönes Gerät, hervorragende Verarbeitung. Die CNC-Qualität spürt man sofort. Einziger Wunsch: eine App zur Lüftersteuerung wäre perfekt.",
+    "author": "Stefan W.",
+    "location": "Wien",
+    "avatar": "/images/testimonials/testimonial-stefan.jpg",
+    "verified": true,
+    "purchaseDate": "2025-02"
+  },
+  {
+    "id": 6,
+    "product": "preventair",
+    "stars": 5,
+    "text": "Wir setzen die Vorgängerversion seit Jahren in unserer Klinik ein. Die Ergebnisse bei COPD-Patienten sind bemerkenswert. Wir warten gespannt auf den Preventair.",
+    "author": "Dr. med. Anke L.",
+    "location": "Freiburg",
+    "avatar": "/images/testimonials/testimonial-anke.jpg",
+    "verified": false,
+    "purchaseDate": null
   }
 ]

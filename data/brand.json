@@ -1,12 +1,16 @@
 {
-  "name": "BREEZI",
+  "name": "AIRIMPULSE",
   "logoParts": {
-    "main": "BREEZI",
-    "accent": "."
+    "main": "AIR",
+    "accent": "IMPULSE"
   },
-  "tagline": "Natürliche Energie für dein Zuhause",
+  "logoImage": "/images/Airimpulse_Logo.svg",
+  "logoInverse": "/images/Airimpulse_Logo_Inverse.svg",
+  "logoMono": "/images/Airimpulse_Logo_Monochrom.svg",
+  "logoIcon": "/images/Airimpulse_Logo_Icon.svg",
+  "tagline": "Sauerstoff-Aktivierung nach dem Vorbild der Natur",
   "designer": "Jörg Klemm",
-  "companyLegal": "BREEZI by Jörg Klemm",
+  "companyLegal": "AIRIMPULSE by Jörg Klemm",
   "language": "de",
   "currency": {
     "code": "EUR",
@@ -14,25 +18,25 @@
     "locale": "de-DE"
   },
   "colors": {
-    "bgDark": "#0a0a0a",
-    "bgLight": "#f5f3f0",
-    "bgCream": "#ebe8e3",
-    "textDark": "#0a0a0a",
-    "textLight": "#f5f3f0",
-    "textMuted": "#8a8680",
-    "accent": "#c8504f",
-    "accentGlow": "#e8706f",
-    "gold": "#b8a68a"
+    "bgDark": "#121416",
+    "bgLight": "#F8F9FA",
+    "bgCream": "#EEF0F2",
+    "textDark": "#222222",
+    "textLight": "#F8F9FA",
+    "textMuted": "#5f6773",
+    "accent": "#357868",
+    "accentGlow": "#2f7566",
+    "gold": "#E25A43"
   },
   "fonts": {
     "serif": "Cormorant Garamond",
     "sans": "DM Sans"
   },
   "social": {
-    "email": "kontakt@breezi.de"
+    "email": "kontakt@airimpulse.de"
   },
   "seo": {
-    "titleTemplate": "%s | BREEZI by Jörg Klemm",
-    "defaultDescription": "BREEZI erzeugt energetische Luft, wie sie in der Natur vorkommt. Handgefertigt in Deutschland."
+    "titleTemplate": "%s | AIRIMPULSE by Jörg Klemm",
+    "defaultDescription": "AIRIMPULSE aktiviert Sauerstoff nach dem Vorbild der Natur — Katalysator-Technologie, handgefertigt in Deutschland. Seit über 25 Jahren bewährt."
   }
 }

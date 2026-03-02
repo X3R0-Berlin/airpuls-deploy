@@ -3,6 +3,10 @@ import brandData from "@/data/brand.json";
 export interface BrandConfig {
   name: string;
   logoParts: { main: string; accent: string };
+  logoImage: string;
+  logoInverse: string;
+  logoMono: string;
+  logoIcon: string;
   tagline: string;
   designer: string;
   companyLegal: string;

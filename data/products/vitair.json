@@ -1,0 +1,134 @@
+{
+  "slug": "vitair",
+  "name": "Vitair",
+  "collection": "AIRIMPULSE Collection",
+  "subtitle": "Luftenergizer",
+  "designer": "Jörg Klemm",
+  "price": 164900,
+  "priceDisplay": "1.649,00",
+  "currency": "EUR",
+  "taxNote": "inkl. MwSt. zzgl. Versandkosten",
+  "freeShipping": true,
+  "inStock": true,
+  "maxQuantity": 10,
+  "featured": true,
+  "description": "Der Vitair aktiviert Sauerstoff nach dem Vorbild der Natur. CNC-präzisionsgefräste Bauteile und sorgfältige Handarbeit machen jedes Gerät zu einem Unikat. Die Katalysator-Technologie versetzt Sauerstoff in seinen energetisch aktiven Zustand — so wie es in der Natur an Wasserfällen und in Wäldern geschieht.",
+  "heroVideo": "vitair-hero-loop.mp4",
+  "heroTagline": "Neu — Jetzt verfügbar",
+  "heroHeading": "Die natürliche<br/>Energie der <em>Natur</em><br/>für dein Zuhause",
+  "heroDescription": "Der Vitair aktiviert den Sauerstoff deiner Raumluft — wie ihn die Natur an Wasserfällen, in Wäldern und nach Gewittern erzeugt. Handgefertigt in Deutschland.",
+  "images": {
+    "hero": "BREEZY-Front-Redlight.png",
+    "gallery": [
+      { "file": "BREEZY-Front-NoCap.png", "alt": "Vitair Frontansicht" },
+      { "file": "BREEZY-Front-Open.png", "alt": "Vitair geöffnet" },
+      { "file": "BREEZY-Front-Redlight.png", "alt": "Vitair Rotlichtmodus" },
+      { "file": "BreezyCloseup-HQ.jpg", "alt": "Vitair Nahaufnahme" },
+      { "file": "BreezyCloseupRed-HQ.jpg", "alt": "Vitair Ventilator Detail" },
+      { "file": "BREEZY-back-usbc.png", "alt": "Vitair Rückseite mit USB-C Anschluss" }
+    ],
+    "basePath": "/images/products/breezy-original"
+  },
+  "specs": [
+    { "label": "Gehäuse", "value": "CNC-präzisionsgefräst, eloxiert" },
+    { "label": "Abmessungen", "value": "Ø 14 cm × 24 cm Höhe" },
+    { "label": "Gewicht", "value": "2,4 kg" },
+    { "label": "Lüfter", "value": "Axiallüfter, < 25 dB" },
+    { "label": "LED-Module", "value": "4× Hochleistungs-LED-Module" },
+    { "label": "Stromversorgung", "value": "12V DC — 18 Watt" },
+    { "label": "Katalysator", "value": "2× Katalysatorscheiben" },
+    { "label": "Filter", "value": "Edelstahlgewebe, feinmaschig" },
+    { "label": "Raumgröße", "value": "Bis zu 40 m²" }
+  ],
+  "details": [
+    {
+      "tag": "Design",
+      "heading": "Perfektion in jedem Detail",
+      "text": "Jeder Vitair wird aus CNC-präzisionsgefrästen Einzelteilen in sorgfältiger Handarbeit montiert. Der ikonische Power-Button mit blau leuchtendem LED-Ring vereint intuitive Bedienung mit skulpturalem Design. Ein Magnet hält den Lichtschirm sicher und ermöglicht mühelose Wartung.",
+      "image": "BreezyCloseup-HQ.jpg",
+      "bullets": [
+        "Deutsche Präzisionsfertigung",
+        "Intuitive Ein-Knopf-Bedienung mit LED-Statusanzeige",
+        "Lasergraviertes, eloxiertes Logo",
+        "Magnetisch befestigter Lichtschirm"
+      ],
+      "reverse": false
+    },
+    {
+      "tag": "Technologie",
+      "heading": "Sauerstoff-Aktivierung nach dem Vorbild der Natur",
+      "text": "Der Vitair nutzt Katalysatortechnologie und speziell abgestimmte LED-Module, um Sauerstoff aus seinem gewöhnlichen Triplett-Zustand in den energetisch aktiven Singulett-Zustand zu überführen. Genau diesen Prozess leisten in der Natur Pflanzen, Wasserfälle und Gewitter. Unsere Mitochondrien — die Kraftwerke unserer Zellen — benötigen aktivierten Sauerstoff, um Energie zu erzeugen.",
+      "image": "BreezyCloseupRed-HQ.jpg",
+      "bullets": [
+        "Katalysatorscheiben aktivieren Sauerstoff-Moleküle",
+        "4× Hochleistungs-LED-Module",
+        "Flüsterleiser Axiallüfter"
+      ],
+      "reverse": true
+    },
+    {
+      "tag": "Wissenschaft",
+      "heading": "Warum aktivierter Sauerstoff?",
+      "text": "Sauerstoff in unserer Atemluft liegt im sogenannten Triplett-Zustand vor — er ist stabil, aber energetisch inaktiv. Erst in der Singulett-Konfiguration kann er mit Wasserstoff in unseren Mitochondrien zu Wasser reagieren und dabei lebenswichtige Energie freisetzen. Der Vitair unterstützt diesen natürlichen Prozess und fördert die zelluläre Energieversorgung.",
+      "image": "BREEZY-Front-Open.png",
+      "bullets": [
+        "Sauerstoff-Aktivierung: Triplett → Singulett",
+        "Unterstützt die mitochondriale Energieproduktion",
+        "Natürliches Prinzip — keine Chemie, keine Ozon-Erzeugung",
+        "Seit Jahrzehnten erforscht und erprobt"
+      ],
+      "reverse": false,
+      "lottie": "/animations/oxygen-molecule.json"
+    }
+  ],
+  "marqueeItems": [
+    "Handgefertigt in Deutschland",
+    "CNC-Präzisionsfertigung",
+    "Katalysator-Technologie",
+    "Made in Germany",
+    "Flüsterleise <25 dB",
+    "Designed by Jörg Klemm",
+    "2 Jahre Garantie",
+    "Kostenloser Versand"
+  ],
+  "hotspots": {
+    "image": "BREEZY-Front-NoCap.png",
+    "points": [
+      {
+        "x": 50,
+        "y": 12,
+        "title": "Lüftergitter",
+        "description": "Feinmaschiges Edelstahlgewebe mit präziser CNC-Bearbeitung filtert Partikel und leitet aktivierte Luft gleichmäßig in den Raum."
+      },
+      {
+        "x": 50,
+        "y": 38,
+        "title": "LED-Module",
+        "description": "4 Hochleistungs-LED-Module emittieren definierte Wellenlängen, die den Katalysator zur Sauerstoff-Aktivierung anregen."
+      },
+      {
+        "x": 50,
+        "y": 55,
+        "title": "Katalysatorscheiben",
+        "description": "2 spezialbeschichtete Scheiben überführen Sauerstoff vom Triplett- in den energetisch aktiven Singulett-Zustand."
+      },
+      {
+        "x": 50,
+        "y": 75,
+        "title": "Power-Button",
+        "description": "Intuitive Ein-Knopf-Bedienung mit blau leuchtendem LED-Statusring. Ein Druck startet die Sauerstoff-Aktivierung."
+      },
+      {
+        "x": 22,
+        "y": 50,
+        "title": "CNC-Gehäuse",
+        "description": "Aus einem Block präzisionsgefräst und eloxiert. Jedes Gehäuse ist ein Unikat mit lasergraviertem Logo."
+      }
+    ]
+  },
+  "trustBadges": [
+    { "icon": "shield", "text": "2 Jahre Garantie" },
+    { "icon": "truck", "text": "Kostenloser Versand" },
+    { "icon": "refresh", "text": "30 Tage Rückgabe" }
+  ]
+}

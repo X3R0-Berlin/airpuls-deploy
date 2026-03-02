@@ -3,9 +3,9 @@ import { brand } from "@/lib/brand";
 
 export default function NotFound() {
   return (
-    <main className="min-h-screen bg-[var(--brand-bg-dark)] flex items-center justify-center px-4">
+    <main className="min-h-screen bg-[var(--brand-bg-light)] flex items-center justify-center px-4">
       <div className="text-center">
-        <h1 className="font-serif text-6xl md:text-8xl text-brand-text-light mb-4">
+        <h1 className="font-serif text-6xl md:text-8xl text-brand-text-dark mb-4">
           404
         </h1>
         <p className="text-brand-text-muted text-lg mb-8">

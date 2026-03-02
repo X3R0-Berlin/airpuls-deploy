@@ -51,7 +51,7 @@ export function ProductGallery({
               "w-16 h-16 md:w-20 md:h-20 rounded-xl overflow-hidden cursor-pointer border-2 transition-all duration-300 p-1 bg-transparent",
               i === activeIndex
                 ? "border-[var(--brand-text-dark)] opacity-100"
-                : "border-transparent opacity-50 hover:opacity-80"
+                : "border-black/15 opacity-60 hover:opacity-100"
             )}
           >
             <Image

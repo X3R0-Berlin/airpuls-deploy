@@ -1,0 +1,74 @@
+[
+  {
+    "category": "Produkt",
+    "items": [
+      {
+        "question": "Was genau macht der Airimpulse Luftenergizer?",
+        "answer": "Der Airimpulse Luftenergizer erzeugt energetische Luft, wie sie in der Natur vorkommt — etwa in Wäldern nach einem Gewitter. Durch ein spezielles Verfahren wird die Raumluft mit negativen Ionen angereichert, was zu einem frischeren, natürlicheren Raumklima beiträgt."
+      },
+      {
+        "question": "Wie laut ist das Gerät im Betrieb?",
+        "answer": "Der Airimpulse arbeitet nahezu lautlos mit weniger als 25 dB — vergleichbar mit einem Flüstern. Du kannst ihn problemlos im Schlafzimmer oder Büro nutzen, ohne gestört zu werden."
+      },
+      {
+        "question": "Für welche Raumgröße ist der Airimpulse geeignet?",
+        "answer": "Der Airimpulse Luftenergizer ist für Räume bis ca. 40 m² ausgelegt. Für größere Räume empfehlen wir die Verwendung mehrerer Geräte oder unsere kommende Airimpulse Pro Variante."
+      },
+      {
+        "question": "Muss ich Filter wechseln?",
+        "answer": "Der integrierte Edelstahlfilter ist langlebig und muss lediglich alle 3–6 Monate gereinigt werden. Ersatzfilter sind separat erhältlich und einfach zu wechseln."
+      }
+    ]
+  },
+  {
+    "category": "Bestellung",
+    "items": [
+      {
+        "question": "Welche Zahlungsmethoden werden akzeptiert?",
+        "answer": "Wir akzeptieren Visa, Mastercard, PayPal und Klarna. Alle Zahlungen werden sicher über unseren Zahlungsdienstleister Stripe abgewickelt."
+      },
+      {
+        "question": "Erhalte ich eine Bestellbestätigung?",
+        "answer": "Ja, unmittelbar nach erfolgreicher Bestellung erhältst du eine Bestätigungs-E-Mail mit allen Details zu deiner Bestellung und einer Zusammenfassung."
+      },
+      {
+        "question": "Kann ich meine Bestellung stornieren?",
+        "answer": "Solange deine Bestellung noch nicht versandt wurde, kannst du sie kostenlos stornieren. Kontaktiere uns einfach per E-Mail an {{email}} mit deiner Bestellnummer."
+      }
+    ]
+  },
+  {
+    "category": "Versand",
+    "items": [
+      {
+        "question": "Wie lange dauert die Lieferung?",
+        "answer": "Innerhalb Deutschlands beträgt die Lieferzeit 3–5 Werktage. Für Österreich und die Schweiz rechne mit 5–8 Werktagen. Du erhältst eine Tracking-Nummer per E-Mail, sobald dein Paket unterwegs ist."
+      },
+      {
+        "question": "Wie hoch sind die Versandkosten?",
+        "answer": "Innerhalb Deutschlands kostet der Standardversand 4,90 €. Ab einem Bestellwert von 50 € liefern wir innerhalb Deutschlands versandkostenfrei. Für Österreich berechnen wir 6,90 € und für die Schweiz 9,90 € Versandkosten."
+      },
+      {
+        "question": "Liefert ihr auch ins Ausland?",
+        "answer": "Aktuell liefern wir nach Deutschland, Österreich und in die Schweiz. Eine Erweiterung auf weitere EU-Länder ist in Planung."
+      }
+    ]
+  },
+  {
+    "category": "Rückgabe",
+    "items": [
+      {
+        "question": "Kann ich den Airimpulse zurückgeben?",
+        "answer": "Ja, du hast ein 14-tägiges Widerrufsrecht. Innerhalb von 14 Tagen nach Erhalt kannst du die Ware ohne Angabe von Gründen zurücksenden. Details findest du in unserer Widerrufsbelehrung."
+      },
+      {
+        "question": "Wie funktioniert die Rückgabe?",
+        "answer": "Sende uns eine kurze E-Mail an {{email}} mit deiner Bestellnummer. Verpacke das Produkt sicher und sende es an unsere Retouradresse. Nach Erhalt und Prüfung erstatten wir den Kaufpreis innerhalb von 14 Tagen."
+      },
+      {
+        "question": "Wer trägt die Rücksendekosten?",
+        "answer": "Die unmittelbaren Kosten der Rücksendung trägt der Käufer. Bei beschädigter oder fehlerhafter Ware übernehmen wir selbstverständlich die Rücksendekosten."
+      }
+    ]
+  }
+]

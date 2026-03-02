@@ -2,19 +2,29 @@
   {
     "id": 1,
     "icon": "sun",
-    "title": "Mehr Energie",
-    "description": "Spürbar mehr Vitalität und Wohlbefinden durch ionisierte Raumluft, wie an einem Wasserfall oder nach einem Gewitter."
+    "title": "Zelluläre Energie",
+    "description": "AIRIMPULSE aktiviert Sauerstoff vom inaktiven Triplett- in den energetischen Singulett-Zustand — genau wie in der Natur. Deine Mitochondrien, die Kraftwerke der Zellen, können aktivierten Sauerstoff direkt für die Energieerzeugung nutzen.",
+    "video": "/videos/feature-zellulaere-energie.mp4"
   },
   {
     "id": 2,
     "icon": "moon",
     "title": "Besserer Schlaf",
-    "description": "Die beruhigende Wirkung negativer Ionen fördert einen tiefen und erholsamen Schlaf für die ganze Familie."
+    "description": "Aktivierter Sauerstoff unterstützt die natürliche Regeneration im Schlaf. Mitochondrien produzieren nachts besonders intensiv Energie für Zellreparatur und Erholung. AIRIMPULSE schafft die optimale Atemluft dafür.",
+    "video": "/videos/feature-besserer-schlaf.mp4"
   },
   {
     "id": 3,
     "icon": "sparkles",
-    "title": "Reine Luft",
-    "description": "Reduziert Feinstaub, Allergene und Gerüche — für ein sauberes und frisches Raumklima in jedem Zimmer."
+    "title": "Natur-Prinzip",
+    "description": "An Wasserfällen, in Wäldern und nach Gewittern ist Sauerstoff auf natürliche Weise aktiviert. AIRIMPULSE reproduziert dieses Prinzip mit Katalysator-Technologie und bringt die erfrischende Energie der Natur in deine Räume.",
+    "video": "/videos/feature-natur-prinzip.mp4"
+  },
+  {
+    "id": 4,
+    "icon": "heart",
+    "title": "25 Jahre Erfahrung",
+    "description": "Die Sauerstoff-Aktivierungstechnologie ist seit über 25 Jahren in der professionellen Anwendung bewährt. Jedes Gerät wird in Deutschland von Hand gefertigt — CNC-präzisionsgefräst mit deutschen Markenkomponenten.",
+    "video": "/videos/feature-25-jahre-erfahrung.mp4"
   }
 ]

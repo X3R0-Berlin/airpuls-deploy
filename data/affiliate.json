@@ -1,6 +1,6 @@
 {
   "program": {
-    "name": "AIRIMPULSE Partnerprogramm",
+    "name": "AIRIMPULS Partnerprogramm",
     "cookieDurationDays": 30,
     "linkFormat": "?ref=PARTNER_CODE",
     "payoutMinimum": 50,
@@ -11,7 +11,7 @@
       "id": "kunde",
       "name": "Kunde",
       "commission": 5,
-      "description": "Empfehle AIRIMPULSE an Freunde und Familie und erhalte 5% Provision auf jeden Verkauf.",
+      "description": "Empfehle AIRIMPULS an Freunde und Familie und erhalte 5% Provision auf jeden Verkauf.",
       "benefits": [
         "5% Provision pro Verkauf",
         "Persönlicher Empfehlungslink",

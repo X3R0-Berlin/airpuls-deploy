@@ -12,18 +12,18 @@ interface LifestyleImage {
 
 const lifestyleImages: LifestyleImage[] = [
   {
-    src: "/images/lifestyle/lifestyle-schlafzimmer.jpg",
+    src: "/images/lifestyle/schlafzimmer.webp",
     alt: "Vitair im Schlafzimmer auf dem Nachttisch",
     caption: "Schlafzimmer",
   },
   {
-    src: "/images/lifestyle/lifestyle-buero.jpg",
+    src: "/images/lifestyle/buero.webp",
     alt: "Vitair im Home Office auf dem Schreibtisch",
     caption: "Home Office",
   },
   {
-    src: "/images/lifestyle/lifestyle-wohnzimmer.jpg",
-    alt: "Vitair im Wohnzimmer auf dem Sideboard",
+    src: "/images/lifestyle/wohnzimmer.webp",
+    alt: "Vitair im Wohnzimmer auf dem Beistelltisch",
     caption: "Wohnzimmer",
   },
 ];

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { LegalPage } from "@/components/layout/legal-page";
 
 export const metadata: Metadata = {
-  title: "AGB | AIRIMPULSE",
-  description: "Allgemeine Geschäftsbedingungen der AIRIMPULSE by Jörg Klemm.",
+  title: "AGB | AIRIMPULS",
+  description: "Allgemeine Geschäftsbedingungen der AIRIMPULS by Jörg Klemm.",
 };
 
 export default function AGBPage() {
@@ -13,7 +13,7 @@ export default function AGBPage() {
       <p>
         Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle
         Bestellungen, die Verbraucher und Unternehmer über den Online-Shop
-        von AIRIMPULSE by Jörg Klemm (<mark>[PLATZHALTER]</mark> Anschrift) abschließen.
+        von AIRIMPULS by Jörg Klemm (<mark>[PLATZHALTER]</mark> Anschrift) abschließen.
       </p>
       <p>
         Maßgeblich ist die zum Zeitpunkt der Bestellung gültige Fassung der AGB.

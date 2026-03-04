@@ -3,7 +3,7 @@ import { LegalPage } from "@/components/layout/legal-page";
 import { brand } from "@/lib/brand";
 
 export const metadata: Metadata = {
-  title: "Datenschutzerklärung | AIRIMPULSE",
+  title: "Datenschutzerklärung | AIRIMPULS",
   description: "Informationen zum Datenschutz gemäß DSGVO.",
 };
 
@@ -39,7 +39,7 @@ export default function DatenschutzPage() {
       <h2>2. Verantwortliche Stelle</h2>
       <p>
         <strong><mark>[PLATZHALTER]</mark> Firmenname</strong><br />
-        AIRIMPULSE by Jörg Klemm<br />
+        AIRIMPULS by Jörg Klemm<br />
         <mark>[PLATZHALTER]</mark> Straße Nr.<br />
         <mark>[PLATZHALTER]</mark> PLZ Ort<br />
         E-Mail: {brand.social.email}

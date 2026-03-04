@@ -27,7 +27,7 @@ export function AffiliateCTA() {
             Empfehlen und profitieren
           </h2>
           <p className="text-brand-text-muted mt-3 max-w-lg mx-auto text-[0.95rem] leading-[1.7]">
-            Werden Sie Teil des AIRIMPULSE Partnerprogramms und verdienen Sie bis zu 10% Provision
+            Werden Sie Teil des AIRIMPULS Partnerprogramms und verdienen Sie bis zu 10% Provision
             auf jeden vermittelten Verkauf.
           </p>
         </motion.div>

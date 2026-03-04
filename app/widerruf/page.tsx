@@ -3,7 +3,7 @@ import { LegalPage } from "@/components/layout/legal-page";
 import { brand } from "@/lib/brand";
 
 export const metadata: Metadata = {
-  title: "Widerrufsbelehrung | AIRIMPULSE",
+  title: "Widerrufsbelehrung | AIRIMPULS",
   description: "Widerrufsbelehrung und Muster-Widerrufsformular.",
 };
 
@@ -22,7 +22,7 @@ export default function WiderrufPage() {
         Um Ihr Widerrufsrecht auszuüben, müssen Sie uns:
       </p>
       <p>
-        <strong>AIRIMPULSE by Jörg Klemm</strong><br />
+        <strong>AIRIMPULS by Jörg Klemm</strong><br />
         <mark>[PLATZHALTER]</mark> Straße Nr.<br />
         <mark>[PLATZHALTER]</mark> PLZ Ort<br />
         E-Mail: {brand.social.email}<br />
@@ -89,7 +89,7 @@ export default function WiderrufPage() {
       <div className="bg-white border border-[var(--brand-border-light)] rounded-xl p-6 my-6">
         <p>
           An:<br />
-          AIRIMPULSE by Jörg Klemm<br />
+          AIRIMPULS by Jörg Klemm<br />
           <mark>[PLATZHALTER]</mark> Straße Nr.<br />
           <mark>[PLATZHALTER]</mark> PLZ Ort<br />
           E-Mail: {brand.social.email}

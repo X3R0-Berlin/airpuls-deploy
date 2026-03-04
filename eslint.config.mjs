@@ -12,7 +12,19 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Non-Next.js files
+    "scripts/**",
+    "php/**",
+    "deploy/**",
   ]),
+  // Relax rules for auto-generated shadcn/MagicUI components
+  {
+    files: ["components/ui/**"],
+    rules: {
+      "react-hooks/exhaustive-deps": "warn",
+      "react-hooks/static-components": "off",
+    },
+  },
 ]);
 
 export default eslintConfig;

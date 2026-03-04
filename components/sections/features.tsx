@@ -12,39 +12,58 @@ const iconMap: Record<string, React.ComponentType<{ className?: string; strokeWi
   heart: Heart,
 };
 
-/* ── Video Background ──────────────────────────────────── */
-function FeatureVideo({ src }: { src: string }) {
+/* ── Video/Poster Background ──────────────────────────── */
+function FeatureMedia({ video, poster }: { video?: string; poster?: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [failed, setFailed] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
+  const [canPlayVideo, setCanPlayVideo] = useState(() => {
+    if (typeof window === "undefined") return false;
+    const wide = window.matchMedia("(min-width: 1024px)").matches;
+    const motionOk = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    return wide && motionOk;
+  });
 
   useEffect(() => {
     const mql = window.matchMedia("(min-width: 1024px)");
     const motionOk = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    setIsDesktop(mql.matches && motionOk);
 
-    const handler = (e: MediaQueryListEvent) => setIsDesktop(e.matches && motionOk);
+    const handler = (e: MediaQueryListEvent) => setCanPlayVideo(e.matches && motionOk);
     mql.addEventListener("change", handler);
     return () => mql.removeEventListener("change", handler);
   }, []);
 
-  if (!isDesktop || failed) return null;
+  if (!poster && !video) return null;
 
   return (
     <div className="absolute inset-0 z-0 overflow-hidden">
-      <video
-        ref={videoRef}
-        src={src}
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="metadata"
-        onError={() => setFailed(true)}
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-      {/* Strong white overlay + blur for guaranteed WCAG AA text contrast */}
-      <div className="absolute inset-0 bg-white/80 backdrop-blur-[3px]" />
+      {/* Poster — always visible as base layer */}
+      {poster && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={poster}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      )}
+      {/* Video — overlays poster on desktop when playing */}
+      {canPlayVideo && video && (
+        <video
+          ref={videoRef}
+          src={video}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          onPlaying={() => setShowVideo(true)}
+          onError={() => setShowVideo(false)}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+            showVideo ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      )}
+      {/* Gradient overlay — lighter top to show image, stronger bottom for text contrast */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-white/50 to-white/75" />
     </div>
   );
 }
@@ -74,8 +93,10 @@ export function Features({ features }: { features: Feature[] }) {
             return (
               <BlurFade key={feature.id} delay={i * 0.1} inView>
                 <div className="relative overflow-hidden bg-white h-full">
-                  {/* Video — fills entire card */}
-                  {feature.video && <FeatureVideo src={feature.video} />}
+                  {/* Video or poster fallback — fills entire card */}
+                  {(feature.video || feature.poster) && (
+                    <FeatureMedia video={feature.video} poster={feature.poster} />
+                  )}
 
                   {/* Content */}
                   <div className="relative z-10 p-[clamp(2rem,3vw,3rem)]">

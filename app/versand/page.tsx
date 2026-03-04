@@ -4,7 +4,7 @@ import { brand } from "@/lib/brand";
 import { Package, Truck, RotateCcw, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Versand & Rückgabe | AIRIMPULSE",
+  title: "Versand & Rückgabe | AIRIMPULS",
   description: "Informationen zu Versandkosten, Lieferzeiten und Rückgabe.",
 };
 
@@ -116,7 +116,7 @@ export default function VersandPage() {
 
       <h2>Retouradresse</h2>
       <p>
-        AIRIMPULSE by Jörg Klemm<br />
+        AIRIMPULS by Jörg Klemm<br />
         <mark>[PLATZHALTER]</mark> Straße Nr.<br />
         <mark>[PLATZHALTER]</mark> PLZ Ort<br />
         Deutschland

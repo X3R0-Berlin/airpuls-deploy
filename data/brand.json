@@ -1,16 +1,16 @@
 {
-  "name": "AIRIMPULSE",
+  "name": "AIRIMPULS",
   "logoParts": {
     "main": "AIR",
-    "accent": "IMPULSE"
+    "accent": "IMPULS"
   },
-  "logoImage": "/images/Airimpulse_Logo.svg",
-  "logoInverse": "/images/Airimpulse_Logo_Inverse.svg",
-  "logoMono": "/images/Airimpulse_Logo_Monochrom.svg",
-  "logoIcon": "/images/Airimpulse_Logo_Icon.svg",
+  "logoImage": "/images/Airimpuls_Logo.svg",
+  "logoInverse": "/images/Airimpuls_Logo_Inverse.svg",
+  "logoMono": "/images/Airimpuls_Logo_Monochrom.svg",
+  "logoIcon": "/images/Airimpuls_Logo_Icon.svg",
   "tagline": "Sauerstoff-Aktivierung nach dem Vorbild der Natur",
   "designer": "Jörg Klemm",
-  "companyLegal": "AIRIMPULSE by Jörg Klemm",
+  "companyLegal": "AIRIMPULS by Jörg Klemm",
   "language": "de",
   "currency": {
     "code": "EUR",
@@ -33,10 +33,10 @@
     "sans": "DM Sans"
   },
   "social": {
-    "email": "kontakt@airimpulse.de"
+    "email": "kontakt@airimpuls.de"
   },
   "seo": {
-    "titleTemplate": "%s | AIRIMPULSE by Jörg Klemm",
-    "defaultDescription": "AIRIMPULSE aktiviert Sauerstoff nach dem Vorbild der Natur — Katalysator-Technologie, handgefertigt in Deutschland. Seit über 25 Jahren bewährt."
+    "titleTemplate": "%s | AIRIMPULS by Jörg Klemm",
+    "defaultDescription": "AIRIMPULS aktiviert Sauerstoff nach dem Vorbild der Natur — Katalysator-Technologie, handgefertigt in Deutschland. Seit über 25 Jahren bewährt."
   }
 }

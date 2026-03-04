@@ -83,7 +83,7 @@ function cartReducer(state: CartState, action: CartAction): CartState {
   }
 }
 
-const CART_KEY = "breezi_cart";
+const CART_KEY = "airimpuls_cart";
 
 interface CartContextValue {
   items: CartItem[];

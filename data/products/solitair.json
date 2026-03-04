@@ -1,7 +1,7 @@
 {
   "slug": "solitair",
   "name": "Solitair",
-  "collection": "AIRIMPULSE Collection",
+  "collection": "AIRIMPULS Collection",
   "subtitle": "Atemluft-Energizer ohne Elektronik",
   "designer": "Jörg Klemm",
   "price": 249900,
@@ -18,11 +18,17 @@
   "heroHeading": "Reine <em>Sauerstoff-Aktivierung</em><br/>ohne Elektronik",
   "heroDescription": "Der Solitair setzt auf das Wesentliche: Katalysator-Technologie ohne elektronische Steuerung. Nachhaltig, langlebig, für die persönliche Anwendung mit Atembrille.",
   "images": {
-    "hero": "BREEZY-Front-Redlight.png",
+    "hero": "hero.webp",
     "gallery": [
-      { "file": "BREEZY-Front-NoCap.png", "alt": "Solitair Frontansicht" }
+      { "file": "front.webp", "alt": "Solitair Frontansicht" },
+      { "file": "vortex.webp", "alt": "Solitair Drei-Viertel-Ansicht" },
+      { "file": "hero.webp", "alt": "Solitair Draufsicht Wasser-Vortex" },
+      { "file": "detail.webp", "alt": "Solitair LED-Vortex Detail" },
+      { "file": "rueckseite.webp", "alt": "Solitair Rückansicht" },
+      { "file": "ambient.webp", "alt": "Solitair im Schlafzimmer" },
+      { "file": "lifestyle.webp", "alt": "Solitair im Wohnzimmer" }
     ],
-    "basePath": "/images/products/breezy-original"
+    "basePath": "/images/products/solitair"
   },
   "specs": [
     { "label": "Anwendung", "value": "Persönliche Nutzung mit Atembrille" },
@@ -38,7 +44,7 @@
       "tag": "Philosophie",
       "heading": "Reduktion auf das Wesentliche",
       "text": "Der Solitair verzichtet bewusst auf elektronische Steuerung. Keine Platine, keine Software, keine Verschleißteile. Reine Katalysator-Technologie, die Sauerstoff auf natürliche Weise aktiviert — für die persönliche Anwendung mit Atembrille. Ein extrem nachhaltiges Gerät, das Generationen überdauert.",
-      "image": "BreezyCloseup-HQ.jpg",
+      "image": "detail.webp",
       "bullets": [
         "Keine Elektronik — maximale Langlebigkeit",
         "Reine Katalysator-Aktivierung",
@@ -50,8 +56,8 @@
     {
       "tag": "Anwendung",
       "heading": "Wie das Preventair — für zu Hause",
-      "text": "Der Solitair nutzt dieselbe Atembrille-Technologie wie das professionelle Preventair-Therapiegerät, jedoch als Endkundengerät für den täglichen Gebrauch zu Hause. Die Sauerstoff-Aktivierung unterstützt die mitochondriale Energieproduktion und fördert das natürliche Wohlbefinden.",
-      "image": "BreezyCloseupRed-HQ.jpg",
+      "text": "Der Solidair nutzt dieselbe Atembrille-Technologie wie das professionelle Preventair-Therapiegerät, jedoch als Endkundengerät für den täglichen Gebrauch zu Hause. Die Sauerstoff-Aktivierung unterstützt die mitochondriale Energieproduktion und fördert das natürliche Wohlbefinden.",
+      "image": "ambient.webp",
       "bullets": [
         "Gleiche Technologie wie das Preventair",
         "Für den täglichen Heimgebrauch konzipiert",

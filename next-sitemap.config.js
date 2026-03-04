@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.NEXT_PUBLIC_BASE_URL || "https://airimpulse.de",
+  siteUrl: process.env.NEXT_PUBLIC_BASE_URL || "https://airimpuls.de",
   generateRobotsTxt: false, // We have a manual robots.txt
   changefreq: "weekly",
   priority: 0.7,
@@ -8,7 +8,8 @@ module.exports = {
   additionalPaths: async () => [
     { loc: "/", changefreq: "daily", priority: 1.0 },
     { loc: "/produkte", changefreq: "weekly", priority: 0.9 },
-    { loc: "/product/breezy-original", changefreq: "weekly", priority: 0.9 },
+    { loc: "/product/vitair", changefreq: "weekly", priority: 0.9 },
+    { loc: "/product/solitair", changefreq: "weekly", priority: 0.8 },
     { loc: "/product/preventair", changefreq: "weekly", priority: 0.7 },
     { loc: "/kontakt", changefreq: "monthly", priority: 0.6 },
     { loc: "/faq", changefreq: "monthly", priority: 0.6 },

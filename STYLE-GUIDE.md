@@ -1,13 +1,13 @@
-# AIRIMPULSE Style Guide
+# AIRIMPULS Style Guide
 
-> Design System & Farbpalette basierend auf dem AIRIMPULSE Firmenlogo.
+> Design System & Farbpalette basierend auf dem AIRIMPULS Firmenlogo.
 > Letzte Aktualisierung: 2. März 2026
 
 ---
 
 ## 1. Farbpalette
 
-Die Farben wurden aus den Gradienten des AIRIMPULSE-Logos abgeleitet.
+Die Farben wurden aus den Gradienten des AIRIMPULS-Logos abgeleitet.
 
 ### 1.1 Primärfarben (aus Logo-Gradienten)
 
@@ -164,7 +164,7 @@ Die Farben wurden aus den Gradienten des AIRIMPULSE-Logos abgeleitet.
 |-------------|------|
 | Hintergrund (initial) | `bg-white/60` + `backdrop-blur-[60px]` |
 | Hintergrund (scrolled) | `bg-white/90` + `backdrop-blur-[60px]` |
-| Logo | Monochrom-Variante (`airimpulse-logo-mono.svg`) |
+| Logo | Monochrom-Variante (`Airimpuls_Logo_Monochrom.svg`) |
 | Text | `#222222` |
 | Hover | `#357868` (Accent) |
 
@@ -173,7 +173,7 @@ Die Farben wurden aus den Gradienten des AIRIMPULSE-Logos abgeleitet.
 | Eigenschaft | Wert |
 |-------------|------|
 | Hintergrund | `#121416` (Dark BG) |
-| Logo | Inverse-Variante (`airimpulse-logo.svg`) |
+| Logo | Inverse-Variante (`Airimpuls_Logo_Inverse.svg`) |
 | Text | `#8a9098` (heller Grauton für dunklen Hintergrund) |
 | Hover-Text | `#FFFFFF` |
 | Border | `rgba(255,255,255,0.10)` |
@@ -219,9 +219,9 @@ Die Farben wurden aus den Gradienten des AIRIMPULSE-Logos abgeleitet.
 
 | Variante | Datei | Verwendung |
 |----------|-------|------------|
-| **Inverse** | `airimpulse-logo.svg` | Dunkler Hintergrund (Footer) |
-| **Monochrom** | `airimpulse-logo-mono.svg` | Heller Hintergrund (Navbar) |
-| **Icon** | `airimpulse-icon.svg` | Favicon, App-Icon, Social Media |
+| **Inverse** | `Airimpuls_Logo_Inverse.svg` | Dunkler Hintergrund (Footer) |
+| **Monochrom** | `Airimpuls_Logo_Monochrom.svg` | Heller Hintergrund (Navbar) |
+| **Icon** | `Airimpuls_Logo_Icon.svg` | Favicon, App-Icon, Social Media |
 
 ---
 

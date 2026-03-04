@@ -1,0 +1,12 @@
+{
+  "name": "airimpuls/shop-api",
+  "description": "PHP API endpoints for AIRIMPULS Shop (Stripe, forms)",
+  "type": "project",
+  "require": {
+    "php": ">=8.1",
+    "stripe/stripe-php": "^15.0"
+  },
+  "config": {
+    "optimize-autoloader": true
+  }
+}

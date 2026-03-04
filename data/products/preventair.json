@@ -1,7 +1,7 @@
 {
   "slug": "preventair",
   "name": "Preventair",
-  "collection": "AIRIMPULSE Collection",
+  "collection": "AIRIMPULS Collection",
   "subtitle": "Professionelles Therapiegerät",
   "designer": "Jörg Klemm",
   "price": 699900,
@@ -18,14 +18,14 @@
   "heroHeading": "Professionelle<br/><em>Atemtherapie</em><br/>seit 25 Jahren bewährt",
   "heroDescription": "PREVENTAIR — das professionelle Therapiegerät für intensive Sauerstoff-Aktivierung. Anwendung mit Atembrille in 15–20 Minuten. Bewährt seit über 25 Jahren.",
   "images": {
-    "hero": "preventair-front.png",
+    "hero": "front.webp",
     "gallery": [
-      { "file": "preventair-front.png", "alt": "Preventair Frontansicht — Produktfoto" },
-      { "file": "preventair-hero.jpg", "alt": "Preventair Therapiegerät mit blauer LED-Beleuchtung" },
-      { "file": "preventair-detail-led.jpg", "alt": "Preventair Nahaufnahme — Aktivierungskammer" },
-      { "file": "preventair-blue-light.jpg", "alt": "Preventair Sauerstoff-Aktivierung aktiv" },
-      { "file": "preventair-ambient.jpg", "alt": "Preventair im Anwendungsumfeld" },
-      { "file": "preventair-breezy-duo.jpg", "alt": "Preventair und Airimpulse — Komplettsystem" }
+      { "file": "front.webp", "alt": "Preventair Frontansicht" },
+      { "file": "ambient.webp", "alt": "Preventair Drei-Viertel-Ansicht" },
+      { "file": "detail-led.webp", "alt": "Preventair Draufsicht Aktivierungskammer" },
+      { "file": "blaulicht.webp", "alt": "Preventair Vortex-Detail Nahaufnahme" },
+      { "file": "duo.webp", "alt": "Preventair Rückansicht" },
+      { "file": "hero.webp", "alt": "Preventair im Anwendungsumfeld" }
     ],
     "basePath": "/images/products/preventair"
   },
@@ -44,7 +44,7 @@
       "tag": "Therapie",
       "heading": "Professionelle Atemtherapie — seit über 25 Jahren bewährt",
       "text": "Der PREVENTAIR ist für die intensive Kurzzeit-Anwendung mit Atembrille konzipiert. In 15–20 Minuten Sitzungen aktiviert das Gerät Sauerstoff gezielt für die Inhalation. Als Therapiegerät hat sich diese Technologie seit über 25 Jahren in der Praxis bewährt — bei chronischen Lungenerkrankungen (COPD) und Stoffwechselstörungen wie Diabetes mellitus.",
-      "image": "preventair-detail-led.jpg",
+      "image": "detail-led.webp",
       "bullets": [
         "Intensive Kurzzeit-Anwendung: 15–20 Minuten pro Sitzung",
         "Gezielte Inhalation über professionelle Atembrille",
@@ -58,7 +58,7 @@
       "tag": "Technologie",
       "heading": "Sauerstoff-Aktivierung auf höchstem Niveau",
       "text": "Die Kerntechnologie des PREVENTAIR überführt Sauerstoff von seinem gewöhnlichen Triplett-Zustand in den energetisch aktiven Singulett-Zustand. Dieser aktivierte Sauerstoff unterstützt die Mitochondrien — die Kraftwerke unserer Zellen — bei der lebenswichtigen Energieerzeugung. Die Aktivierungskammer visualisiert den Prozess mit beeindruckender LED-Illumination.",
-      "image": "preventair-blue-light.jpg",
+      "image": "blaulicht.webp",
       "bullets": [
         "Sauerstoff-Aktivierung: Triplett → Singulett",
         "Unterstützt mitochondriale Energieproduktion",
@@ -71,7 +71,7 @@
       "tag": "Qualität",
       "heading": "Präzision in jedem Detail — jedes Gerät ein Unikat",
       "text": "Jeder PREVENTAIR wird in sorgfältiger Handarbeit gefertigt. Das gebürstete Edelstahlgehäuse und die präzise eingepasste Aktivierungskammer machen jedes Gerät zu einem Präzisionsinstrument. Materialien und Verarbeitung entsprechen dem professionellen Anspruch eines Therapiegeräts.",
-      "image": "preventair-ambient.jpg",
+      "image": "ambient.webp",
       "bullets": [
         "Sorgfältige Handmontage in Deutschland",
         "Premium-Edelstahlgehäuse",

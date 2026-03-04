@@ -25,7 +25,7 @@ export default function VergleichPage() {
                 href="/"
                 className="hover:text-brand-text-dark transition-colors"
               >
-                AIRIMPULSE
+                AIRIMPULS
               </Link>
               <span>/</span>
               <span className="text-brand-text-dark">Produktvergleich</span>

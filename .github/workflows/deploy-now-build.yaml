@@ -1,0 +1,62 @@
+name: Deploy Now Build
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # 1. Build Next.js static export
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install Node.js dependencies
+        run: npm ci
+
+      - name: Build static site
+        run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_URL: ${{ vars.NEXT_PUBLIC_BASE_URL || 'https://airimpuls.de' }}
+
+      - name: Build products.json for PHP API
+        run: node scripts/build-products-json.js
+
+      # 2. Install PHP dependencies
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: composer
+
+      - name: Install Composer dependencies
+        run: composer install --no-dev --optimize-autoloader
+
+      # 3. Assemble deployment directory
+      - name: Assemble deployment
+        run: |
+          mkdir -p deploy/public
+          # Copy Next.js static export
+          cp -r out/* deploy/public/
+          # Copy PHP API files
+          mkdir -p deploy/public/api
+          cp php/api/*.php deploy/public/api/
+          cp php/api/products.json deploy/public/api/
+          # Copy .htaccess
+          cp php/.htaccess deploy/public/.htaccess
+          # Copy Composer vendor (outside public for security)
+          cp -r vendor deploy/vendor
+
+      # 4. Upload artifact for IONOS Deploy Now
+      - name: Upload deployment artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: deployment
+          path: deploy/

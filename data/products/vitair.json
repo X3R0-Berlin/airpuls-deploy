@@ -1,7 +1,7 @@
 {
   "slug": "vitair",
   "name": "Vitair",
-  "collection": "AIRIMPULSE Collection",
+  "collection": "AIRIMPULS Collection",
   "subtitle": "Luftenergizer",
   "designer": "Jörg Klemm",
   "price": 164900,
@@ -13,21 +13,21 @@
   "maxQuantity": 10,
   "featured": true,
   "description": "Der Vitair aktiviert Sauerstoff nach dem Vorbild der Natur. CNC-präzisionsgefräste Bauteile und sorgfältige Handarbeit machen jedes Gerät zu einem Unikat. Die Katalysator-Technologie versetzt Sauerstoff in seinen energetisch aktiven Zustand — so wie es in der Natur an Wasserfällen und in Wäldern geschieht.",
-  "heroVideo": "vitair-hero-loop.mp4",
+  "heroVideo": "hero.webm",
   "heroTagline": "Neu — Jetzt verfügbar",
   "heroHeading": "Die natürliche<br/>Energie der <em>Natur</em><br/>für dein Zuhause",
   "heroDescription": "Der Vitair aktiviert den Sauerstoff deiner Raumluft — wie ihn die Natur an Wasserfällen, in Wäldern und nach Gewittern erzeugt. Handgefertigt in Deutschland.",
   "images": {
-    "hero": "BREEZY-Front-Redlight.png",
+    "hero": "rotlicht.webp",
     "gallery": [
-      { "file": "BREEZY-Front-NoCap.png", "alt": "Vitair Frontansicht" },
-      { "file": "BREEZY-Front-Open.png", "alt": "Vitair geöffnet" },
-      { "file": "BREEZY-Front-Redlight.png", "alt": "Vitair Rotlichtmodus" },
-      { "file": "BreezyCloseup-HQ.jpg", "alt": "Vitair Nahaufnahme" },
-      { "file": "BreezyCloseupRed-HQ.jpg", "alt": "Vitair Ventilator Detail" },
-      { "file": "BREEZY-back-usbc.png", "alt": "Vitair Rückseite mit USB-C Anschluss" }
+      { "file": "front.webp", "alt": "Vitair Frontansicht" },
+      { "file": "offen.webp", "alt": "Vitair geöffnet" },
+      { "file": "rotlicht.webp", "alt": "Vitair Rotlichtmodus" },
+      { "file": "detail.webp", "alt": "Vitair Nahaufnahme" },
+      { "file": "detail-rot.webp", "alt": "Vitair Ventilator Detail" },
+      { "file": "usbc.webp", "alt": "Vitair Rückseite mit USB-C Anschluss" }
     ],
-    "basePath": "/images/products/breezy-original"
+    "basePath": "/images/products/vitair"
   },
   "specs": [
     { "label": "Gehäuse", "value": "CNC-präzisionsgefräst, eloxiert" },
@@ -45,7 +45,7 @@
       "tag": "Design",
       "heading": "Perfektion in jedem Detail",
       "text": "Jeder Vitair wird aus CNC-präzisionsgefrästen Einzelteilen in sorgfältiger Handarbeit montiert. Der ikonische Power-Button mit blau leuchtendem LED-Ring vereint intuitive Bedienung mit skulpturalem Design. Ein Magnet hält den Lichtschirm sicher und ermöglicht mühelose Wartung.",
-      "image": "BreezyCloseup-HQ.jpg",
+      "image": "detail.webp",
       "bullets": [
         "Deutsche Präzisionsfertigung",
         "Intuitive Ein-Knopf-Bedienung mit LED-Statusanzeige",
@@ -58,7 +58,7 @@
       "tag": "Technologie",
       "heading": "Sauerstoff-Aktivierung nach dem Vorbild der Natur",
       "text": "Der Vitair nutzt Katalysatortechnologie und speziell abgestimmte LED-Module, um Sauerstoff aus seinem gewöhnlichen Triplett-Zustand in den energetisch aktiven Singulett-Zustand zu überführen. Genau diesen Prozess leisten in der Natur Pflanzen, Wasserfälle und Gewitter. Unsere Mitochondrien — die Kraftwerke unserer Zellen — benötigen aktivierten Sauerstoff, um Energie zu erzeugen.",
-      "image": "BreezyCloseupRed-HQ.jpg",
+      "image": "detail-rot.webp",
       "bullets": [
         "Katalysatorscheiben aktivieren Sauerstoff-Moleküle",
         "4× Hochleistungs-LED-Module",
@@ -70,7 +70,7 @@
       "tag": "Wissenschaft",
       "heading": "Warum aktivierter Sauerstoff?",
       "text": "Sauerstoff in unserer Atemluft liegt im sogenannten Triplett-Zustand vor — er ist stabil, aber energetisch inaktiv. Erst in der Singulett-Konfiguration kann er mit Wasserstoff in unseren Mitochondrien zu Wasser reagieren und dabei lebenswichtige Energie freisetzen. Der Vitair unterstützt diesen natürlichen Prozess und fördert die zelluläre Energieversorgung.",
-      "image": "BREEZY-Front-Open.png",
+      "image": "offen.webp",
       "bullets": [
         "Sauerstoff-Aktivierung: Triplett → Singulett",
         "Unterstützt die mitochondriale Energieproduktion",
@@ -92,7 +92,7 @@
     "Kostenloser Versand"
   ],
   "hotspots": {
-    "image": "BREEZY-Front-NoCap.png",
+    "image": "front.webp",
     "points": [
       {
         "x": 50,

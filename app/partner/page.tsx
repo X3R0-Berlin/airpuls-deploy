@@ -6,7 +6,7 @@ import { PartnerPageClient } from "./partner-client";
 export const metadata = {
   title: `Partnerprogramm | ${brand.name}`,
   description:
-    "Werden Sie AIRIMPULSE Partner und verdienen Sie bis zu 10% Provision. Drei Stufen: Kunde, Therapeut, Creator.",
+    "Werden Sie AIRIMPULS Partner und verdienen Sie bis zu 10% Provision. Drei Stufen: Kunde, Therapeut, Creator.",
 };
 
 function getAffiliateData() {

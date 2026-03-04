@@ -1,7 +1,7 @@
-# CLAUDE.md - Breezi Shop
+# CLAUDE.md - AIRIMPULS Shop
 
 ## Project Overview
-Premium e-commerce shop for BREEZI Luftenergizer products. Built with Next.js 15 (App Router), Tailwind CSS v4, shadcn/ui, and MagicUI animations. Mobile-first design with German language interface.
+Premium e-commerce shop for AIRIMPULS Luftenergizer products (Vitair, Solitair, Preventair). Built with Next.js 15 (App Router), Tailwind CSS v4, shadcn/ui, and MagicUI animations. Mobile-first design with German language interface.
 
 ## Tech Stack
 - **Framework**: Next.js 15 (App Router, TypeScript)
@@ -41,7 +41,9 @@ docker compose --profile dev up  # Dev container with hot-reload
 
 ## Important Files
 - `data/brand.json` - Central brand identity (name, colors, fonts, tagline)
-- `data/products/breezy-original.json` - Main product data
+- `data/products/vitair.json` - Flagship product (featured)
+- `data/products/solitair.json` - Solitair product
+- `data/products/preventair.json` - Preventair product
 - `app/globals.css` - Tailwind config + CSS custom properties
 - `lib/cart-context.tsx` - Cart state management
 - `app/api/checkout/route.ts` - Stripe checkout session creation

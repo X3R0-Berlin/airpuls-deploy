@@ -1,0 +1,14 @@
+bootstrap:
+  excludes:
+    - node_modules
+    - .next
+    - .git
+    - .github
+    - src
+
+recurring:
+  excludes:
+    - node_modules
+    - .next
+    - .git
+    - .github

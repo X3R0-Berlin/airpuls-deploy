@@ -59,7 +59,7 @@ export function DetailSection({
     >
       <div className="max-w-[1280px] mx-auto px-[clamp(1.5rem,4vw,4rem)]">
         <div
-          className={`grid grid-cols-1 lg:grid-cols-2 gap-[clamp(2rem,5vw,5rem)] items-center ${
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-[clamp(2rem,5vw,5rem)] items-center ${
             detail.reverse ? "lg:[direction:rtl]" : ""
           }`}
         >

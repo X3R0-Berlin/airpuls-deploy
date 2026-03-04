@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Cookie, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
-const STORAGE_KEY = "airimpulse_cookie_consent";
+const STORAGE_KEY = "airimpuls_cookie_consent";
 
 export function CookieBanner() {
   const [visible, setVisible] = useState(false);

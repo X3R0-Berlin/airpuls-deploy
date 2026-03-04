@@ -12,7 +12,7 @@ import faqData from "@/data/faq.json";
 import { brand } from "@/lib/brand";
 
 export const metadata: Metadata = {
-  title: "FAQ | AIRIMPULSE",
+  title: "FAQ | AIRIMPULS",
   description: "Häufig gestellte Fragen zu Produkten, Bestellung, Versand und Rückgabe.",
 };
 

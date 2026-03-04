@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getAllProducts, getProductBySlug, getTestimonials, getBundles } from "@/lib/products";
-import { brand, formatCurrency } from "@/lib/brand";
+import { brand } from "@/lib/brand";
 import { MarqueeBar } from "@/components/sections/marquee-bar";
 import { ProductShowcase } from "@/components/sections/product-showcase";
 import { UpsellDrawer } from "@/components/sections/upsell-drawer";
@@ -45,7 +45,7 @@ export default async function ProductPage({
   const allTestimonials = testimonials.length > 0 ? testimonials : getTestimonials();
   const bundles = getBundles();
 
-  const siteUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://airimpulse.de";
+  const siteUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://airimpuls.de";
 
   // Product Schema.org JSON-LD
   const productSchema = {

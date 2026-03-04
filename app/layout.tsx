@@ -27,7 +27,7 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://airimpulse.de";
+const siteUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://airimpuls.de";
 
 export const metadata: Metadata = {
   title: {
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
       { url: "/favicon.ico", sizes: "32x32" },
     ],
     apple: [
-      { url: "/images/Airimpulse_Logo_Icon.svg", type: "image/svg+xml" },
+      { url: "/images/Airimpuls_Logo_Icon.svg", type: "image/svg+xml" },
     ],
   },
   openGraph: {
@@ -80,7 +80,7 @@ const organizationSchema = {
   name: brand.name,
   legalName: brand.companyLegal,
   url: siteUrl,
-  logo: `${siteUrl}/images/Airimpulse_Logo.svg`,
+  logo: `${siteUrl}/images/Airimpuls_Logo.svg`,
   email: brand.social.email,
   description: brand.seo.defaultDescription,
   sameAs: [],

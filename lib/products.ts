@@ -75,9 +75,15 @@ const productsDir = path.join(process.cwd(), "data", "products");
 
 export function getAllProducts(): Product[] {
   const files = fs.readdirSync(productsDir).filter((f) => f.endsWith(".json"));
-  return files.map((file) => {
+  const products = files.map((file) => {
     const content = fs.readFileSync(path.join(productsDir, file), "utf-8");
     return JSON.parse(content) as Product;
+  });
+  // Featured (in stock) products first, then coming soon, alphabetically within each group
+  return products.sort((a, b) => {
+    if (a.featured !== b.featured) return a.featured ? -1 : 1;
+    if (a.inStock !== b.inStock) return a.inStock ? -1 : 1;
+    return a.name.localeCompare(b.name);
   });
 }
 

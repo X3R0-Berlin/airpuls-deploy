@@ -3,11 +3,103 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Lottie, { type LottieRefCurrentProps } from "lottie-react";
 import { ShoppingBag, Menu, X, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { brand } from "@/lib/brand";
 import { useCart } from "@/lib/cart-context";
 import { cn } from "@/lib/utils";
+
+function NavbarLogo({ className }: { className?: string }) {
+  const lottieRef = useRef<LottieRefCurrentProps>(null);
+  const [animationData, setAnimationData] = useState<unknown>(null);
+  const [prefersReduced] = useState(
+    () => typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  );
+  const [animDone, setAnimDone] = useState(false);
+
+  useEffect(() => {
+    if (prefersReduced) return;
+
+    fetch("/animations/airimpuls-logo.json")
+      .then((res) => res.json())
+      .then(setAnimationData)
+      .catch(() => {});
+  }, [prefersReduced]);
+
+  const handleComplete = useCallback(() => {
+    setAnimDone(true);
+  }, []);
+
+  const handleHover = useCallback(() => {
+    if (animDone) {
+      setAnimDone(false);
+      // Small delay so Lottie becomes visible before playing
+      requestAnimationFrame(() => {
+        lottieRef.current?.goToAndPlay(0);
+      });
+    }
+  }, [animDone]);
+
+  if (!animationData || prefersReduced) {
+    return (
+      <Image
+        src={brand.logoImage}
+        alt={brand.name}
+        width={640}
+        height={650}
+        className={className}
+        priority
+      />
+    );
+  }
+
+  // Lottie canvas: 1550×600 (icon + text)
+  return (
+    <div
+      onMouseEnter={handleHover}
+      className={cn("relative", className)}
+      style={{ aspectRatio: "1550 / 600" }}
+      aria-label={brand.name}
+    >
+      {/* Lottie animation — hidden after completion */}
+      <div
+        className="absolute inset-0"
+        style={{
+          opacity: animDone ? 0 : 1,
+          transition: "none",
+          pointerEvents: animDone ? "none" : "auto",
+        }}
+      >
+        <Lottie
+          lottieRef={lottieRef}
+          animationData={animationData}
+          loop={false}
+          autoplay
+          onComplete={handleComplete}
+          style={{ height: "100%", width: "100%" }}
+        />
+      </div>
+      {/* Static SVG — fades in after animation completes */}
+      <div
+        className="absolute inset-0"
+        style={{
+          opacity: animDone ? 1 : 0,
+          transition: "none",
+        }}
+      >
+        <Image
+          src={brand.logoImage}
+          alt={brand.name}
+          width={1550}
+          height={600}
+          className="h-full w-auto"
+          priority
+        />
+      </div>
+    </div>
+  );
+}
 
 export type NavProduct = {
   slug: string;
@@ -81,14 +173,7 @@ export function Navbar({ products = [] }: { products?: NavProduct[] }) {
         <div className="max-w-[1280px] mx-auto px-[clamp(1.5rem,4vw,4rem)] flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center no-underline" onClick={closeMobile}>
-            <Image
-              src={brand.logoImage}
-              alt={brand.name}
-              width={640}
-              height={650}
-              className="h-14 w-auto"
-              priority
-            />
+            <NavbarLogo className="h-14 w-auto" />
           </Link>
 
           {/* Desktop nav */}

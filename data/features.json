@@ -3,28 +3,32 @@
     "id": 1,
     "icon": "sun",
     "title": "Zelluläre Energie",
-    "description": "AIRIMPULSE aktiviert Sauerstoff vom inaktiven Triplett- in den energetischen Singulett-Zustand — genau wie in der Natur. Deine Mitochondrien, die Kraftwerke der Zellen, können aktivierten Sauerstoff direkt für die Energieerzeugung nutzen.",
-    "video": "/videos/feature-zellulaere-energie.mp4"
+    "description": "AIRIMPULS aktiviert Sauerstoff vom inaktiven Triplett- in den energetischen Singulett-Zustand — genau wie in der Natur. Deine Mitochondrien, die Kraftwerke der Zellen, können aktivierten Sauerstoff direkt für die Energieerzeugung nutzen.",
+    "video": "/videos/energie.webm",
+    "poster": "/images/features/energie.webp"
   },
   {
     "id": 2,
     "icon": "moon",
     "title": "Besserer Schlaf",
-    "description": "Aktivierter Sauerstoff unterstützt die natürliche Regeneration im Schlaf. Mitochondrien produzieren nachts besonders intensiv Energie für Zellreparatur und Erholung. AIRIMPULSE schafft die optimale Atemluft dafür.",
-    "video": "/videos/feature-besserer-schlaf.mp4"
+    "description": "Aktivierter Sauerstoff unterstützt die natürliche Regeneration im Schlaf. Mitochondrien produzieren nachts besonders intensiv Energie für Zellreparatur und Erholung. AIRIMPULS schafft die optimale Atemluft dafür.",
+    "video": "/videos/schlaf.webm",
+    "poster": "/images/features/schlaf.webp"
   },
   {
     "id": 3,
     "icon": "sparkles",
     "title": "Natur-Prinzip",
-    "description": "An Wasserfällen, in Wäldern und nach Gewittern ist Sauerstoff auf natürliche Weise aktiviert. AIRIMPULSE reproduziert dieses Prinzip mit Katalysator-Technologie und bringt die erfrischende Energie der Natur in deine Räume.",
-    "video": "/videos/feature-natur-prinzip.mp4"
+    "description": "An Wasserfällen, in Wäldern und nach Gewittern ist Sauerstoff auf natürliche Weise aktiviert. AIRIMPULS reproduziert dieses Prinzip mit Katalysator-Technologie und bringt die erfrischende Energie der Natur in deine Räume.",
+    "video": "/videos/natur.webm",
+    "poster": "/images/features/natur.webp"
   },
   {
     "id": 4,
     "icon": "heart",
     "title": "25 Jahre Erfahrung",
     "description": "Die Sauerstoff-Aktivierungstechnologie ist seit über 25 Jahren in der professionellen Anwendung bewährt. Jedes Gerät wird in Deutschland von Hand gefertigt — CNC-präzisionsgefräst mit deutschen Markenkomponenten.",
-    "video": "/videos/feature-25-jahre-erfahrung.mp4"
+    "video": "/videos/erfahrung.webm",
+    "poster": "/images/features/erfahrung.webp"
   }
 ]

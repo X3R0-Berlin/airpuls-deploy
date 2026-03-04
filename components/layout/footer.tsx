@@ -27,7 +27,7 @@ export function Footer() {
             title="Shop"
             links={[
               { label: "Alle Produkte", href: "/produkte" },
-              { label: "AIRIMPULSE Luftenergizer", href: "/product/vitair" },
+              { label: "AIRIMPULS Luftenergizer", href: "/product/vitair" },
               { label: "Preventair", href: "/product/preventair" },
             ]}
           />

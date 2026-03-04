@@ -8,8 +8,8 @@ import { getAllProducts } from "@/lib/products";
 import { formatCurrency } from "@/lib/brand";
 
 export const metadata: Metadata = {
-  title: "Produkte | AIRIMPULSE",
-  description: "Entdecke alle AIRIMPULSE Produkte — natürliche Energie für dein Zuhause.",
+  title: "Produkte | AIRIMPULS",
+  description: "Entdecke alle AIRIMPULS Produkte — natürliche Energie für dein Zuhause.",
 };
 
 export default function ProduktePage() {

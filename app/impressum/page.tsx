@@ -3,7 +3,7 @@ import { LegalPage } from "@/components/layout/legal-page";
 import { brand } from "@/lib/brand";
 
 export const metadata: Metadata = {
-  title: "Impressum | AIRIMPULSE",
+  title: "Impressum | AIRIMPULS",
   description: "Impressum und Anbieterkennzeichnung gemäß § 5 TMG.",
 };
 
@@ -13,7 +13,7 @@ export default function ImpressumPage() {
       <h2>Angaben gemäß § 5 TMG</h2>
       <p>
         <strong><mark>[PLATZHALTER]</mark> Firmenname</strong><br />
-        AIRIMPULSE by Jörg Klemm<br />
+        AIRIMPULS by Jörg Klemm<br />
         <mark>[PLATZHALTER]</mark> Straße Nr.<br />
         <mark>[PLATZHALTER]</mark> PLZ Ort<br />
         Deutschland

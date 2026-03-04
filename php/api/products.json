@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "preventair",
+    "name": "Preventair",
+    "subtitle": "Professionelles Therapiegerät",
+    "price": 699900,
+    "description": "Der PREVENTAIR ist ein professionelles Therapiegerät für die intensive Kurzzeit-Anwendung mit Atembrille. Seit über 25 Jahren als Therapiegerät bewährt, aktiviert er Sauerstoff für die gezielte Inhala",
+    "images": {
+      "basePath": "/images/products/preventair",
+      "gallery": [
+        {
+          "file": "front.webp",
+          "alt": "Preventair Frontansicht"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "solitair",
+    "name": "Solitair",
+    "subtitle": "Atemluft-Energizer ohne Elektronik",
+    "price": 249900,
+    "description": "Der Solitair ist ein extrem nachhaltiges Endkundengerät für die persönliche Anwendung mit Atembrille — ohne elektronische Steuerung, rein auf die Kraft der Katalysator-Technologie reduziert. Ein Puris",
+    "images": {
+      "basePath": "/images/products/solitair",
+      "gallery": [
+        {
+          "file": "front.webp",
+          "alt": "Solitair Frontansicht"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "vitair",
+    "name": "Vitair",
+    "subtitle": "Luftenergizer",
+    "price": 164900,
+    "description": "Der Vitair aktiviert Sauerstoff nach dem Vorbild der Natur. CNC-präzisionsgefräste Bauteile und sorgfältige Handarbeit machen jedes Gerät zu einem Unikat. Die Katalysator-Technologie versetzt Sauersto",
+    "images": {
+      "basePath": "/images/products/vitair",
+      "gallery": [
+        {
+          "file": "front.webp",
+          "alt": "Vitair Frontansicht"
+        }
+      ]
+    }
+  }
+]

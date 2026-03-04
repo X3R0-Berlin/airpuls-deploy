@@ -17,7 +17,7 @@ export function AffiliateTracker() {
       // Store ref code in cookie for 30 days
       const expires = new Date();
       expires.setDate(expires.getDate() + 30);
-      document.cookie = `airimpulse_ref=${encodeURIComponent(ref)};expires=${expires.toUTCString()};path=/;SameSite=Lax`;
+      document.cookie = `airimpuls_ref=${encodeURIComponent(ref)};expires=${expires.toUTCString()};path=/;SameSite=Lax`;
     }
   }, [searchParams]);
 
@@ -29,6 +29,6 @@ export function AffiliateTracker() {
  */
 export function getAffiliateRef(): string | null {
   if (typeof document === "undefined") return null;
-  const match = document.cookie.match(/airimpulse_ref=([^;]+)/);
+  const match = document.cookie.match(/airimpuls_ref=([^;]+)/);
   return match ? decodeURIComponent(match[1]) : null;
 }

@@ -138,7 +138,7 @@ export function PartnerPageClient({ affiliate }: { affiliate: AffiliateData }) {
         <div className="max-w-7xl mx-auto">
           <nav className="flex items-center gap-2 text-brand-text-muted text-sm font-sans">
             <Link href="/" className="hover:text-brand-text-dark transition-colors">
-              AIRIMPULSE
+              AIRIMPULS
             </Link>
             <span>/</span>
             <span className="text-brand-text-dark">Partnerprogramm</span>

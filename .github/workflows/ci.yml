@@ -25,19 +25,24 @@ jobs:
       - name: Lint
         run: npm run lint
 
-      - name: Build
+      - name: Build static export
         run: npm run build
-        env:
-          STRIPE_SECRET_KEY: sk_test_placeholder
-          NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: pk_test_placeholder
-          STRIPE_WEBHOOK_SECRET: whsec_placeholder
 
-  docker:
-    runs-on: ubuntu-latest
-    needs: build
+      - name: Verify static export
+        run: |
+          test -d out || (echo "ERROR: out/ directory not found" && exit 1)
+          test -f out/index.html || (echo "ERROR: out/index.html not found" && exit 1)
+          test -d out/product/vitair || (echo "ERROR: product pages not generated" && exit 1)
+          echo "Static export OK: $(find out -name '*.html' | wc -l) HTML files"
 
-    steps:
-      - uses: actions/checkout@v4
+      - name: Build products.json
+        run: node scripts/build-products-json.js
 
-      - name: Build Docker image
-        run: docker build -t breezi-shop:${{ github.sha }} .
+      - name: Verify PHP API files
+        run: |
+          test -f php/api/checkout.php || (echo "ERROR: checkout.php not found" && exit 1)
+          test -f php/api/webhook.php || (echo "ERROR: webhook.php not found" && exit 1)
+          test -f php/api/newsletter.php || (echo "ERROR: newsletter.php not found" && exit 1)
+          test -f php/api/contact.php || (echo "ERROR: contact.php not found" && exit 1)
+          test -f php/api/products.json || (echo "ERROR: products.json not built" && exit 1)
+          echo "PHP API files OK"

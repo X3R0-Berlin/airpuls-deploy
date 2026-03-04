@@ -1,9 +1,10 @@
 services:
-  airimpulse-web:
+  airimpuls-web:
     build:
       context: .
       target: runner
-    container_name: airimpulse-web
+    image: airimpuls-shop:latest
+    container_name: airimpuls-web
     ports:
       - "3000:3000"
     env_file:
@@ -13,6 +14,12 @@ services:
     restart: unless-stopped
     networks:
       - matrix-net
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:3000"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
     profiles:
       - prod
 

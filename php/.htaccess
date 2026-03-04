@@ -1,0 +1,27 @@
+RewriteEngine On
+
+# CORS headers for API endpoints
+<FilesMatch "\.php$">
+    Header set Access-Control-Allow-Methods "POST, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type"
+</FilesMatch>
+
+# Next.js static export: serve index.html for client-side routes
+# (trailingSlash: true means /product/vitair/ has its own index.html)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/api/
+RewriteRule ^(.*)$ /index.html [L]
+
+# Prevent directory listings
+Options -Indexes
+
+# Security: deny access to hidden files
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# PHP error logging
+php_flag display_errors off
+php_flag log_errors on

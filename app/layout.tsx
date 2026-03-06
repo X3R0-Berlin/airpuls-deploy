@@ -6,11 +6,11 @@ import { getAllProducts } from "@/lib/products";
 import { CartProvider } from "@/lib/cart-context";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
-import { CartPanel } from "@/components/layout/cart-panel";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
-import { CookieBanner } from "@/components/ui/cookie-banner";
 import { Suspense } from "react";
 import { AffiliateTracker } from "@/components/affiliate-tracker";
+import { CartPanel } from "@/components/layout/cart-panel";
+import { CookieBanner } from "@/components/ui/cookie-banner";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",

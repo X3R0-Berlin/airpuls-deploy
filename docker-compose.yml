@@ -6,7 +6,7 @@ services:
     image: airimpuls-shop:latest
     container_name: airimpuls-web
     ports:
-      - "3000:3000"
+      - "3000:80"
     env_file:
       - .env.local
     volumes:

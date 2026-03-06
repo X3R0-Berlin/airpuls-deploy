@@ -3,7 +3,10 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Lottie, { type LottieRefCurrentProps } from "lottie-react";
+import type { LottieRefCurrentProps } from "lottie-react";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 import { ShoppingBag, Menu, X, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { brand } from "@/lib/brand";
@@ -13,18 +16,18 @@ import { cn } from "@/lib/utils";
 function NavbarLogo({ className }: { className?: string }) {
   const lottieRef = useRef<LottieRefCurrentProps>(null);
   const [animationData, setAnimationData] = useState<unknown>(null);
-  const [prefersReduced] = useState(
-    () => typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches
-  );
+  const [prefersReduced, setPrefersReduced] = useState(false);
   const [animDone, setAnimDone] = useState(false);
 
   useEffect(() => {
-    if (prefersReduced) return;
+    const isReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    setPrefersReduced(isReduced);
+    if (isReduced) return;
 
     fetch("/animations/airimpuls-logo.json")
       .then((res) => res.json())
       .then(setAnimationData)
-      .catch(() => {});
+      .catch(() => { });
   }, [prefersReduced]);
 
   const handleComplete = useCallback(() => {

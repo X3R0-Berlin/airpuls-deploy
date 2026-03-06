@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 interface LottieAnimationProps {
   src: string;
@@ -15,7 +17,7 @@ export default function LottieAnimation({ src, className }: LottieAnimationProps
     fetch(src)
       .then((res) => res.json())
       .then(setAnimationData)
-      .catch(() => {});
+      .catch(() => { });
   }, [src]);
 
   if (!animationData) return null;

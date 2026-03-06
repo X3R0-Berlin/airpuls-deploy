@@ -16,16 +16,14 @@ const iconMap: Record<string, React.ComponentType<{ className?: string; strokeWi
 function FeatureMedia({ video, poster }: { video?: string; poster?: string }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [showVideo, setShowVideo] = useState(false);
-  const [canPlayVideo, setCanPlayVideo] = useState(() => {
-    if (typeof window === "undefined") return false;
-    const wide = window.matchMedia("(min-width: 1024px)").matches;
-    const motionOk = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    return wide && motionOk;
-  });
+  const [canPlayVideo, setCanPlayVideo] = useState(false);
 
   useEffect(() => {
     const mql = window.matchMedia("(min-width: 1024px)");
     const motionOk = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    // Set initial state after hydration to match client constraints
+    setCanPlayVideo(mql.matches && motionOk);
 
     const handler = (e: MediaQueryListEvent) => setCanPlayVideo(e.matches && motionOk);
     mql.addEventListener("change", handler);
@@ -57,9 +55,8 @@ function FeatureMedia({ video, poster }: { video?: string; poster?: string }) {
           preload="metadata"
           onPlaying={() => setShowVideo(true)}
           onError={() => setShowVideo(false)}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
-            showVideo ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${showVideo ? "opacity-100" : "opacity-0"
+            }`}
         />
       )}
       {/* Gradient overlay — lighter top to show image, stronger bottom for text contrast */}

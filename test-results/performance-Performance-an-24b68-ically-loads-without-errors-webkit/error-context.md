@@ -1,0 +1,951 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "AIRIMPULS" [ref=e4]:
+        - /url: /
+        - generic "AIRIMPULS" [ref=e5]:
+          - generic:
+            - generic:
+              - img
+          - img "AIRIMPULS" [ref=e7]
+      - list [ref=e8]:
+        - listitem [ref=e9]:
+          - button "Produkte" [ref=e10] [cursor=pointer]
+        - listitem [ref=e11]:
+          - link "Vorteile" [ref=e12]:
+            - /url: "#features"
+        - listitem [ref=e13]:
+          - link "Technologie" [ref=e14]:
+            - /url: "#details"
+        - listitem [ref=e15]:
+          - link "Bewertungen" [ref=e16]:
+            - /url: "#reviews"
+      - button "Warenkorb öffnen" [ref=e18] [cursor=pointer]:
+        - img [ref=e19]
+  - main [ref=e22]:
+    - generic [ref=e24]:
+      - generic [ref=e26]: Neu — Jetzt verfügbar
+      - heading "Die natürliche Energie der Natur für dein Zuhause" [level=1] [ref=e29]:
+        - paragraph [ref=e30]:
+          - generic [ref=e31]: Die natürliche Energie der Natur für dein Zuhause
+          - generic [ref=e32]: Die
+          - generic [ref=e34]: natürliche
+          - generic [ref=e36]: Energie
+          - generic [ref=e38]: der
+          - generic [ref=e40]: Natur
+          - generic [ref=e42]: für
+          - generic [ref=e44]: dein
+          - generic [ref=e46]: Zuhause
+      - paragraph [ref=e48]: Der Vitair aktiviert den Sauerstoff deiner Raumluft — wie ihn die Natur an Wasserfällen, in Wäldern und nach Gewittern erzeugt. Handgefertigt in Deutschland.
+      - generic [ref=e50]:
+        - button "Jetzt entdecken" [ref=e52] [cursor=pointer]:
+          - generic [ref=e56]:
+            - text: Jetzt entdecken
+            - img [ref=e57]
+        - link "Mehr erfahren" [ref=e61]:
+          - /url: "#details"
+    - generic [ref=e66]:
+      - generic [ref=e67]:
+        - generic [ref=e68]:
+          - generic [ref=e69]: ◆
+          - text: Handgefertigt in Deutschland
+        - generic [ref=e70]:
+          - generic [ref=e71]: ◆
+          - text: CNC-Präzisionsfertigung
+        - generic [ref=e72]:
+          - generic [ref=e73]: ◆
+          - text: Katalysator-Technologie
+        - generic [ref=e74]:
+          - generic [ref=e75]: ◆
+          - text: Made in Germany
+        - generic [ref=e76]:
+          - generic [ref=e77]: ◆
+          - text: Flüsterleise <25 dB
+        - generic [ref=e78]:
+          - generic [ref=e79]: ◆
+          - text: Designed by Jörg Klemm
+        - generic [ref=e80]:
+          - generic [ref=e81]: ◆
+          - text: 2 Jahre Garantie
+        - generic [ref=e82]:
+          - generic [ref=e83]: ◆
+          - text: Kostenloser Versand
+      - generic [ref=e84]:
+        - generic [ref=e85]:
+          - generic [ref=e86]: ◆
+          - text: Handgefertigt in Deutschland
+        - generic [ref=e87]:
+          - generic [ref=e88]: ◆
+          - text: CNC-Präzisionsfertigung
+        - generic [ref=e89]:
+          - generic [ref=e90]: ◆
+          - text: Katalysator-Technologie
+        - generic [ref=e91]:
+          - generic [ref=e92]: ◆
+          - text: Made in Germany
+        - generic [ref=e93]:
+          - generic [ref=e94]: ◆
+          - text: Flüsterleise <25 dB
+        - generic [ref=e95]:
+          - generic [ref=e96]: ◆
+          - text: Designed by Jörg Klemm
+        - generic [ref=e97]:
+          - generic [ref=e98]: ◆
+          - text: 2 Jahre Garantie
+        - generic [ref=e99]:
+          - generic [ref=e100]: ◆
+          - text: Kostenloser Versand
+      - generic [ref=e101]:
+        - generic [ref=e102]:
+          - generic [ref=e103]: ◆
+          - text: Handgefertigt in Deutschland
+        - generic [ref=e104]:
+          - generic [ref=e105]: ◆
+          - text: CNC-Präzisionsfertigung
+        - generic [ref=e106]:
+          - generic [ref=e107]: ◆
+          - text: Katalysator-Technologie
+        - generic [ref=e108]:
+          - generic [ref=e109]: ◆
+          - text: Made in Germany
+        - generic [ref=e110]:
+          - generic [ref=e111]: ◆
+          - text: Flüsterleise <25 dB
+        - generic [ref=e112]:
+          - generic [ref=e113]: ◆
+          - text: Designed by Jörg Klemm
+        - generic [ref=e114]:
+          - generic [ref=e115]: ◆
+          - text: 2 Jahre Garantie
+        - generic [ref=e116]:
+          - generic [ref=e117]: ◆
+          - text: Kostenloser Versand
+      - generic [ref=e118]:
+        - generic [ref=e119]:
+          - generic [ref=e120]: ◆
+          - text: Handgefertigt in Deutschland
+        - generic [ref=e121]:
+          - generic [ref=e122]: ◆
+          - text: CNC-Präzisionsfertigung
+        - generic [ref=e123]:
+          - generic [ref=e124]: ◆
+          - text: Katalysator-Technologie
+        - generic [ref=e125]:
+          - generic [ref=e126]: ◆
+          - text: Made in Germany
+        - generic [ref=e127]:
+          - generic [ref=e128]: ◆
+          - text: Flüsterleise <25 dB
+        - generic [ref=e129]:
+          - generic [ref=e130]: ◆
+          - text: Designed by Jörg Klemm
+        - generic [ref=e131]:
+          - generic [ref=e132]: ◆
+          - text: 2 Jahre Garantie
+        - generic [ref=e133]:
+          - generic [ref=e134]: ◆
+          - text: Kostenloser Versand
+    - generic [ref=e136]:
+      - generic [ref=e138]:
+        - generic [ref=e139]: Vorteile
+        - heading "Das Wirkprinzip ist einfach und komplex zugleich" [level=2] [ref=e140]
+      - generic [ref=e141]:
+        - generic [ref=e147]:
+          - img [ref=e149]
+          - heading "Zelluläre Energie" [level=3] [ref=e155]
+          - paragraph [ref=e156]: AIRIMPULS aktiviert Sauerstoff vom inaktiven Triplett- in den energetischen Singulett-Zustand — genau wie in der Natur. Deine Mitochondrien, die Kraftwerke der Zellen, können aktivierten Sauerstoff direkt für die Energieerzeugung nutzen.
+        - generic [ref=e162]:
+          - img [ref=e164]
+          - heading "Besserer Schlaf" [level=3] [ref=e166]
+          - paragraph [ref=e167]: Aktivierter Sauerstoff unterstützt die natürliche Regeneration im Schlaf. Mitochondrien produzieren nachts besonders intensiv Energie für Zellreparatur und Erholung. AIRIMPULS schafft die optimale Atemluft dafür.
+        - generic [ref=e173]:
+          - img [ref=e175]
+          - heading "Natur-Prinzip" [level=3] [ref=e178]
+          - paragraph [ref=e179]: An Wasserfällen, in Wäldern und nach Gewittern ist Sauerstoff auf natürliche Weise aktiviert. AIRIMPULS reproduziert dieses Prinzip mit Katalysator-Technologie und bringt die erfrischende Energie der Natur in deine Räume.
+        - generic [ref=e185]:
+          - img [ref=e187]
+          - heading "25 Jahre Erfahrung" [level=3] [ref=e189]
+          - paragraph [ref=e190]: Die Sauerstoff-Aktivierungstechnologie ist seit über 25 Jahren in der professionellen Anwendung bewährt. Jedes Gerät wird in Deutschland von Hand gefertigt — CNC-präzisionsgefräst mit deutschen Markenkomponenten.
+    - generic [ref=e193]:
+      - generic [ref=e195]:
+        - generic [ref=e196]:
+          - generic [ref=e197]: "0"
+          - generic [ref=e198]: +
+        - paragraph [ref=e199]: Geräte ausgeliefert
+      - generic [ref=e201]:
+        - generic [ref=e202]:
+          - generic [ref=e203]: "0"
+          - generic [ref=e204]: +
+        - paragraph [ref=e205]: Jahre Erfahrung
+      - generic [ref=e207]:
+        - generic [ref=e208]:
+          - generic [ref=e209]: "0"
+          - generic [ref=e210]: "%"
+        - paragraph [ref=e211]: Kundenzufriedenheit
+      - generic [ref=e213]:
+        - generic [ref=e214]:
+          - generic [ref=e215]: "0"
+          - generic [ref=e216]: "%"
+        - paragraph [ref=e217]: Handarbeit
+    - generic [ref=e220]:
+      - generic [ref=e222]:
+        - img "Vitair Frontansicht" [ref=e224]
+        - generic [ref=e225]:
+          - button "Vitair Frontansicht" [ref=e226] [cursor=pointer]:
+            - img "Vitair Frontansicht" [ref=e227]
+          - button "Vitair geöffnet" [ref=e228] [cursor=pointer]:
+            - img "Vitair geöffnet" [ref=e229]
+          - button "Vitair Rotlichtmodus" [ref=e230] [cursor=pointer]:
+            - img "Vitair Rotlichtmodus" [ref=e231]
+          - button "Vitair Nahaufnahme" [ref=e232] [cursor=pointer]:
+            - img "Vitair Nahaufnahme" [ref=e233]
+          - button "Vitair Ventilator Detail" [ref=e234] [cursor=pointer]:
+            - img "Vitair Ventilator Detail" [ref=e235]
+          - button "Vitair Rückseite mit USB-C Anschluss" [ref=e236] [cursor=pointer]:
+            - img "Vitair Rückseite mit USB-C Anschluss" [ref=e237]
+      - generic [ref=e239]:
+        - text: AIRIMPULS Collection
+        - heading "Vitair" [level=2] [ref=e240]
+        - paragraph [ref=e241]: by Jörg Klemm
+        - generic [ref=e242]:
+          - generic [ref=e243]:
+            - generic [ref=e244]: "0"
+            - generic [ref=e245]: ",00 €"
+          - generic [ref=e246]: Kostenloser Versand
+        - paragraph [ref=e247]: inkl. MwSt. zzgl. Versandkosten
+        - paragraph [ref=e248]:
+          - text: oder ab
+          - generic [ref=e249]: 138 €/Monat
+          - text: · 12 Raten · 0% Finanzierung
+        - paragraph [ref=e251]: Der Vitair aktiviert Sauerstoff nach dem Vorbild der Natur. CNC-präzisionsgefräste Bauteile und sorgfältige Handarbeit machen jedes Gerät zu einem Unikat. Die Katalysator-Technologie versetzt Sauerstoff in seinen energetisch aktiven Zustand — so wie es in der Natur an Wasserfällen und in Wäldern geschieht.
+        - generic [ref=e252]:
+          - generic [ref=e253]:
+            - generic [ref=e254]: Gehäuse
+            - generic [ref=e255]: CNC-präzisionsgefräst, eloxiert
+          - generic [ref=e256]:
+            - generic [ref=e257]: Abmessungen
+            - generic [ref=e258]: Ø 14 cm × 24 cm Höhe
+          - generic [ref=e259]:
+            - generic [ref=e260]: Gewicht
+            - generic [ref=e261]: 2,4 kg
+          - generic [ref=e262]:
+            - generic [ref=e263]: Lüfter
+            - generic [ref=e264]: Axiallüfter, < 25 dB
+          - generic [ref=e265]:
+            - generic [ref=e266]: LED-Module
+            - generic [ref=e267]: 4× Hochleistungs-LED-Module
+          - generic [ref=e268]:
+            - generic [ref=e269]: Stromversorgung
+            - generic [ref=e270]: 12V DC — 18 Watt
+          - generic [ref=e271]:
+            - generic [ref=e272]: Katalysator
+            - generic [ref=e273]: 2× Katalysatorscheiben
+          - generic [ref=e274]:
+            - generic [ref=e275]: Filter
+            - generic [ref=e276]: Edelstahlgewebe, feinmaschig
+          - generic [ref=e277]:
+            - generic [ref=e278]: Raumgröße
+            - generic [ref=e279]: Bis zu 40 m²
+        - generic [ref=e280]:
+          - generic [ref=e281]: "Anzahl:"
+          - generic [ref=e282]:
+            - button [ref=e283] [cursor=pointer]:
+              - img [ref=e284]
+            - generic [ref=e285]: "1"
+            - button [ref=e286] [cursor=pointer]:
+              - img [ref=e287]
+        - button "In den Warenkorb" [ref=e290] [cursor=pointer]:
+          - generic [ref=e294]: In den Warenkorb
+        - generic [ref=e297]:
+          - generic [ref=e298]:
+            - img [ref=e299]
+            - text: 2 Jahre Garantie
+          - generic [ref=e302]:
+            - img [ref=e303]
+            - text: Kostenloser Versand
+          - generic [ref=e308]:
+            - img [ref=e309]
+            - text: 30 Tage Rückgabe
+    - generic [ref=e316]:
+      - img "Perfektion in jedem Detail" [ref=e319]
+      - generic [ref=e320]:
+        - generic [ref=e321]: Design
+        - heading "Perfektion in jedem Detail" [level=2] [ref=e322]
+        - paragraph [ref=e323]: Jeder Vitair wird aus CNC-präzisionsgefrästen Einzelteilen in sorgfältiger Handarbeit montiert. Der ikonische Power-Button mit blau leuchtendem LED-Ring vereint intuitive Bedienung mit skulpturalem Design. Ein Magnet hält den Lichtschirm sicher und ermöglicht mühelose Wartung.
+        - list [ref=e324]:
+          - listitem [ref=e325]:
+            - img [ref=e326]
+            - text: Deutsche Präzisionsfertigung
+          - listitem [ref=e328]:
+            - img [ref=e329]
+            - text: Intuitive Ein-Knopf-Bedienung mit LED-Statusanzeige
+          - listitem [ref=e331]:
+            - img [ref=e332]
+            - text: Lasergraviertes, eloxiertes Logo
+          - listitem [ref=e334]:
+            - img [ref=e335]
+            - text: Magnetisch befestigter Lichtschirm
+    - generic [ref=e339]:
+      - img "Sauerstoff-Aktivierung nach dem Vorbild der Natur" [ref=e342]
+      - generic [ref=e343]:
+        - generic [ref=e344]: Technologie
+        - heading "Sauerstoff-Aktivierung nach dem Vorbild der Natur" [level=2] [ref=e345]
+        - paragraph [ref=e346]: Der Vitair nutzt Katalysatortechnologie und speziell abgestimmte LED-Module, um Sauerstoff aus seinem gewöhnlichen Triplett-Zustand in den energetisch aktiven Singulett-Zustand zu überführen. Genau diesen Prozess leisten in der Natur Pflanzen, Wasserfälle und Gewitter. Unsere Mitochondrien — die Kraftwerke unserer Zellen — benötigen aktivierten Sauerstoff, um Energie zu erzeugen.
+        - list [ref=e347]:
+          - listitem [ref=e348]:
+            - img [ref=e349]
+            - text: Katalysatorscheiben aktivieren Sauerstoff-Moleküle
+          - listitem [ref=e351]:
+            - img [ref=e352]
+            - text: 4× Hochleistungs-LED-Module
+          - listitem [ref=e354]:
+            - img [ref=e355]
+            - text: Flüsterleiser Axiallüfter
+    - generic [ref=e359]:
+      - generic [ref=e361]:
+        - img "Warum aktivierter Sauerstoff?" [ref=e362]
+        - img [ref=e365]
+      - generic [ref=e416]:
+        - generic [ref=e417]: Wissenschaft
+        - heading "Warum aktivierter Sauerstoff?" [level=2] [ref=e418]
+        - paragraph [ref=e419]: Sauerstoff in unserer Atemluft liegt im sogenannten Triplett-Zustand vor — er ist stabil, aber energetisch inaktiv. Erst in der Singulett-Konfiguration kann er mit Wasserstoff in unseren Mitochondrien zu Wasser reagieren und dabei lebenswichtige Energie freisetzen. Der Vitair unterstützt diesen natürlichen Prozess und fördert die zelluläre Energieversorgung.
+        - list [ref=e420]:
+          - listitem [ref=e421]:
+            - img [ref=e422]
+            - text: "Sauerstoff-Aktivierung: Triplett → Singulett"
+          - listitem [ref=e424]:
+            - img [ref=e425]
+            - text: Unterstützt die mitochondriale Energieproduktion
+          - listitem [ref=e427]:
+            - img [ref=e428]
+            - text: Natürliches Prinzip — keine Chemie, keine Ozon-Erzeugung
+          - listitem [ref=e430]:
+            - img [ref=e431]
+            - text: Seit Jahrzehnten erforscht und erprobt
+    - generic [ref=e433]:
+      - generic [ref=e434]:
+        - text: Zuhause
+        - heading "Fügt sich nahtlos in deinen Alltag ein" [level=2] [ref=e435]:
+          - text: Fügt sich nahtlos in
+          - emphasis [ref=e436]: deinen Alltag
+          - text: ein
+      - generic [ref=e437]:
+        - generic [ref=e439]:
+          - img "Vitair im Schlafzimmer auf dem Nachttisch" [ref=e440]
+          - generic [ref=e442]: Schlafzimmer
+        - generic [ref=e444]:
+          - img "Vitair im Home Office auf dem Schreibtisch" [ref=e445]
+          - generic [ref=e447]: Home Office
+        - generic [ref=e449]:
+          - img "Vitair im Wohnzimmer auf dem Beistelltisch" [ref=e450]
+          - generic [ref=e452]: Wohnzimmer
+    - generic [ref=e454]:
+      - generic [ref=e456]:
+        - text: Produktvergleich
+        - heading "Welches Gerät passt zu Ihnen?" [level=2] [ref=e457]
+        - paragraph [ref=e458]: Alle drei Produkte im direkten Vergleich
+      - table [ref=e461]:
+        - rowgroup [ref=e462]:
+          - row "Vitair Vitair Luftenergizer 1.649,00 € Solitair Solitair Atemluft-Energizer ohne Elektronik Coming Soon Preventair Preventair Professionelles Therapiegerät Coming Soon" [ref=e463]:
+            - columnheader [ref=e464]
+            - columnheader "Vitair Vitair Luftenergizer 1.649,00 €" [ref=e465]:
+              - generic [ref=e466]:
+                - img "Vitair" [ref=e468]
+                - generic [ref=e469]:
+                  - paragraph [ref=e470]: Vitair
+                  - paragraph [ref=e471]: Luftenergizer
+                - paragraph [ref=e472]: 1.649,00 €
+            - columnheader "Solitair Solitair Atemluft-Energizer ohne Elektronik Coming Soon" [ref=e473]:
+              - generic [ref=e474]:
+                - img "Solitair" [ref=e476]
+                - generic [ref=e477]:
+                  - paragraph [ref=e478]: Solitair
+                  - paragraph [ref=e479]: Atemluft-Energizer ohne Elektronik
+                - paragraph [ref=e480]: Coming Soon
+            - columnheader "Preventair Preventair Professionelles Therapiegerät Coming Soon" [ref=e481]:
+              - generic [ref=e482]:
+                - img "Preventair" [ref=e484]
+                - generic [ref=e485]:
+                  - paragraph [ref=e486]: Preventair
+                  - paragraph [ref=e487]: Professionelles Therapiegerät
+                - paragraph [ref=e488]: Coming Soon
+        - rowgroup [ref=e489]:
+          - row "Anwendung Raumluft-Aktivierung Persönliche Atembrille Professionelle Therapie" [ref=e490]:
+            - cell "Anwendung" [ref=e491]
+            - cell "Raumluft-Aktivierung" [ref=e492]
+            - cell "Persönliche Atembrille" [ref=e493]
+            - cell "Professionelle Therapie" [ref=e494]
+          - row "Zielgruppe Zuhause & Büro Bewusste Anwender Therapeuten & Kliniken" [ref=e495]:
+            - cell "Zielgruppe" [ref=e496]
+            - cell "Zuhause & Büro" [ref=e497]
+            - cell "Bewusste Anwender" [ref=e498]
+            - cell "Therapeuten & Kliniken" [ref=e499]
+          - row "Technologie LED + Katalysator Reiner Katalysator Hochleistungs-Aktivierung" [ref=e500]:
+            - cell "Technologie" [ref=e501]
+            - cell "LED + Katalysator" [ref=e502]
+            - cell "Reiner Katalysator" [ref=e503]
+            - cell "Hochleistungs-Aktivierung" [ref=e504]
+          - row "Elektronik" [ref=e505]:
+            - cell "Elektronik" [ref=e506]
+            - cell [ref=e507]:
+              - img [ref=e508]
+            - cell [ref=e510]:
+              - img [ref=e511]
+            - cell [ref=e514]:
+              - img [ref=e515]
+          - row "Atembrille" [ref=e517]:
+            - cell "Atembrille" [ref=e518]
+            - cell [ref=e519]:
+              - img [ref=e520]
+            - cell [ref=e523]:
+              - img [ref=e524]
+            - cell [ref=e526]:
+              - img [ref=e527]
+          - row "Raumluft bis 40 m²" [ref=e529]:
+            - cell "Raumluft bis 40 m²" [ref=e530]
+            - cell [ref=e531]:
+              - img [ref=e532]
+            - cell [ref=e534]:
+              - img [ref=e535]
+            - cell [ref=e538]:
+              - img [ref=e539]
+          - row "Sitzungsdauer Dauerbetrieb Nach Bedarf 15–20 Min." [ref=e542]:
+            - cell "Sitzungsdauer" [ref=e543]
+            - cell "Dauerbetrieb" [ref=e544]
+            - cell "Nach Bedarf" [ref=e545]
+            - cell "15–20 Min." [ref=e546]
+          - row "Nachhaltigkeit Hoch Extrem hoch Hoch" [ref=e547]:
+            - cell "Nachhaltigkeit" [ref=e548]
+            - cell "Hoch" [ref=e549]
+            - cell "Extrem hoch" [ref=e550]
+            - cell "Hoch" [ref=e551]
+          - row "Jetzt kaufen Mehr erfahren Mehr erfahren" [ref=e552]:
+            - cell [ref=e553]
+            - cell "Jetzt kaufen" [ref=e554]:
+              - link "Jetzt kaufen" [ref=e555]:
+                - /url: /product/vitair/
+            - cell "Mehr erfahren" [ref=e556]:
+              - link "Mehr erfahren" [ref=e557]:
+                - /url: /product/solitair/
+            - cell "Mehr erfahren" [ref=e558]:
+              - link "Mehr erfahren" [ref=e559]:
+                - /url: /product/preventair/
+    - generic [ref=e561]:
+      - generic [ref=e563]:
+        - text: Produktberater
+        - heading "Welches Gerät passt zu Ihnen?" [level=2] [ref=e564]
+      - generic [ref=e565]:
+        - paragraph [ref=e566]: Wofür möchten Sie aktivierten Sauerstoff nutzen?
+        - generic [ref=e567]:
+          - button "Raumluft Für Wohnräume & Büros" [ref=e568] [cursor=pointer]:
+            - generic [ref=e570]:
+              - paragraph [ref=e571]: Raumluft
+              - paragraph [ref=e572]: Für Wohnräume & Büros
+          - button "Atemtherapie Persönliche Anwendung" [ref=e573] [cursor=pointer]:
+            - generic [ref=e575]:
+              - paragraph [ref=e576]: Atemtherapie
+              - paragraph [ref=e577]: Persönliche Anwendung
+          - button "Professionell Therapeuten & Kliniken" [ref=e578] [cursor=pointer]:
+            - generic [ref=e580]:
+              - paragraph [ref=e581]: Professionell
+              - paragraph [ref=e582]: Therapeuten & Kliniken
+    - generic [ref=e584]:
+      - generic [ref=e586]:
+        - generic [ref=e587]: Kundenstimmen
+        - heading "Das sagen unsere Kunden" [level=2] [ref=e588]
+      - generic [ref=e589]:
+        - generic [ref=e590]:
+          - generic [ref=e593]:
+            - generic [ref=e594]:
+              - img [ref=e595]
+              - img [ref=e597]
+              - img [ref=e599]
+              - img [ref=e601]
+              - img [ref=e603]
+            - paragraph [ref=e605]: “Seit ich den Vitair im Schlafzimmer stehen habe, schlafe ich deutlich tiefer. Mein Partner hat die gleiche Erfahrung gemacht. Ein echtes Qualitätsprodukt.”
+            - generic [ref=e606]:
+              - img "Martina S." [ref=e608]
+              - generic [ref=e609]:
+                - generic [ref=e610]:
+                  - strong [ref=e611]: Martina S.
+                  - img [ref=e612]
+                - paragraph [ref=e615]:
+                  - text: München
+                  - generic [ref=e616]: · Kauf 2024-11
+          - generic [ref=e619]:
+            - generic [ref=e620]:
+              - img [ref=e621]
+              - img [ref=e623]
+              - img [ref=e625]
+              - img [ref=e627]
+              - img [ref=e629]
+            - paragraph [ref=e631]: “Das Design ist absolut fantastisch — der Vitair sieht aus wie ein Kunstobjekt. Und die Luftqualität in meinem Büro hat sich merklich verbessert.”
+            - generic [ref=e632]:
+              - img "Thomas K." [ref=e634]
+              - generic [ref=e635]:
+                - generic [ref=e636]:
+                  - strong [ref=e637]: Thomas K.
+                  - img [ref=e638]
+                - paragraph [ref=e641]:
+                  - text: Berlin
+                  - generic [ref=e642]: · Kauf 2024-09
+          - generic [ref=e645]:
+            - generic [ref=e646]:
+              - img [ref=e647]
+              - img [ref=e649]
+              - img [ref=e651]
+              - img [ref=e653]
+              - img [ref=e655]
+            - paragraph [ref=e657]: “Als Allergiker bin ich begeistert. Die Luft fühlt sich so frisch an wie nach einem Waldspaziergang. Der Vitair läuft bei uns rund um die Uhr.”
+            - generic [ref=e658]:
+              - img "Dr. Julia F." [ref=e660]
+              - generic [ref=e661]:
+                - generic [ref=e662]:
+                  - strong [ref=e663]: Dr. Julia F.
+                  - img [ref=e664]
+                - paragraph [ref=e667]:
+                  - text: Hamburg
+                  - generic [ref=e668]: · Kauf 2024-08
+          - generic [ref=e671]:
+            - generic [ref=e672]:
+              - img [ref=e673]
+              - img [ref=e675]
+              - img [ref=e677]
+              - img [ref=e679]
+              - img [ref=e681]
+            - paragraph [ref=e683]: “Meine Praxis-Patienten spüren den Unterschied sofort. Die Raumluft fühlt sich lebendig an. Ich empfehle den Vitair jedem, der Wert auf Atemqualität legt.”
+            - generic [ref=e684]:
+              - img "HP Michael R." [ref=e686]
+              - generic [ref=e687]:
+                - generic [ref=e688]:
+                  - strong [ref=e689]: HP Michael R.
+                  - img [ref=e690]
+                - paragraph [ref=e693]:
+                  - text: Stuttgart
+                  - generic [ref=e694]: · Kauf 2025-01
+          - generic [ref=e697]:
+            - generic [ref=e698]:
+              - img [ref=e699]
+              - img [ref=e701]
+              - img [ref=e703]
+              - img [ref=e705]
+              - img [ref=e707]
+            - paragraph [ref=e709]: "“Wunderschönes Gerät, hervorragende Verarbeitung. Die CNC-Qualität spürt man sofort. Einziger Wunsch: eine App zur Lüftersteuerung wäre perfekt.”"
+            - generic [ref=e710]:
+              - img "Stefan W." [ref=e712]
+              - generic [ref=e713]:
+                - generic [ref=e714]:
+                  - strong [ref=e715]: Stefan W.
+                  - img [ref=e716]
+                - paragraph [ref=e719]:
+                  - text: Wien
+                  - generic [ref=e720]: · Kauf 2025-02
+          - generic [ref=e723]:
+            - generic [ref=e724]:
+              - img [ref=e725]
+              - img [ref=e727]
+              - img [ref=e729]
+              - img [ref=e731]
+              - img [ref=e733]
+            - paragraph [ref=e735]: “Wir setzen die Vorgängerversion seit Jahren in unserer Klinik ein. Die Ergebnisse bei COPD-Patienten sind bemerkenswert. Wir warten gespannt auf den Preventair.”
+            - generic [ref=e736]:
+              - img "Dr. med. Anke L." [ref=e738]
+              - generic [ref=e739]:
+                - strong [ref=e741]: Dr. med. Anke L.
+                - paragraph [ref=e742]: Freiburg
+        - generic [ref=e743]:
+          - generic [ref=e746]:
+            - generic [ref=e747]:
+              - img [ref=e748]
+              - img [ref=e750]
+              - img [ref=e752]
+              - img [ref=e754]
+              - img [ref=e756]
+            - paragraph [ref=e758]: “Seit ich den Vitair im Schlafzimmer stehen habe, schlafe ich deutlich tiefer. Mein Partner hat die gleiche Erfahrung gemacht. Ein echtes Qualitätsprodukt.”
+            - generic [ref=e759]:
+              - img "Martina S." [ref=e761]
+              - generic [ref=e762]:
+                - generic [ref=e763]:
+                  - strong [ref=e764]: Martina S.
+                  - img [ref=e765]
+                - paragraph [ref=e768]:
+                  - text: München
+                  - generic [ref=e769]: · Kauf 2024-11
+          - generic [ref=e772]:
+            - generic [ref=e773]:
+              - img [ref=e774]
+              - img [ref=e776]
+              - img [ref=e778]
+              - img [ref=e780]
+              - img [ref=e782]
+            - paragraph [ref=e784]: “Das Design ist absolut fantastisch — der Vitair sieht aus wie ein Kunstobjekt. Und die Luftqualität in meinem Büro hat sich merklich verbessert.”
+            - generic [ref=e785]:
+              - img "Thomas K." [ref=e787]
+              - generic [ref=e788]:
+                - generic [ref=e789]:
+                  - strong [ref=e790]: Thomas K.
+                  - img [ref=e791]
+                - paragraph [ref=e794]:
+                  - text: Berlin
+                  - generic [ref=e795]: · Kauf 2024-09
+          - generic [ref=e798]:
+            - generic [ref=e799]:
+              - img [ref=e800]
+              - img [ref=e802]
+              - img [ref=e804]
+              - img [ref=e806]
+              - img [ref=e808]
+            - paragraph [ref=e810]: “Als Allergiker bin ich begeistert. Die Luft fühlt sich so frisch an wie nach einem Waldspaziergang. Der Vitair läuft bei uns rund um die Uhr.”
+            - generic [ref=e811]:
+              - img "Dr. Julia F." [ref=e813]
+              - generic [ref=e814]:
+                - generic [ref=e815]:
+                  - strong [ref=e816]: Dr. Julia F.
+                  - img [ref=e817]
+                - paragraph [ref=e820]:
+                  - text: Hamburg
+                  - generic [ref=e821]: · Kauf 2024-08
+          - generic [ref=e824]:
+            - generic [ref=e825]:
+              - img [ref=e826]
+              - img [ref=e828]
+              - img [ref=e830]
+              - img [ref=e832]
+              - img [ref=e834]
+            - paragraph [ref=e836]: “Meine Praxis-Patienten spüren den Unterschied sofort. Die Raumluft fühlt sich lebendig an. Ich empfehle den Vitair jedem, der Wert auf Atemqualität legt.”
+            - generic [ref=e837]:
+              - img "HP Michael R." [ref=e839]
+              - generic [ref=e840]:
+                - generic [ref=e841]:
+                  - strong [ref=e842]: HP Michael R.
+                  - img [ref=e843]
+                - paragraph [ref=e846]:
+                  - text: Stuttgart
+                  - generic [ref=e847]: · Kauf 2025-01
+          - generic [ref=e850]:
+            - generic [ref=e851]:
+              - img [ref=e852]
+              - img [ref=e854]
+              - img [ref=e856]
+              - img [ref=e858]
+              - img [ref=e860]
+            - paragraph [ref=e862]: "“Wunderschönes Gerät, hervorragende Verarbeitung. Die CNC-Qualität spürt man sofort. Einziger Wunsch: eine App zur Lüftersteuerung wäre perfekt.”"
+            - generic [ref=e863]:
+              - img "Stefan W." [ref=e865]
+              - generic [ref=e866]:
+                - generic [ref=e867]:
+                  - strong [ref=e868]: Stefan W.
+                  - img [ref=e869]
+                - paragraph [ref=e872]:
+                  - text: Wien
+                  - generic [ref=e873]: · Kauf 2025-02
+          - generic [ref=e876]:
+            - generic [ref=e877]:
+              - img [ref=e878]
+              - img [ref=e880]
+              - img [ref=e882]
+              - img [ref=e884]
+              - img [ref=e886]
+            - paragraph [ref=e888]: “Wir setzen die Vorgängerversion seit Jahren in unserer Klinik ein. Die Ergebnisse bei COPD-Patienten sind bemerkenswert. Wir warten gespannt auf den Preventair.”
+            - generic [ref=e889]:
+              - img "Dr. med. Anke L." [ref=e891]
+              - generic [ref=e892]:
+                - strong [ref=e894]: Dr. med. Anke L.
+                - paragraph [ref=e895]: Freiburg
+        - generic [ref=e896]:
+          - generic [ref=e899]:
+            - generic [ref=e900]:
+              - img [ref=e901]
+              - img [ref=e903]
+              - img [ref=e905]
+              - img [ref=e907]
+              - img [ref=e909]
+            - paragraph [ref=e911]: “Seit ich den Vitair im Schlafzimmer stehen habe, schlafe ich deutlich tiefer. Mein Partner hat die gleiche Erfahrung gemacht. Ein echtes Qualitätsprodukt.”
+            - generic [ref=e912]:
+              - img "Martina S." [ref=e914]
+              - generic [ref=e915]:
+                - generic [ref=e916]:
+                  - strong [ref=e917]: Martina S.
+                  - img [ref=e918]
+                - paragraph [ref=e921]:
+                  - text: München
+                  - generic [ref=e922]: · Kauf 2024-11
+          - generic [ref=e925]:
+            - generic [ref=e926]:
+              - img [ref=e927]
+              - img [ref=e929]
+              - img [ref=e931]
+              - img [ref=e933]
+              - img [ref=e935]
+            - paragraph [ref=e937]: “Das Design ist absolut fantastisch — der Vitair sieht aus wie ein Kunstobjekt. Und die Luftqualität in meinem Büro hat sich merklich verbessert.”
+            - generic [ref=e938]:
+              - img "Thomas K." [ref=e940]
+              - generic [ref=e941]:
+                - generic [ref=e942]:
+                  - strong [ref=e943]: Thomas K.
+                  - img [ref=e944]
+                - paragraph [ref=e947]:
+                  - text: Berlin
+                  - generic [ref=e948]: · Kauf 2024-09
+          - generic [ref=e951]:
+            - generic [ref=e952]:
+              - img [ref=e953]
+              - img [ref=e955]
+              - img [ref=e957]
+              - img [ref=e959]
+              - img [ref=e961]
+            - paragraph [ref=e963]: “Als Allergiker bin ich begeistert. Die Luft fühlt sich so frisch an wie nach einem Waldspaziergang. Der Vitair läuft bei uns rund um die Uhr.”
+            - generic [ref=e964]:
+              - img "Dr. Julia F." [ref=e966]
+              - generic [ref=e967]:
+                - generic [ref=e968]:
+                  - strong [ref=e969]: Dr. Julia F.
+                  - img [ref=e970]
+                - paragraph [ref=e973]:
+                  - text: Hamburg
+                  - generic [ref=e974]: · Kauf 2024-08
+          - generic [ref=e977]:
+            - generic [ref=e978]:
+              - img [ref=e979]
+              - img [ref=e981]
+              - img [ref=e983]
+              - img [ref=e985]
+              - img [ref=e987]
+            - paragraph [ref=e989]: “Meine Praxis-Patienten spüren den Unterschied sofort. Die Raumluft fühlt sich lebendig an. Ich empfehle den Vitair jedem, der Wert auf Atemqualität legt.”
+            - generic [ref=e990]:
+              - img "HP Michael R." [ref=e992]
+              - generic [ref=e993]:
+                - generic [ref=e994]:
+                  - strong [ref=e995]: HP Michael R.
+                  - img [ref=e996]
+                - paragraph [ref=e999]:
+                  - text: Stuttgart
+                  - generic [ref=e1000]: · Kauf 2025-01
+          - generic [ref=e1003]:
+            - generic [ref=e1004]:
+              - img [ref=e1005]
+              - img [ref=e1007]
+              - img [ref=e1009]
+              - img [ref=e1011]
+              - img [ref=e1013]
+            - paragraph [ref=e1015]: "“Wunderschönes Gerät, hervorragende Verarbeitung. Die CNC-Qualität spürt man sofort. Einziger Wunsch: eine App zur Lüftersteuerung wäre perfekt.”"
+            - generic [ref=e1016]:
+              - img "Stefan W." [ref=e1018]
+              - generic [ref=e1019]:
+                - generic [ref=e1020]:
+                  - strong [ref=e1021]: Stefan W.
+                  - img [ref=e1022]
+                - paragraph [ref=e1025]:
+                  - text: Wien
+                  - generic [ref=e1026]: · Kauf 2025-02
+          - generic [ref=e1029]:
+            - generic [ref=e1030]:
+              - img [ref=e1031]
+              - img [ref=e1033]
+              - img [ref=e1035]
+              - img [ref=e1037]
+              - img [ref=e1039]
+            - paragraph [ref=e1041]: “Wir setzen die Vorgängerversion seit Jahren in unserer Klinik ein. Die Ergebnisse bei COPD-Patienten sind bemerkenswert. Wir warten gespannt auf den Preventair.”
+            - generic [ref=e1042]:
+              - img "Dr. med. Anke L." [ref=e1044]
+              - generic [ref=e1045]:
+                - strong [ref=e1047]: Dr. med. Anke L.
+                - paragraph [ref=e1048]: Freiburg
+        - generic [ref=e1049]:
+          - generic [ref=e1052]:
+            - generic [ref=e1053]:
+              - img [ref=e1054]
+              - img [ref=e1056]
+              - img [ref=e1058]
+              - img [ref=e1060]
+              - img [ref=e1062]
+            - paragraph [ref=e1064]: “Seit ich den Vitair im Schlafzimmer stehen habe, schlafe ich deutlich tiefer. Mein Partner hat die gleiche Erfahrung gemacht. Ein echtes Qualitätsprodukt.”
+            - generic [ref=e1065]:
+              - img "Martina S." [ref=e1067]
+              - generic [ref=e1068]:
+                - generic [ref=e1069]:
+                  - strong [ref=e1070]: Martina S.
+                  - img [ref=e1071]
+                - paragraph [ref=e1074]:
+                  - text: München
+                  - generic [ref=e1075]: · Kauf 2024-11
+          - generic [ref=e1078]:
+            - generic [ref=e1079]:
+              - img [ref=e1080]
+              - img [ref=e1082]
+              - img [ref=e1084]
+              - img [ref=e1086]
+              - img [ref=e1088]
+            - paragraph [ref=e1090]: “Das Design ist absolut fantastisch — der Vitair sieht aus wie ein Kunstobjekt. Und die Luftqualität in meinem Büro hat sich merklich verbessert.”
+            - generic [ref=e1091]:
+              - img "Thomas K." [ref=e1093]
+              - generic [ref=e1094]:
+                - generic [ref=e1095]:
+                  - strong [ref=e1096]: Thomas K.
+                  - img [ref=e1097]
+                - paragraph [ref=e1100]:
+                  - text: Berlin
+                  - generic [ref=e1101]: · Kauf 2024-09
+          - generic [ref=e1104]:
+            - generic [ref=e1105]:
+              - img [ref=e1106]
+              - img [ref=e1108]
+              - img [ref=e1110]
+              - img [ref=e1112]
+              - img [ref=e1114]
+            - paragraph [ref=e1116]: “Als Allergiker bin ich begeistert. Die Luft fühlt sich so frisch an wie nach einem Waldspaziergang. Der Vitair läuft bei uns rund um die Uhr.”
+            - generic [ref=e1117]:
+              - img "Dr. Julia F." [ref=e1119]
+              - generic [ref=e1120]:
+                - generic [ref=e1121]:
+                  - strong [ref=e1122]: Dr. Julia F.
+                  - img [ref=e1123]
+                - paragraph [ref=e1126]:
+                  - text: Hamburg
+                  - generic [ref=e1127]: · Kauf 2024-08
+          - generic [ref=e1130]:
+            - generic [ref=e1131]:
+              - img [ref=e1132]
+              - img [ref=e1134]
+              - img [ref=e1136]
+              - img [ref=e1138]
+              - img [ref=e1140]
+            - paragraph [ref=e1142]: “Meine Praxis-Patienten spüren den Unterschied sofort. Die Raumluft fühlt sich lebendig an. Ich empfehle den Vitair jedem, der Wert auf Atemqualität legt.”
+            - generic [ref=e1143]:
+              - img "HP Michael R." [ref=e1145]
+              - generic [ref=e1146]:
+                - generic [ref=e1147]:
+                  - strong [ref=e1148]: HP Michael R.
+                  - img [ref=e1149]
+                - paragraph [ref=e1152]:
+                  - text: Stuttgart
+                  - generic [ref=e1153]: · Kauf 2025-01
+          - generic [ref=e1156]:
+            - generic [ref=e1157]:
+              - img [ref=e1158]
+              - img [ref=e1160]
+              - img [ref=e1162]
+              - img [ref=e1164]
+              - img [ref=e1166]
+            - paragraph [ref=e1168]: "“Wunderschönes Gerät, hervorragende Verarbeitung. Die CNC-Qualität spürt man sofort. Einziger Wunsch: eine App zur Lüftersteuerung wäre perfekt.”"
+            - generic [ref=e1169]:
+              - img "Stefan W." [ref=e1171]
+              - generic [ref=e1172]:
+                - generic [ref=e1173]:
+                  - strong [ref=e1174]: Stefan W.
+                  - img [ref=e1175]
+                - paragraph [ref=e1178]:
+                  - text: Wien
+                  - generic [ref=e1179]: · Kauf 2025-02
+          - generic [ref=e1182]:
+            - generic [ref=e1183]:
+              - img [ref=e1184]
+              - img [ref=e1186]
+              - img [ref=e1188]
+              - img [ref=e1190]
+              - img [ref=e1192]
+            - paragraph [ref=e1194]: “Wir setzen die Vorgängerversion seit Jahren in unserer Klinik ein. Die Ergebnisse bei COPD-Patienten sind bemerkenswert. Wir warten gespannt auf den Preventair.”
+            - generic [ref=e1195]:
+              - img "Dr. med. Anke L." [ref=e1197]
+              - generic [ref=e1198]:
+                - strong [ref=e1200]: Dr. med. Anke L.
+                - paragraph [ref=e1201]: Freiburg
+    - generic [ref=e1203]:
+      - generic [ref=e1204]:
+        - text: Partnerprogramm
+        - heading "Empfehlen und profitieren" [level=2] [ref=e1205]
+        - paragraph [ref=e1206]: Werden Sie Teil des AIRIMPULS Partnerprogramms und verdienen Sie bis zu 10% Provision auf jeden vermittelten Verkauf.
+      - generic [ref=e1207]:
+        - generic [ref=e1208]:
+          - img [ref=e1209]
+          - paragraph [ref=e1211]: Bis zu 10%
+          - paragraph [ref=e1212]: Provision pro Verkauf
+        - generic [ref=e1213]:
+          - img [ref=e1214]
+          - paragraph [ref=e1219]: 30 Tage
+          - paragraph [ref=e1220]: Cookie-Laufzeit
+        - generic [ref=e1221]:
+          - img [ref=e1222]
+          - paragraph [ref=e1225]: 3 Stufen
+          - paragraph [ref=e1226]: Kunde · Therapeut · Creator
+      - link "Jetzt Partner werden" [ref=e1228]:
+        - /url: /partner/
+    - generic [ref=e1232]:
+      - generic [ref=e1233]:
+        - heading "Bleib informiert" [level=3] [ref=e1234]
+        - paragraph [ref=e1235]: Erhalte exklusive Angebote und Neuigkeiten direkt in dein Postfach.
+      - generic [ref=e1237]:
+        - textbox "Deine E-Mail-Adresse" [ref=e1239]
+        - button "Anmelden" [ref=e1240] [cursor=pointer]:
+          - generic [ref=e1244]: Anmelden
+  - contentinfo [ref=e1247]:
+    - generic [ref=e1248]:
+      - generic [ref=e1249]:
+        - generic [ref=e1250]:
+          - link "AIRIMPULS" [ref=e1251]:
+            - /url: /
+            - img "AIRIMPULS" [ref=e1252]
+          - paragraph [ref=e1253]: Wir bringen die natürliche Energie der Natur in dein Zuhause. Handgefertigt in Deutschland mit Leidenschaft für Qualität.
+        - generic [ref=e1254]:
+          - heading "Shop" [level=4] [ref=e1255]
+          - list [ref=e1256]:
+            - listitem [ref=e1257]:
+              - link "Alle Produkte" [ref=e1258]:
+                - /url: /produkte/
+            - listitem [ref=e1259]:
+              - link "AIRIMPULS Luftenergizer" [ref=e1260]:
+                - /url: /product/vitair/
+            - listitem [ref=e1261]:
+              - link "Preventair" [ref=e1262]:
+                - /url: /product/preventair/
+        - generic [ref=e1263]:
+          - heading "Support" [level=4] [ref=e1264]
+          - list [ref=e1265]:
+            - listitem [ref=e1266]:
+              - link "Kontakt" [ref=e1267]:
+                - /url: /kontakt/
+            - listitem [ref=e1268]:
+              - link "FAQ" [ref=e1269]:
+                - /url: /faq/
+            - listitem [ref=e1270]:
+              - link "Versand & Rückgabe" [ref=e1271]:
+                - /url: /versand/
+        - generic [ref=e1272]:
+          - heading "Rechtliches" [level=4] [ref=e1273]
+          - list [ref=e1274]:
+            - listitem [ref=e1275]:
+              - link "Impressum" [ref=e1276]:
+                - /url: /impressum/
+            - listitem [ref=e1277]:
+              - link "Datenschutz" [ref=e1278]:
+                - /url: /datenschutz/
+            - listitem [ref=e1279]:
+              - link "AGB" [ref=e1280]:
+                - /url: /agb/
+            - listitem [ref=e1281]:
+              - link "Widerruf" [ref=e1282]:
+                - /url: /widerruf/
+      - generic [ref=e1283]:
+        - generic [ref=e1284]: © 2026 AIRIMPULS by Jörg Klemm. Alle Rechte vorbehalten.
+        - generic [ref=e1285]:
+          - img "Visa" [ref=e1286]
+          - img "Mastercard" [ref=e1287]
+          - img "PayPal" [ref=e1288]
+          - img "Klarna" [ref=e1289]
+  - alert [ref=e1290]
+  - generic [ref=e1293]:
+    - img [ref=e1294]
+    - generic [ref=e1296]:
+      - paragraph [ref=e1297]:
+        - text: Wir verwenden Cookies, um Ihnen die bestmögliche Erfahrung zu bieten. Technisch notwendige Cookies sind für den Betrieb des Shops erforderlich.
+        - link "Mehr erfahren" [ref=e1298]:
+          - /url: /datenschutz/
+      - generic [ref=e1299]:
+        - button "Alle akzeptieren" [ref=e1300] [cursor=pointer]
+        - button "Nur Notwendige" [ref=e1301] [cursor=pointer]
+    - button "Schließen" [ref=e1302] [cursor=pointer]:
+      - img [ref=e1303]
+```

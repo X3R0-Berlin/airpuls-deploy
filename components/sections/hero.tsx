@@ -90,6 +90,10 @@ export function Hero({ product }: { product: Product }) {
             >
               <source
                 src={`${product.images.basePath}/${product.heroVideo}`}
+                type="video/webm"
+              />
+              <source
+                src={`${product.images.basePath}/${product.heroVideo.replace('.webm', '.mp4')}`}
                 type="video/mp4"
               />
             </video>

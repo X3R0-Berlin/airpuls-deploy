@@ -188,7 +188,14 @@ function sendEmail(string $to, string $subject, string $htmlBody, string $replyT
             $mail->Port = $smtpPort;
 
             $mail->CharSet = 'UTF-8';
-            $mail->setFrom($from, 'AIRIMPULS Team');
+
+            // Differentiate Sender Name based on internal vs external
+            if ($to === 'team@airimpuls.com') {
+                $mail->setFrom($from, 'Shop System');
+            } else {
+                $mail->setFrom($from, 'AIRIMPULS Kundenservice');
+            }
+
             $mail->addAddress($to);
             $actualReplyTo = !empty($replyToEmail) ? $replyToEmail : $from;
             $mail->addReplyTo($actualReplyTo);

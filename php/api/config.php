@@ -194,7 +194,8 @@ function sendEmail(string $to, string $subject, string $htmlBody, string $replyT
             $mail->send();
             return true;
         } catch (Exception $e) {
-            error_log("PHPMailer Error: {$mail->ErrorInfo}");
+            // Debug: return the exact error
+            jsonError("PHPMailer Error: {$mail->ErrorInfo}", 500);
             return false;
         }
     }
@@ -207,5 +208,10 @@ function sendEmail(string $to, string $subject, string $htmlBody, string $replyT
         'MIME-Version' => '1.0',
         'Content-Type' => 'text/html; charset=UTF-8',
     ];
-    return mail($to, $subject, $htmlBody, $headers, "-f$from");
+    $mailResult = mail($to, $subject, $htmlBody, $headers, "-f$from");
+    if (!$mailResult) {
+        $lastErr = error_get_last();
+        jsonError("mail() Failed: " . ($lastErr['message'] ?? 'Unknown error'), 500);
+    }
+    return $mailResult;
 }

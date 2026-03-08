@@ -114,14 +114,79 @@ $htmlBody = "
 </html>
 ";
 
-// Call the generic sendEmail function from config.php with Reply-To
-$success = sendEmail($to, $subject, $htmlBody, $email);
+// Call the generic sendEmail function from config.php with Reply-To (Send to Admin)
+$successAdmin = sendEmail($to, $subject, $htmlBody, $email);
 
-if ($success) {
+// 3. Prepare Auto-Responder Email to the Customer
+$customerSubject = "Eingangsbestätigung: " . $subject;
+$customerHtmlBody = "
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <style>
+        @keyframes slowPulse {
+            0% { transform: scale(1); opacity: 0.9; }
+            50% { transform: scale(1.03); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.9; }
+        }
+        .animated-logo {
+            animation: slowPulse 4s infinite ease-in-out;
+            display: inline-block;
+            max-width: 180px;
+            height: auto;
+        }
+        .static-logo {
+            display: none;
+            max-width: 180px;
+            height: auto;
+            mso-hide: all;
+        }
+        @media print {
+            .animated-logo { display: none !important; }
+            .static-logo { display: inline-block !important; }
+        }
+    </style>
+</head>
+<body style='margin: 0; padding: 20px; background-color: #ffffff;'>
+    <div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;'>
+        <div style='text-align: center; border-bottom: 1px solid #eee; padding-bottom: 20px; margin-bottom: 20px;'>
+            
+            <!--[if mso]>
+            <img src='{$baseUrl}/images/Airimpuls_Logo.png' alt='AIRIMPULS' width='180' style='width: 180px; display: block; margin: 0 auto 20px auto;' />
+            <![endif]-->
+            
+            <!--[if !mso]><!-->
+            <div style='text-align: center; margin-bottom: 20px;'>
+                <img src='{$baseUrl}/animations/airimpuls-logo.gif' alt='AIRIMPULS' class='animated-logo' />
+                <img src='{$baseUrl}/images/Airimpuls_Logo.png' alt='AIRIMPULS' class='static-logo' />
+            </div>
+            <!--<![endif]-->
+
+            <h1 style='color: #000; margin-top: 20px; font-size: 24px;'>Vielen Dank für deine Nachricht!</h1>
+        </div>
+        
+        <p>Hallo " . htmlspecialchars($name) . ",</p>
+        <p>wir haben deine Anfrage erhalten und werden uns schnellstmöglich bei dir melden. In der Regel antworten wir innerhalb von 24 Stunden.</p>
+        
+        <h3 style='margin-top: 30px; font-size: 16px; color: #000;'>Deine gesendete Nachricht:</h3>
+        <div style='background-color: #f9f9f9; border-left: 4px solid #000; padding: 15px; border-radius: 4px; margin-bottom: 30px; white-space: pre-wrap; font-family: inherit; color: #555;'>" . htmlspecialchars($message) . "</div>
+        
+        <p>Viele Grüße,<br>Dein AIRIMPULS Team</p>
+    </div>
+</body>
+</html>
+";
+
+// Send to Customer (No Reply-To needed here since it comes from the default system address)
+$successCustomer = sendEmail($email, $customerSubject, $customerHtmlBody);
+
+if ($successAdmin) {
     jsonResponse([
         'status' => 'success',
         'message' => 'Vielen Dank für deine Nachricht. Wir werden uns in Kürze melden.'
     ]);
 } else {
+    // If admin email fails, we consider the process failed even if customer email succeeded
     jsonError('Die E-Mail konnte nicht versendet werden. Bitte versuche es später noch einmal.', 500);
 }

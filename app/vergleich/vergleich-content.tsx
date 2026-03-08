@@ -24,7 +24,7 @@ interface VergleichContentProps {
   comparison: ComparisonData;
 }
 
-export function VergleichContent({ products, comparison }: VergleichContentProps) {
+export function VergleichContent({ products }: VergleichContentProps) {
   const { locale } = useLanguage();
 
   const localizedProducts = products.map((p) => getLocalizedProduct(p, locale));

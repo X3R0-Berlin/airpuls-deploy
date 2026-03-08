@@ -38,8 +38,6 @@ interface ProductDetailContentProps {
 
 export function ProductDetailContent({
   product,
-  testimonials,
-  bundles,
 }: ProductDetailContentProps) {
   const { locale } = useLanguage();
 

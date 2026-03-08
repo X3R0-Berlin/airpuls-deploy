@@ -48,10 +48,6 @@ interface HomeContentProps {
 export function HomeContent({
   product,
   allProducts,
-  features,
-  testimonials,
-  stats,
-  comparison,
 }: HomeContentProps) {
   const { locale } = useLanguage();
 

@@ -52,11 +52,10 @@ function TierCard({ tier, index }: { tier: Tier; index: number }) {
       initial={{ opacity: 0, y: 24 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: index * 0.15 }}
-      className={`relative rounded-2xl p-6 sm:p-8 border transition-colors ${
-        isHighlighted
+      className={`relative rounded-2xl p-6 sm:p-8 border transition-colors ${isHighlighted
           ? "border-brand-accent bg-brand-accent/5"
           : "border-[var(--brand-border-light)] bg-[var(--brand-bg-cream)]"
-      }`}
+        }`}
     >
       {isHighlighted && (
         <span className="absolute -top-3 left-6 px-3 py-0.5 bg-brand-accent text-white text-[0.7rem] font-medium rounded-full tracking-wide uppercase">
@@ -105,7 +104,7 @@ function TierCard({ tier, index }: { tier: Tier; index: number }) {
   );
 }
 
-export function PartnerPageClient({ affiliate }: { affiliate: AffiliateData }) {
+export function PartnerPageClient({ }: { affiliate?: AffiliateData }) {
   const heroRef = useRef<HTMLDivElement>(null);
   const heroInView = useInView(heroRef, { once: true, amount: 0.3 });
   const stepsRef = useRef<HTMLDivElement>(null);

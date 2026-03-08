@@ -34,7 +34,7 @@ const categoryIcons: Record<string, string> = {
   Returns: "↩️",
 };
 
-export function FAQContent({ faqData }: { faqData: FAQCategory[] }) {
+export function FAQContent({ }: { faqData?: FAQCategory[] }) {
   const { t, locale } = useLanguage();
   const localizedFaqData = getLocalizedFaq(locale) as FAQCategory[];
 

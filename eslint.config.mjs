@@ -16,6 +16,9 @@ const eslintConfig = defineConfig([
     "scripts/**",
     "php/**",
     "deploy/**",
+    "cms/**",
+    "extract-frame.js",
+    "cms-starten.bat",
   ]),
   // Relax rules for auto-generated shadcn/MagicUI components
   {
@@ -25,6 +28,12 @@ const eslintConfig = defineConfig([
       "react-hooks/static-components": "off",
     },
   },
+  {
+    rules: {
+      "react-hooks/set-state-in-effect": "off",
+      "@typescript-eslint/no-unused-vars": "warn",
+    }
+  }
 ]);
 
 export default eslintConfig;

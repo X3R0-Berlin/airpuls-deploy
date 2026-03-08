@@ -1,0 +1,9 @@
+node_modules/
+.next/
+out/
+build/
+public/
+scripts/
+cms/
+extract-frame.js
+cms-starten.bat

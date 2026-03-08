@@ -4,6 +4,12 @@
  * Environment variables are injected by IONOS Deploy Now.
  */
 
+if (file_exists(__DIR__ . '/../vendor/autoload.php')) {
+    require_once __DIR__ . '/../vendor/autoload.php'; // IONOS deployment path
+} elseif (file_exists(__DIR__ . '/../../vendor/autoload.php')) {
+    require_once __DIR__ . '/../../vendor/autoload.php'; // Local dev path
+}
+
 // CORS headers
 function setCorsHeaders(): void
 {
@@ -154,29 +160,52 @@ function getClientIp(): string
         : ($_SERVER['REMOTE_ADDR'] ?? 'unknown');
 }
 
-// Send email (uses IONOS sendmail or SMTP)
+// Send email (uses PHPMailer via IONOS SMTP)
 function sendEmail(string $to, string $subject, string $htmlBody, string $replyToEmail = ''): bool
 {
-    // Falls keine eigene FROM-Adresse definiert ist, nutze die primäre Domain-Adresse
     $from = getenv('SMTP_FROM') ?: getenv('IONOS_MAIL_FROM') ?: 'team@airimpuls.com';
+    $smtpHost = getenv('SMTP_HOST') ?: 'smtp.ionos.de';
+    $smtpUser = getenv('SMTP_USER') ?: 'team@airimpuls.com';
+    $smtpPass = getenv('SMTP_PASS') ?: 'Airimpulse2026...'; // User's provided password fallback
+    $smtpPort = getenv('SMTP_PORT') ?: 465;
 
-    $smtpHost = getenv('SMTP_HOST');
+    // Use PHPMailer if available
+    if (class_exists('PHPMailer\PHPMailer\PHPMailer')) {
+        $mail = new \PHPMailer\PHPMailer\PHPMailer(true);
+        try {
+            $mail->isSMTP();
+            $mail->Host = $smtpHost;
+            $mail->SMTPAuth = true;
+            $mail->Username = $smtpUser;
+            $mail->Password = $smtpPass;
+            $mail->SMTPSecure = ($smtpPort == 465) ? \PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_SMTPS : \PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Port = $smtpPort;
 
-    if ($smtpHost) {
-        // Use PHPMailer-style approach if SMTP configured
-        // For simplicity, fall through to mail() with custom headers
+            $mail->CharSet = 'UTF-8';
+            $mail->setFrom($from, 'AIRIMPULS Team');
+            $mail->addAddress($to);
+            $actualReplyTo = !empty($replyToEmail) ? $replyToEmail : $from;
+            $mail->addReplyTo($actualReplyTo);
+
+            $mail->isHTML(true);
+            $mail->Subject = $subject;
+            $mail->Body = $htmlBody;
+
+            $mail->send();
+            return true;
+        } catch (Exception $e) {
+            error_log("PHPMailer Error: {$mail->ErrorInfo}");
+            return false;
+        }
     }
 
-    // Wenn ein Reply-To übergeben wurde (z.B. der Kunde aus dem Kontaktformular), nutze diesen, sonst den Absender
+    // Fallback if composer somehow fails
     $actualReplyTo = !empty($replyToEmail) ? $replyToEmail : $from;
-
     $headers = [
         'From' => $from,
         'Reply-To' => $actualReplyTo,
         'MIME-Version' => '1.0',
         'Content-Type' => 'text/html; charset=UTF-8',
     ];
-
-    // Mit -f Parameter den Envelope-Sender für IONOS Mail erzwingen
     return mail($to, $subject, $htmlBody, $headers, "-f$from");
 }

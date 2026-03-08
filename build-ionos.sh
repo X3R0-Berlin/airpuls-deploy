@@ -8,6 +8,9 @@ npm run build
 # Generate products.json
 node scripts/build-products-json.js
 
+# Install PHP dependencies (PHPMailer, Stripe)
+composer install --no-dev --optimize-autoloader
+
 # Assemble everything directly in 'deploy' root.
 # IONOS will sync this folder to the webspace.
 # "Public folder path = public" means Apache document root = <webspace>/public/

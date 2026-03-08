@@ -177,10 +177,6 @@ function sendEmail(string $to, string $subject, string $htmlBody, string $replyT
         'Content-Type' => 'text/html; charset=UTF-8',
     ];
 
-    $headerStr = '';
-    foreach ($headers as $k => $v) {
-        $headerStr .= "$k: $v\r\n";
-    }
-
-    return mail($to, $subject, $htmlBody, $headerStr);
+    // Mit -f Parameter den Envelope-Sender für IONOS Mail erzwingen
+    return mail($to, $subject, $htmlBody, $headers, "-f$from");
 }

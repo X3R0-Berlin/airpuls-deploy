@@ -35,16 +35,19 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     jsonError('Ungültige E-Mail-Adresse.');
 }
 
+// 1. Save to database (optional backup/record)
 try {
-    // 1. Save to database (optional backup/record)
     $db = getDb();
     $stmt = $db->prepare('INSERT INTO contact_messages (name, email, subject, message) VALUES (?, ?, ?, ?)');
     $stmt->execute([$name, $email, $subject, $message]);
+} catch (Throwable $e) {
+    error_log("Database Error (Ignored) in contact.php: " . $e->getMessage());
+}
 
-    // 2. Prepare Email to the shop team
-    $to = 'team@airimpuls.com'; // Admin Email Receiving the Contact Form
+// 2. Prepare Email to the shop team
+$to = 'team@airimpuls.com'; // Admin Email Receiving the Contact Form
 
-    $htmlBody = "
+$htmlBody = "
     <html>
     <body style='font-family: Arial, sans-serif; line-height: 1.6; color: #333;'>
         <h2>Neue Kontaktanfrage über die Webseite</h2>
@@ -57,24 +60,14 @@ try {
     </html>
     ";
 
-    // Call the generic sendEmail function from config.php
-    // To ensure reply-to works correctly, we can pass headers indirectly or patch config.php
-    // In config.php, Reply-To defaults to $from, but we can override it inside config.php soon.
+// Call the generic sendEmail function from config.php with Reply-To
+$success = sendEmail($to, $subject, $htmlBody, $email);
 
-    // For now, testing the basic flow.
-    $success = sendEmail($to, $subject, $htmlBody);
-
-    if ($success) {
-        jsonResponse([
-            'status' => 'success',
-            'message' => 'Vielen Dank für deine Nachricht. Wir werden uns in Kürze melden.'
-        ]);
-    } else {
-        jsonError('Die E-Mail konnte nicht versendet werden. Bitte versuche es später noch einmal.', 500);
-    }
-
-} catch (PDOException $e) {
-    // Log real DB error internally, but return generic error to client
-    error_log("Database Error in contact.php: " . $e->getMessage());
-    jsonError('Es gab ein Problem beim Speichern deiner Anfrage. Bitte versuche es später nochmal.', 500);
+if ($success) {
+    jsonResponse([
+        'status' => 'success',
+        'message' => 'Vielen Dank für deine Nachricht. Wir werden uns in Kürze melden.'
+    ]);
+} else {
+    jsonError('Die E-Mail konnte nicht versendet werden. Bitte versuche es später noch einmal.', 500);
 }

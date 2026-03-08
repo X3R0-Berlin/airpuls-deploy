@@ -5,6 +5,7 @@ import { ArrowRight, RotateCcw } from "lucide-react";
 import Link from "next/link";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { MagicCard } from "@/components/ui/magic-card";
+import { useLanguage } from "@/lib/i18n/context";
 
 type Step = "start" | "result";
 
@@ -12,28 +13,14 @@ interface Answer {
   usage: "raumluft" | "atemtherapie" | "profi" | null;
 }
 
-const recommendations: Record<string, { slug: string; name: string; subtitle: string; reason: string }> = {
-  raumluft: {
-    slug: "vitair",
-    name: "Vitair",
-    subtitle: "Luftenergizer",
-    reason: "Ideal für die kontinuierliche Raumluft-Aktivierung in Wohnräumen und Büros bis 40 m².",
-  },
-  atemtherapie: {
-    slug: "solitair",
-    name: "Solitair",
-    subtitle: "Atemluft-Energizer",
-    reason: "Für die persönliche Anwendung mit Atembrille — ohne Elektronik, maximal nachhaltig.",
-  },
-  profi: {
-    slug: "preventair",
-    name: "Preventair",
-    subtitle: "Professionelles Therapiegerät",
-    reason: "Professionelle Kurzzeit-Therapie mit Atembrille. Seit über 25 Jahren in der Praxis bewährt.",
-  },
+const recommendations: Record<string, { slug: string; name: string; subtitle: string; reasonKey: string }> = {
+  raumluft: { slug: "vitair", name: "Vitair", subtitle: "Luftenergizer", reasonKey: "finder.reasonRoomAir" },
+  atemtherapie: { slug: "solitair", name: "Solitair", subtitle: "Atemluft-Energizer", reasonKey: "finder.reasonBreathing" },
+  profi: { slug: "preventair", name: "Preventair", subtitle: "Professionelles Therapiegerät", reasonKey: "finder.reasonProfessional" },
 };
 
 export function ProductFinder() {
+  const { t } = useLanguage();
   const [step, setStep] = useState<Step>("start");
   const [answer, setAnswer] = useState<Answer>({ usage: null });
 
@@ -55,10 +42,10 @@ export function ProductFinder() {
         <BlurFade delay={0} inView>
           <div className="text-center mb-10">
             <span className="text-[0.7rem] tracking-[0.25em] uppercase text-brand-accent font-medium">
-              Produktberater
+              {t("finder.tag")}
             </span>
             <h2 className="font-serif text-[clamp(2rem,4vw,3rem)] font-light text-brand-text-dark mt-3">
-              Welches Gerät passt zu Ihnen?
+              {t("finder.heading")}
             </h2>
           </div>
         </BlurFade>
@@ -66,13 +53,13 @@ export function ProductFinder() {
         {step === "start" && (
           <BlurFade delay={0.1} inView>
             <p className="text-center text-brand-text-muted mb-8">
-              Wofür möchten Sie aktivierten Sauerstoff nutzen?
+              {t("finder.question")}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
-                { key: "raumluft" as const, label: "Raumluft", desc: "Für Wohnräume & Büros" },
-                { key: "atemtherapie" as const, label: "Atemtherapie", desc: "Persönliche Anwendung" },
-                { key: "profi" as const, label: "Professionell", desc: "Therapeuten & Kliniken" },
+                { key: "raumluft" as const, label: t("finder.roomAir"), desc: t("finder.roomAirDesc") },
+                { key: "atemtherapie" as const, label: t("finder.breathing"), desc: t("finder.breathingDesc") },
+                { key: "profi" as const, label: t("finder.professional"), desc: t("finder.professionalDesc") },
               ].map((option) => (
                 <MagicCard
                   key={option.key}
@@ -96,7 +83,7 @@ export function ProductFinder() {
           <BlurFade delay={0} inView>
             <div className="border border-[var(--brand-border-light)] rounded-2xl p-8 text-center">
               <p className="text-brand-accent text-sm font-medium mb-2">
-                Unsere Empfehlung
+                {t("finder.recommendation")}
               </p>
               <h3 className="font-serif text-3xl text-brand-text-dark font-light mb-1">
                 {result.name}
@@ -105,14 +92,14 @@ export function ProductFinder() {
                 {result.subtitle}
               </p>
               <p className="text-brand-text-muted text-[0.9rem] leading-relaxed mb-8 max-w-md mx-auto">
-                {result.reason}
+                {t(result.reasonKey)}
               </p>
               <div className="flex items-center justify-center gap-4">
                 <Link
                   href={`/product/${result.slug}`}
                   className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--brand-bg-light)] text-[var(--brand-text-dark)] rounded-full font-semibold text-sm hover:bg-white transition-colors no-underline"
                 >
-                  Jetzt entdecken
+                  {t("finder.discover")}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <button
@@ -120,7 +107,7 @@ export function ProductFinder() {
                   className="inline-flex items-center gap-2 px-4 py-3 border border-[var(--brand-border-light)] text-brand-text-muted rounded-full text-sm hover:text-brand-text-dark transition-colors cursor-pointer bg-transparent"
                 >
                   <RotateCcw className="w-3.5 h-3.5" />
-                  Nochmal
+                  {t("finder.reset")}
                 </button>
               </div>
             </div>

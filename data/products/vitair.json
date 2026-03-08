@@ -20,25 +20,70 @@
   "images": {
     "hero": "rotlicht.webp",
     "gallery": [
-      { "file": "front.webp", "alt": "Vitair Frontansicht" },
-      { "file": "offen.webp", "alt": "Vitair geöffnet" },
-      { "file": "rotlicht.webp", "alt": "Vitair Rotlichtmodus" },
-      { "file": "detail.webp", "alt": "Vitair Nahaufnahme" },
-      { "file": "detail-rot.webp", "alt": "Vitair Ventilator Detail" },
-      { "file": "usbc.webp", "alt": "Vitair Rückseite mit USB-C Anschluss" }
+      {
+        "file": "front.webp",
+        "alt": "Vitair Frontansicht"
+      },
+      {
+        "file": "offen.webp",
+        "alt": "Vitair geöffnet"
+      },
+      {
+        "file": "rotlicht.webp",
+        "alt": "Vitair Rotlichtmodus"
+      },
+      {
+        "file": "detail.webp",
+        "alt": "Vitair Nahaufnahme"
+      },
+      {
+        "file": "detail-rot.webp",
+        "alt": "Vitair Ventilator Detail"
+      },
+      {
+        "file": "usbc.webp",
+        "alt": "Vitair Rückseite mit USB-C Anschluss"
+      }
     ],
     "basePath": "/images/products/vitair"
   },
   "specs": [
-    { "label": "Gehäuse", "value": "CNC-präzisionsgefräst, eloxiert" },
-    { "label": "Abmessungen", "value": "Ø 14 cm × 24 cm Höhe" },
-    { "label": "Gewicht", "value": "2,4 kg" },
-    { "label": "Lüfter", "value": "Axiallüfter, < 25 dB" },
-    { "label": "LED-Module", "value": "4× Hochleistungs-LED-Module" },
-    { "label": "Stromversorgung", "value": "12V DC — 18 Watt" },
-    { "label": "Katalysator", "value": "2× Katalysatorscheiben" },
-    { "label": "Filter", "value": "Edelstahlgewebe, feinmaschig" },
-    { "label": "Raumgröße", "value": "Bis zu 40 m²" }
+    {
+      "label": "Gehäuse",
+      "value": "CNC-präzisionsgefräst, eloxiert"
+    },
+    {
+      "label": "Abmessungen",
+      "value": "Ø 14 cm × 24 cm Höhe"
+    },
+    {
+      "label": "Gewicht",
+      "value": "2,4 kg"
+    },
+    {
+      "label": "Lüfter",
+      "value": "Axiallüfter, < 25 dB"
+    },
+    {
+      "label": "LED-Module",
+      "value": "4× Hochleistungs-LED-Module"
+    },
+    {
+      "label": "Stromversorgung",
+      "value": "12V DC — 18 Watt"
+    },
+    {
+      "label": "Katalysator",
+      "value": "2× Katalysatorscheiben"
+    },
+    {
+      "label": "Filter",
+      "value": "Edelstahlgewebe, feinmaschig"
+    },
+    {
+      "label": "Raumgröße",
+      "value": "Bis zu 40 m²"
+    }
   ],
   "details": [
     {
@@ -127,8 +172,17 @@
     ]
   },
   "trustBadges": [
-    { "icon": "shield", "text": "2 Jahre Garantie" },
-    { "icon": "truck", "text": "Kostenloser Versand" },
-    { "icon": "refresh", "text": "30 Tage Rückgabe" }
+    {
+      "icon": "shield",
+      "text": "2 Jahre Garantie"
+    },
+    {
+      "icon": "truck",
+      "text": "Kostenloser Versand"
+    },
+    {
+      "icon": "refresh",
+      "text": "30 Tage Rückgabe"
+    }
   ]
 }

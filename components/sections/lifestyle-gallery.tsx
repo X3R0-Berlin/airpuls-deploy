@@ -3,30 +3,13 @@
 import Image from "next/image";
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
+import { useLanguage } from "@/lib/i18n/context";
 
 interface LifestyleImage {
   src: string;
   alt: string;
   caption: string;
 }
-
-const lifestyleImages: LifestyleImage[] = [
-  {
-    src: "/images/lifestyle/schlafzimmer.webp",
-    alt: "Vitair im Schlafzimmer auf dem Nachttisch",
-    caption: "Schlafzimmer",
-  },
-  {
-    src: "/images/lifestyle/buero.webp",
-    alt: "Vitair im Home Office auf dem Schreibtisch",
-    caption: "Home Office",
-  },
-  {
-    src: "/images/lifestyle/wohnzimmer.webp",
-    alt: "Vitair im Wohnzimmer auf dem Beistelltisch",
-    caption: "Wohnzimmer",
-  },
-];
 
 function LifestyleCard({ image, index }: { image: LifestyleImage; index: number }) {
   const ref = useRef(null);
@@ -62,8 +45,27 @@ function LifestyleCard({ image, index }: { image: LifestyleImage; index: number 
 }
 
 export function LifestyleGallery() {
+  const { t } = useLanguage();
   const headingRef = useRef(null);
   const isInView = useInView(headingRef, { once: true, margin: "-80px" });
+
+  const lifestyleImages: LifestyleImage[] = [
+    {
+      src: "/images/lifestyle/schlafzimmer.webp",
+      alt: t("lifestyle.bedroomAlt"),
+      caption: t("lifestyle.bedroom"),
+    },
+    {
+      src: "/images/lifestyle/buero.webp",
+      alt: t("lifestyle.officeAlt"),
+      caption: t("lifestyle.office"),
+    },
+    {
+      src: "/images/lifestyle/wohnzimmer.webp",
+      alt: t("lifestyle.livingRoomAlt"),
+      caption: t("lifestyle.livingRoom"),
+    },
+  ];
 
   return (
     <section className="py-24 px-[clamp(1.5rem,5vw,6rem)]">
@@ -75,11 +77,11 @@ export function LifestyleGallery() {
         className="text-center mb-14"
       >
         <span className="text-brand-accent text-xs uppercase tracking-[0.2em] font-medium">
-          Zuhause
+          {t("lifestyle.tag")}
         </span>
         <h2 className="font-serif text-[clamp(2rem,3.5vw,3rem)] font-light mt-3 leading-tight">
-          Fügt sich nahtlos in<br />
-          <em>deinen Alltag</em> ein
+          {t("lifestyle.heading")}<br />
+          <em>{t("lifestyle.headingEm")}</em> {t("lifestyle.headingSuffix")}
         </h2>
       </motion.div>
 

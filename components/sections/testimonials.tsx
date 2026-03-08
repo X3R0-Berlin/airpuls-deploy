@@ -6,8 +6,10 @@ import { BlurFade } from "@/components/ui/blur-fade";
 import { Marquee } from "@/components/ui/marquee";
 import { MagicCard } from "@/components/ui/magic-card";
 import type { Testimonial } from "@/lib/products";
+import { useLanguage } from "@/lib/i18n/context";
 
 export function Testimonials({ testimonials }: { testimonials: Testimonial[] }) {
+  const { t } = useLanguage();
   return (
     <section
       id="reviews"
@@ -17,18 +19,18 @@ export function Testimonials({ testimonials }: { testimonials: Testimonial[] }) 
         <BlurFade delay={0} inView>
           <div className="text-center mb-[clamp(3rem,6vw,5rem)]">
             <span className="inline-block text-[0.7rem] tracking-[0.25em] uppercase text-brand-accent mb-4 font-medium">
-              Kundenstimmen
+              {t("testimonials.tag")}
             </span>
             <h2 className="font-serif font-light text-[clamp(2rem,4vw,3.2rem)] leading-[1.2] max-w-[600px] mx-auto text-brand-text-dark">
-              Das sagen unsere Kunden
+              {t("testimonials.heading")}
             </h2>
           </div>
         </BlurFade>
 
         <Marquee pauseOnHover className="[--duration:50s] [--gap:1.5rem]">
-          {testimonials.map((t) => (
+          {testimonials.map((item) => (
             <MagicCard
-              key={t.id}
+              key={item.id}
               className="w-[380px] bg-white p-8 flex-shrink-0 cursor-default"
               gradientColor="rgba(53,120,104,0.1)"
             >
@@ -38,7 +40,7 @@ export function Testimonials({ testimonials }: { testimonials: Testimonial[] }) 
                   <Star
                     key={i}
                     className={`w-4 h-4 ${
-                      i < t.stars
+                      i < item.stars
                         ? "fill-brand-accent text-brand-accent"
                         : "fill-none text-brand-text-muted/60"
                     }`}
@@ -48,16 +50,16 @@ export function Testimonials({ testimonials }: { testimonials: Testimonial[] }) 
 
               {/* Quote */}
               <p className="text-brand-text-dark text-[0.9rem] leading-[1.7] mb-6 italic min-h-[80px]">
-                &ldquo;{t.text}&rdquo;
+                &ldquo;{item.text}&rdquo;
               </p>
 
               {/* Author with avatar */}
               <div className="flex items-center gap-3 pt-4 border-t border-[var(--brand-border-light)]">
                 <div className="w-10 h-10 rounded-full bg-[var(--brand-accent)]/10 flex items-center justify-center shrink-0 overflow-hidden">
-                  {t.avatar ? (
+                  {item.avatar ? (
                     <Image
-                      src={t.avatar}
-                      alt={t.author}
+                      src={item.avatar}
+                      alt={item.author}
                       width={40}
                       height={40}
                       className="w-full h-full object-cover"
@@ -69,16 +71,16 @@ export function Testimonials({ testimonials }: { testimonials: Testimonial[] }) 
                 <div className="min-w-0">
                   <div className="flex items-center gap-1.5">
                     <strong className="text-brand-text-dark font-medium text-[0.85rem]">
-                      {t.author}
+                      {item.author}
                     </strong>
-                    {t.verified && (
+                    {item.verified && (
                       <BadgeCheck className="w-3.5 h-3.5 text-brand-accent shrink-0" />
                     )}
                   </div>
                   <p className="text-brand-text-muted text-[0.75rem]">
-                    {t.location}
-                    {t.purchaseDate && (
-                      <span> · Kauf {t.purchaseDate}</span>
+                    {item.location}
+                    {item.purchaseDate && (
+                      <span> · {t("testimonials.purchase")} {item.purchaseDate}</span>
                     )}
                   </p>
                 </div>

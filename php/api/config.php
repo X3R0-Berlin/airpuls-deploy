@@ -5,9 +5,10 @@
  */
 
 // CORS headers
-function setCorsHeaders(): void {
+function setCorsHeaders(): void
+{
     $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
-    $allowed = getenv('ALLOWED_ORIGIN') ?: '*';
+    $allowed = getenv('ALLOWED_ORIGIN') ?: 'https://airimpuls.de';
 
     if ($allowed === '*' || $origin === $allowed) {
         header("Access-Control-Allow-Origin: $origin");
@@ -18,7 +19,8 @@ function setCorsHeaders(): void {
 }
 
 // Handle CORS preflight
-function handlePreflight(): void {
+function handlePreflight(): void
+{
     if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
         setCorsHeaders();
         http_response_code(204);
@@ -27,27 +29,32 @@ function handlePreflight(): void {
 }
 
 // Require POST method
-function requirePost(): void {
+function requirePost(): void
+{
     if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
         jsonError('Method Not Allowed', 405);
     }
 }
 
 // JSON response helpers
-function jsonResponse(array $data, int $status = 200): void {
+function jsonResponse(array $data, int $status = 200): void
+{
     http_response_code($status);
     echo json_encode($data, JSON_UNESCAPED_UNICODE);
     exit;
 }
 
-function jsonError(string $message, int $status = 400): void {
+function jsonError(string $message, int $status = 400): void
+{
     jsonResponse(['error' => $message], $status);
 }
 
 // Database connection (MariaDB via IONOS Deploy Now)
-function getDb(): PDO {
+function getDb(): PDO
+{
     static $pdo = null;
-    if ($pdo) return $pdo;
+    if ($pdo)
+        return $pdo;
 
     $host = getenv('IONOS_DB_HOST') ?: getenv('DB_HOST') ?: 'localhost';
     $name = getenv('IONOS_DB_NAME') ?: getenv('DB_NAME') ?: 'airimpuls';
@@ -78,15 +85,26 @@ function getDb(): PDO {
             message TEXT NOT NULL,
             created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+        CREATE TABLE IF NOT EXISTS newsletter_tokens (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            email VARCHAR(255) NOT NULL,
+            token VARCHAR(64) NOT NULL UNIQUE,
+            created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            INDEX idx_token (token),
+            INDEX idx_email (email)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
     ");
 
     return $pdo;
 }
 
 // Load product data for price validation
-function getProducts(): array {
+function getProducts(): array
+{
     static $products = null;
-    if ($products !== null) return $products;
+    if ($products !== null)
+        return $products;
 
     $file = __DIR__ . '/products.json';
     if (!file_exists($file)) {
@@ -96,7 +114,8 @@ function getProducts(): array {
     return $products;
 }
 
-function getProductBySlug(string $slug): ?array {
+function getProductBySlug(string $slug): ?array
+{
     foreach (getProducts() as $product) {
         if ($product['slug'] === $slug) {
             return $product;
@@ -106,9 +125,11 @@ function getProductBySlug(string $slug): ?array {
 }
 
 // Simple rate limiting (file-based)
-function isRateLimited(string $key, int $maxRequests = 5, int $windowSeconds = 60): bool {
+function isRateLimited(string $key, int $maxRequests = 5, int $windowSeconds = 60): bool
+{
     $dir = sys_get_temp_dir() . '/airimpuls_ratelimit';
-    if (!is_dir($dir)) @mkdir($dir, 0755, true);
+    if (!is_dir($dir))
+        @mkdir($dir, 0755, true);
 
     $file = $dir . '/' . md5($key) . '.json';
     $now = time();
@@ -126,15 +147,18 @@ function isRateLimited(string $key, int $maxRequests = 5, int $windowSeconds = 6
 }
 
 // Get client IP
-function getClientIp(): string {
+function getClientIp(): string
+{
     return $_SERVER['HTTP_X_FORWARDED_FOR']
         ? explode(',', $_SERVER['HTTP_X_FORWARDED_FOR'])[0]
         : ($_SERVER['REMOTE_ADDR'] ?? 'unknown');
 }
 
 // Send email (uses IONOS sendmail or SMTP)
-function sendEmail(string $to, string $subject, string $htmlBody, string $textBody = ''): bool {
-    $from = getenv('SMTP_FROM') ?: getenv('IONOS_MAIL_FROM') ?: 'kontakt@airimpuls.de';
+function sendEmail(string $to, string $subject, string $htmlBody, string $replyToEmail = ''): bool
+{
+    // Falls keine eigene FROM-Adresse definiert ist, nutze die primäre Domain-Adresse
+    $from = getenv('SMTP_FROM') ?: getenv('IONOS_MAIL_FROM') ?: 'team@airimpuls.com';
 
     $smtpHost = getenv('SMTP_HOST');
 
@@ -143,9 +167,12 @@ function sendEmail(string $to, string $subject, string $htmlBody, string $textBo
         // For simplicity, fall through to mail() with custom headers
     }
 
+    // Wenn ein Reply-To übergeben wurde (z.B. der Kunde aus dem Kontaktformular), nutze diesen, sonst den Absender
+    $actualReplyTo = !empty($replyToEmail) ? $replyToEmail : $from;
+
     $headers = [
         'From' => $from,
-        'Reply-To' => $from,
+        'Reply-To' => $actualReplyTo,
         'MIME-Version' => '1.0',
         'Content-Type' => 'text/html; charset=UTF-8',
     ];

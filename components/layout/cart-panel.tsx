@@ -6,26 +6,33 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sh
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { useCart } from "@/lib/cart-context";
-import { formatCurrency } from "@/lib/brand";
+import { useCurrency } from "@/lib/currency-context";
+import { useLanguage } from "@/lib/i18n/context";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { getAffiliateRef } from "@/components/affiliate-tracker";
 
 export function CartPanel() {
   const { items, isOpen, setOpen, updateQuantity, removeItem, totalPrice } =
     useCart();
+  const { t } = useLanguage();
+  const { currencyCode, formatPrice } = useCurrency();
 
   const handleCheckout = async () => {
     try {
       const res = await fetch("/api/checkout.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ items, affiliateRef: getAffiliateRef() }),
+        body: JSON.stringify({ items, affiliateRef: getAffiliateRef(), currency: currencyCode }),
       });
       const data = await res.json();
       if (data.url) {
         window.location.href = data.url;
+      } else if (data.error) {
+        alert("Checkout Fehler: " + data.error);
+        console.error("Checkout API error:", data.error);
       }
     } catch (err) {
+      alert("Ein Fehler ist aufgetreten. Bitte versuche es später erneut.");
       console.error("Checkout error:", err);
     }
   };
@@ -36,14 +43,14 @@ export function CartPanel() {
         <SheetHeader className="p-0 pt-8 pb-6 pr-8 border-b border-[var(--brand-border-light)]">
           <SheetTitle className="text-brand-text-dark font-sans text-xl flex items-center gap-3">
             <ShoppingBag className="w-5 h-5" />
-            Warenkorb
+            {t("cart.title")}
           </SheetTitle>
         </SheetHeader>
 
         {items.length === 0 ? (
           <div className="flex-1 flex flex-col items-center justify-center text-brand-text-muted text-sm">
             <ShoppingBag className="w-12 h-12 mb-4 opacity-30" />
-            <p>Dein Warenkorb ist leer.</p>
+            <p>{t("cart.empty")}</p>
           </div>
         ) : (
           <>
@@ -68,11 +75,11 @@ export function CartPanel() {
                         {item.name}
                       </p>
                       <p className="text-brand-text-dark text-sm font-medium whitespace-nowrap flex-shrink-0">
-                        {formatCurrency(item.price * item.quantity)}
+                        {formatPrice(item.price * item.quantity, item.priceChf ? item.priceChf * item.quantity : undefined)}
                       </p>
                     </div>
                     <p className="text-brand-text-muted text-xs mt-1.5">
-                      {formatCurrency(item.price)} pro Stk.
+                      {formatPrice(item.price, item.priceChf)} {t("cart.perUnit")}
                     </p>
                     <div className="flex items-center gap-3 mt-4">
                       <button
@@ -107,14 +114,14 @@ export function CartPanel() {
             </div>
 
             <div className="border-t border-[var(--brand-border-light)] pt-6 pb-8 space-y-5">
-              <div className="flex justify-between items-center">
-                <span className="text-brand-text-muted text-sm">Zwischensumme</span>
+              <div className="flex justify-between items-center" aria-live="polite" aria-atomic="true">
+                <span className="text-brand-text-muted text-sm">{t("cart.subtotal")}</span>
                 <span className="text-brand-text-dark font-semibold text-lg">
-                  {formatCurrency(totalPrice)}
+                  {formatPrice(totalPrice, currencyCode === 'CHF' ? totalPrice : undefined)}
                 </span>
               </div>
               <p className="text-brand-text-muted text-xs">
-                Kostenloser Versand innerhalb Deutschlands
+                {t("cart.freeShipping")}
               </p>
               <Separator className="bg-[var(--brand-border-light)]" />
               <ShimmerButton
@@ -124,7 +131,7 @@ export function CartPanel() {
                 background="var(--brand-accent)"
               >
                 <span className="text-white font-semibold text-sm">
-                  Zur Kasse
+                  {t("cart.checkout")}
                 </span>
               </ShimmerButton>
               <Button
@@ -132,7 +139,7 @@ export function CartPanel() {
                 onClick={() => setOpen(false)}
                 className="w-full text-brand-text-muted hover:text-brand-text-dark"
               >
-                Weiter einkaufen
+                {t("cart.continueShopping")}
               </Button>
             </div>
           </>

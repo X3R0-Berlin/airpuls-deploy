@@ -6,10 +6,12 @@ import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/context";
 
 type Status = "idle" | "loading" | "success" | "error";
 
 export function Newsletter() {
+  const { t } = useLanguage();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
@@ -31,17 +33,17 @@ export function Newsletter() {
 
       if (res.ok) {
         setStatus("success");
-        setMessage(data.message || "Erfolgreich angemeldet!");
+        setMessage(data.message || t("newsletter.success"));
         setEmail("");
         setTimeout(() => setStatus("idle"), 5000);
       } else {
         setStatus("error");
-        setMessage(data.error || "Ein Fehler ist aufgetreten.");
+        setMessage(data.error || t("newsletter.error"));
         setTimeout(() => setStatus("idle"), 4000);
       }
     } catch {
       setStatus("error");
-      setMessage("Verbindungsfehler. Bitte versuche es erneut.");
+      setMessage(t("newsletter.connectionError"));
       setTimeout(() => setStatus("idle"), 4000);
     }
   };
@@ -53,11 +55,10 @@ export function Newsletter() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="text-center md:text-left">
               <h3 className="font-serif text-2xl font-light text-brand-text-dark mb-2">
-                Bleib informiert
+                {t("newsletter.heading")}
               </h3>
               <p className="text-brand-text-muted text-[0.9rem]">
-                Erhalte exklusive Angebote und Neuigkeiten direkt in dein
-                Postfach.
+                {t("newsletter.description")}
               </p>
             </div>
 
@@ -82,7 +83,7 @@ export function Newsletter() {
                   <div className="relative">
                     <Input
                       type="email"
-                      placeholder="Deine E-Mail-Adresse"
+                      placeholder={t("newsletter.placeholder")}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
@@ -107,10 +108,10 @@ export function Newsletter() {
                       {status === "loading" ? (
                         <>
                           <Loader2 className="w-4 h-4 animate-spin" />
-                          Senden...
+                          {t("newsletter.sending")}
                         </>
                       ) : (
-                        "Anmelden"
+                        t("newsletter.submit")
                       )}
                     </span>
                   </ShimmerButton>

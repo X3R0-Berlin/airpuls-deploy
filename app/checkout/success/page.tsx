@@ -1,8 +1,13 @@
+"use client";
+
 import { CheckCircle } from "lucide-react";
 import Link from "next/link";
 import { brand } from "@/lib/brand";
+import { useLanguage } from "@/lib/i18n/context";
 
 export default function CheckoutSuccess() {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-[var(--brand-bg-light)]">
       <div className="text-center max-w-md px-6">
@@ -10,17 +15,16 @@ export default function CheckoutSuccess() {
           <CheckCircle className="w-8 h-8 text-green-500" />
         </div>
         <h1 className="font-serif text-3xl font-light text-brand-text-dark mb-4">
-          Vielen Dank!
+          {t("checkout.successTitle")}
         </h1>
         <p className="text-brand-text-muted mb-8">
-          Deine Bestellung wurde erfolgreich aufgegeben. Du erhältst in Kürze
-          eine Bestätigungsmail von {brand.companyLegal}.
+          {t("checkout.successMessage", { company: brand.companyLegal })}
         </p>
         <Link
           href="/"
           className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--brand-accent)] text-white rounded-full font-semibold text-[0.85rem] no-underline hover:opacity-90 transition-opacity"
         >
-          Zurück zum Shop
+          {t("checkout.backToShop")}
         </Link>
       </div>
     </div>

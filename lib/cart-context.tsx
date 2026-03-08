@@ -7,11 +7,13 @@ import {
   useEffect,
   type ReactNode,
 } from "react";
+import { useCurrency } from "./currency-context";
 
 export interface CartItem {
   slug: string;
   name: string;
   price: number;
+  priceChf?: number;
   quantity: number;
   image: string;
 }
@@ -83,6 +85,13 @@ function cartReducer(state: CartState, action: CartAction): CartState {
   }
 }
 
+/**
+ * GDPR / ePrivacy note:
+ * Shopping-cart persistence in localStorage is classified as "technically
+ * necessary" (essential) under GDPR Art. 6(1)(b) and the ePrivacy Directive
+ * Art. 5(3) exemption.  Users reasonably expect their cart to survive page
+ * reloads, so no prior cookie consent is required for this storage.
+ */
 const CART_KEY = "airimpuls_cart";
 
 interface CartContextValue {
@@ -104,6 +113,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
     items: [],
     isOpen: false,
   });
+
+  const { getPriceForCurrency } = useCurrency();
 
   // Hydrate from LocalStorage on mount
   useEffect(() => {
@@ -127,7 +138,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   const totalItems = state.items.reduce((sum, i) => sum + i.quantity, 0);
   const totalPrice = state.items.reduce(
-    (sum, i) => sum + i.price * i.quantity,
+    (sum, i) => sum + getPriceForCurrency(i.price, i.priceChf) * i.quantity,
     0
   );
 

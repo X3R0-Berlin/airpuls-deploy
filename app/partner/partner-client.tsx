@@ -10,6 +10,8 @@ import {
   Video,
   ArrowRight,
 } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/context";
+import { getLocalizedAffiliate } from "@/lib/i18n/data";
 
 interface Tier {
   id: string;
@@ -42,6 +44,7 @@ function TierCard({ tier, index }: { tier: Tier; index: number }) {
   const isInView = useInView(ref, { once: true, amount: 0.2 });
   const Icon = tierIcons[tier.id] || Users;
   const isHighlighted = tier.id === "therapeut";
+  const { t } = useLanguage();
 
   return (
     <motion.div
@@ -57,7 +60,7 @@ function TierCard({ tier, index }: { tier: Tier; index: number }) {
     >
       {isHighlighted && (
         <span className="absolute -top-3 left-6 px-3 py-0.5 bg-brand-accent text-white text-[0.7rem] font-medium rounded-full tracking-wide uppercase">
-          Empfohlen
+          {t("partner.recommended")}
         </span>
       )}
 
@@ -69,7 +72,7 @@ function TierCard({ tier, index }: { tier: Tier; index: number }) {
           <h3 className="text-brand-text-dark font-semibold text-lg">{tier.name}</h3>
           <p className="text-brand-accent font-serif text-2xl font-light">
             {tier.commission}%
-            <span className="text-brand-text-muted text-sm font-sans ml-1">Provision</span>
+            <span className="text-brand-text-muted text-sm font-sans ml-1">{t("partner.commission")}</span>
           </p>
         </div>
       </div>
@@ -92,7 +95,7 @@ function TierCard({ tier, index }: { tier: Tier; index: number }) {
 
       <div className="pt-4 border-t border-[var(--brand-border-light)]">
         <p className="text-brand-text-muted text-[0.8rem]">
-          Geschätzter Verdienst:{" "}
+          {t("partner.estimatedEarnings")}{" "}
           <span className="text-brand-text-dark font-medium">
             {tier.estimatedEarning}
           </span>
@@ -107,27 +110,31 @@ export function PartnerPageClient({ affiliate }: { affiliate: AffiliateData }) {
   const heroInView = useInView(heroRef, { once: true, amount: 0.3 });
   const stepsRef = useRef<HTMLDivElement>(null);
   const stepsInView = useInView(stepsRef, { once: true, amount: 0.2 });
+  const { t, locale } = useLanguage();
+
+  // Use localized affiliate data based on current locale
+  const localizedAffiliate = getLocalizedAffiliate(locale) as AffiliateData;
 
   const steps = [
     {
       number: "01",
-      title: "Registrieren",
-      desc: "Füllen Sie das Kontaktformular aus und teilen Sie uns Ihre bevorzugte Stufe mit.",
+      title: t("partner.step1Title"),
+      desc: t("partner.step1Desc"),
     },
     {
       number: "02",
-      title: "Link erhalten",
-      desc: "Sie erhalten Ihren persönlichen Empfehlungslink und Promo-Material.",
+      title: t("partner.step2Title"),
+      desc: t("partner.step2Desc"),
     },
     {
       number: "03",
-      title: "Empfehlen",
-      desc: "Teilen Sie Ihren Link mit Ihrem Netzwerk — online und offline.",
+      title: t("partner.step3Title"),
+      desc: t("partner.step3Desc"),
     },
     {
       number: "04",
-      title: "Verdienen",
-      desc: "Bei jedem Verkauf über Ihren Link erhalten Sie Ihre Provision.",
+      title: t("partner.step4Title"),
+      desc: t("partner.step4Desc"),
     },
   ];
 
@@ -141,7 +148,7 @@ export function PartnerPageClient({ affiliate }: { affiliate: AffiliateData }) {
               AIRIMPULS
             </Link>
             <span>/</span>
-            <span className="text-brand-text-dark">Partnerprogramm</span>
+            <span className="text-brand-text-dark">{t("page.partner")}</span>
           </nav>
         </div>
       </section>
@@ -155,7 +162,7 @@ export function PartnerPageClient({ affiliate }: { affiliate: AffiliateData }) {
             transition={{ duration: 0.5 }}
             className="inline-block text-[0.7rem] tracking-[0.25em] uppercase text-brand-accent font-medium mb-4"
           >
-            Partnerprogramm
+            {t("partner.tag")}
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -163,7 +170,7 @@ export function PartnerPageClient({ affiliate }: { affiliate: AffiliateData }) {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-serif text-[clamp(2.5rem,5vw,4rem)] font-light text-brand-text-dark leading-[1.1]"
           >
-            Gemeinsam für bessere Luft
+            {t("partner.heading")}
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 16 }}
@@ -171,8 +178,7 @@ export function PartnerPageClient({ affiliate }: { affiliate: AffiliateData }) {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-brand-text-muted text-[1.05rem] leading-[1.7] mt-4 max-w-xl mx-auto"
           >
-            Werden Sie Teil unseres Partnerprogramms und verdienen Sie an jeder Empfehlung.
-            Drei Stufen, faire Provisionen, transparente Abrechnung.
+            {t("partner.description")}
           </motion.p>
         </div>
       </section>
@@ -180,7 +186,7 @@ export function PartnerPageClient({ affiliate }: { affiliate: AffiliateData }) {
       {/* Tiers */}
       <section className="pb-[clamp(4rem,8vw,6rem)] px-[clamp(1.5rem,4vw,4rem)]">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-          {affiliate.tiers.map((tier, i) => (
+          {localizedAffiliate.tiers.map((tier, i) => (
             <TierCard key={tier.id} tier={tier} index={i} />
           ))}
         </div>
@@ -196,10 +202,10 @@ export function PartnerPageClient({ affiliate }: { affiliate: AffiliateData }) {
             className="text-center mb-12"
           >
             <span className="text-[0.7rem] tracking-[0.25em] uppercase text-brand-accent font-medium">
-              So funktioniert&apos;s
+              {t("partner.howItWorks")}
             </span>
             <h2 className="font-serif text-[clamp(2rem,4vw,3rem)] font-light text-brand-text-dark mt-3">
-              In vier Schritten zum Partner
+              {t("partner.stepsHeading")}
             </h2>
           </motion.div>
 
@@ -231,24 +237,24 @@ export function PartnerPageClient({ affiliate }: { affiliate: AffiliateData }) {
       <section className="py-[clamp(4rem,8vw,6rem)] px-[clamp(1.5rem,4vw,4rem)] border-t border-[var(--brand-border-light)]">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="font-serif text-[clamp(1.8rem,3vw,2.5rem)] font-light text-brand-text-dark">
-            Bereit, Partner zu werden?
+            {t("partner.ctaHeading")}
           </h2>
           <p className="text-brand-text-muted mt-3 text-[0.95rem]">
-            Kontaktieren Sie uns und wir richten Ihr Partnerkonto ein.
+            {t("partner.ctaDesc")}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
             <Link
               href="/kontakt"
               className="inline-flex items-center gap-2 px-8 py-3.5 bg-[var(--brand-accent)] text-white rounded-full font-semibold text-[0.9rem] hover:bg-[var(--brand-accent-glow)] transition-colors no-underline"
             >
-              Jetzt bewerben
+              {t("partner.ctaApply")}
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/faq"
               className="inline-flex items-center gap-2 px-6 py-3.5 border border-[var(--brand-border-light)] text-brand-text-muted rounded-full text-[0.9rem] hover:text-brand-text-dark hover:border-black/10 transition-all no-underline"
             >
-              Häufige Fragen
+              {t("partner.ctaFaq")}
             </Link>
           </div>
         </div>

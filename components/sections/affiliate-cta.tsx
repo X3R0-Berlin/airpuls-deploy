@@ -4,8 +4,10 @@ import Link from "next/link";
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { Users, TrendingUp, Heart } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/context";
 
 export function AffiliateCTA() {
+  const { t } = useLanguage();
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
@@ -21,14 +23,13 @@ export function AffiliateCTA() {
           transition={{ duration: 0.6 }}
         >
           <span className="text-[0.7rem] tracking-[0.25em] uppercase text-brand-accent font-medium">
-            Partnerprogramm
+            {t("affiliate.tag")}
           </span>
           <h2 className="font-serif text-[clamp(2rem,4vw,3rem)] font-light text-brand-text-dark mt-3">
-            Empfehlen und profitieren
+            {t("affiliate.heading")}
           </h2>
           <p className="text-brand-text-muted mt-3 max-w-lg mx-auto text-[0.95rem] leading-[1.7]">
-            Werden Sie Teil des AIRIMPULS Partnerprogramms und verdienen Sie bis zu 10% Provision
-            auf jeden vermittelten Verkauf.
+            {t("affiliate.description")}
           </p>
         </motion.div>
 
@@ -42,18 +43,18 @@ export function AffiliateCTA() {
           {[
             {
               icon: Heart,
-              title: "Bis zu 10%",
-              desc: "Provision pro Verkauf",
+              title: t("affiliate.commission"),
+              desc: t("affiliate.commissionDesc"),
             },
             {
               icon: Users,
-              title: "30 Tage",
-              desc: "Cookie-Laufzeit",
+              title: t("affiliate.cookieDuration"),
+              desc: t("affiliate.cookieDesc"),
             },
             {
               icon: TrendingUp,
-              title: "3 Stufen",
-              desc: "Kunde · Therapeut · Creator",
+              title: t("affiliate.tiers"),
+              desc: t("affiliate.tiersDesc"),
             },
           ].map((item, i) => (
             <div
@@ -78,7 +79,7 @@ export function AffiliateCTA() {
             href="/partner"
             className="inline-flex items-center gap-2 px-8 py-3.5 bg-[var(--brand-accent)] text-white rounded-full font-semibold text-[0.9rem] hover:bg-[var(--brand-accent-glow)] transition-colors no-underline"
           >
-            Jetzt Partner werden
+            {t("affiliate.cta")}
           </Link>
         </motion.div>
       </div>

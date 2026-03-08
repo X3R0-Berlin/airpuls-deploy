@@ -39,6 +39,14 @@ yarn-error.log*
 # claude code
 .claude/
 
+# CMS (Payload CMS läuft nur lokal)
+cms/node_modules/
+cms/.next/
+cms/data/
+cms/.env
+cms/src/payload-types.ts
+cms/media/
+
 # SQLite database files
 *.db
 *.db-shm

@@ -4,16 +4,21 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Cookie, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import { useLanguage } from "@/lib/i18n/context";
+import { getConsent } from "@/lib/consent";
 
 const STORAGE_KEY = "airimpuls_cookie_consent";
 
 export function CookieBanner() {
   const [visible, setVisible] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     // Small delay so it doesn't flash on page load
     const timer = setTimeout(() => {
-      const consent = localStorage.getItem(STORAGE_KEY);
+      // Use expiration-aware check: if consent is missing OR expired
+      // (older than 13 months), the banner is shown again.
+      const consent = getConsent();
       if (!consent) setVisible(true);
     }, 1500);
     return () => clearTimeout(timer);
@@ -42,14 +47,12 @@ export function CookieBanner() {
               <Cookie className="w-5 h-5 text-brand-accent shrink-0 mt-0.5" />
               <div className="flex-1 min-w-0">
                 <p className="text-[0.88rem] leading-[1.7] text-brand-text-muted mb-4">
-                  Wir verwenden Cookies, um Ihnen die bestmögliche Erfahrung zu
-                  bieten. Technisch notwendige Cookies sind für den Betrieb des
-                  Shops erforderlich.{" "}
+                  {t("cookie.text")}{" "}
                   <Link
                     href="/datenschutz"
                     className="text-brand-accent underline underline-offset-2 hover:text-brand-accent-glow transition-colors"
                   >
-                    Mehr erfahren
+                    {t("cookie.learnMore")}
                   </Link>
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
@@ -57,20 +60,20 @@ export function CookieBanner() {
                     onClick={() => accept("all")}
                     className="px-6 py-2.5 bg-brand-accent text-white text-[0.82rem] font-semibold rounded-full hover:bg-brand-accent-glow transition-colors cursor-pointer border-none"
                   >
-                    Alle akzeptieren
+                    {t("cookie.acceptAll")}
                   </button>
                   <button
                     onClick={() => accept("essential")}
                     className="px-6 py-2.5 bg-transparent text-brand-text-muted text-[0.82rem] font-medium rounded-full border border-[var(--brand-border-light)] hover:text-brand-text-dark hover:border-black/10 transition-all cursor-pointer"
                   >
-                    Nur Notwendige
+                    {t("cookie.essentialOnly")}
                   </button>
                 </div>
               </div>
               <button
                 onClick={() => accept("essential")}
                 className="text-brand-text-muted hover:text-brand-text-dark transition-colors cursor-pointer bg-transparent border-none p-1"
-                aria-label="Schließen"
+                aria-label={t("cookie.close")}
               >
                 <X className="w-4 h-4" />
               </button>

@@ -4,14 +4,12 @@
     "main": "AIR",
     "accent": "IMPULS"
   },
-  "logoImage": "/images/Airimpuls_Logo.svg",
-  "logoInverse": "/images/Airimpuls_Logo_Inverse.svg",
-  "logoMono": "/images/Airimpuls_Logo_Monochrom.svg",
-  "logoIcon": "/images/Airimpuls_Logo_Icon.svg",
   "tagline": "Sauerstoff-Aktivierung nach dem Vorbild der Natur",
-  "designer": "Jörg Klemm",
   "companyLegal": "AIRIMPULS by Jörg Klemm",
   "language": "de",
+  "logoImage": "/images/Airimpuls_Logo.svg",
+  "logoInverse": "/images/Airimpuls_Logo_Inverse.svg",
+  "logoIcon": "/images/Airimpuls_Logo_Icon.svg",
   "currency": {
     "code": "EUR",
     "symbol": "€",

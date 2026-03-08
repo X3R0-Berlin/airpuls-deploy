@@ -1,8 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { brand } from "@/lib/brand";
+import { useLanguage } from "@/lib/i18n/context";
+import { useCurrency } from "@/lib/currency-context";
 
 export function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="pt-[clamp(3rem,5vw,5rem)] pb-8 bg-[var(--brand-bg-dark)]">
       <div className="max-w-[1280px] mx-auto px-[clamp(1.5rem,4vw,4rem)]">
@@ -17,44 +23,45 @@ export function Footer() {
                 className="h-16 w-auto"
               />
             </Link>
-            <p className="text-[0.85rem] leading-[1.7] text-[#8a9098] mt-4 max-w-[280px]">
-              Wir bringen die natürliche Energie der Natur in dein Zuhause.
-              Handgefertigt in Deutschland mit Leidenschaft für Qualität.
+            <p className="text-[0.85rem] leading-[1.7] text-brand-text-muted mt-4 max-w-[280px]">
+              {t("footer.description")}
             </p>
           </div>
 
           <FooterCol
-            title="Shop"
+            title={t("footer.shop")}
             links={[
-              { label: "Alle Produkte", href: "/produkte" },
-              { label: "AIRIMPULS Luftenergizer", href: "/product/vitair" },
-              { label: "Preventair", href: "/product/preventair" },
+              { label: t("footer.allProducts"), href: "/produkte" },
+              { label: t("footer.vitair"), href: "/product/vitair" },
+              { label: t("footer.preventair"), href: "/product/preventair" },
             ]}
           />
           <FooterCol
-            title="Support"
+            title={t("footer.support")}
             links={[
-              { label: "Kontakt", href: "/kontakt" },
-              { label: "FAQ", href: "/faq" },
-              { label: "Versand & Rückgabe", href: "/versand" },
+              { label: t("footer.contact"), href: "/kontakt" },
+              { label: t("footer.faq"), href: "/faq" },
+              { label: t("footer.shipping"), href: "/versand" },
             ]}
           />
           <FooterCol
-            title="Rechtliches"
+            title={t("footer.legal")}
             links={[
-              { label: "Impressum", href: "/impressum" },
-              { label: "Datenschutz", href: "/datenschutz" },
-              { label: "AGB", href: "/agb" },
-              { label: "Widerruf", href: "/widerruf" },
+              { label: t("footer.impressum"), href: "/impressum" },
+              { label: t("footer.datenschutz"), href: "/datenschutz" },
+              { label: t("footer.agb"), href: "/agb" },
+              { label: t("footer.widerruf"), href: "/widerruf" },
             ]}
           />
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-between items-center pt-8 gap-4 text-[0.75rem] text-[#8a9098]">
-          <span>
-            &copy; {new Date().getFullYear()} {brand.companyLegal}. Alle Rechte
-            vorbehalten.
-          </span>
+        <div className="flex flex-col sm:flex-row justify-between items-center pt-8 gap-4 text-[0.75rem] text-brand-text-muted">
+          <div className="flex items-center gap-4">
+            <span>
+              &copy; {new Date().getFullYear()} {brand.companyLegal}. {t("footer.allRights")}
+            </span>
+            <CurrencySwitcher />
+          </div>
           <div className="flex gap-3 items-center">
             {[
               { name: "Visa", src: "/images/payment/visa.svg" },
@@ -87,7 +94,7 @@ function FooterCol({
 }) {
   return (
     <div>
-      <h4 className="text-[0.72rem] tracking-[0.25em] uppercase text-[#8a9098] mb-5 font-medium">
+      <h4 className="text-[0.72rem] tracking-[0.25em] uppercase text-brand-text-muted mb-5 font-medium">
         {title}
       </h4>
       <ul className="list-none space-y-2.5">
@@ -95,13 +102,36 @@ function FooterCol({
           <li key={link.label}>
             <Link
               href={link.href}
-              className="text-[#8a9098] no-underline text-[0.85rem] hover:text-white transition-colors duration-300"
+              className="text-brand-text-muted no-underline text-[0.85rem] hover:text-white transition-colors duration-300"
             >
               {link.label}
             </Link>
           </li>
         ))}
       </ul>
+    </div>
+  );
+}
+
+function CurrencySwitcher() {
+  const { currencyCode, setCurrencyCode } = useCurrency();
+
+  return (
+    <div className="flex items-center gap-2 border border-white/10 rounded-full px-2 py-1 bg-white/5">
+      <button
+        onClick={() => setCurrencyCode("EUR")}
+        className={`px-2 py-0.5 rounded-full transition-colors ${currencyCode === "EUR" ? "bg-white text-[var(--brand-bg-dark)] font-medium" : "text-brand-text-muted hover:text-white"
+          }`}
+      >
+        EUR
+      </button>
+      <button
+        onClick={() => setCurrencyCode("CHF")}
+        className={`px-2 py-0.5 rounded-full transition-colors ${currencyCode === "CHF" ? "bg-white text-[var(--brand-bg-dark)] font-medium" : "text-brand-text-muted hover:text-white"
+          }`}
+      >
+        CHF
+      </button>
     </div>
   );
 }

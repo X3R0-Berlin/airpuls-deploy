@@ -1,0 +1,73 @@
+/**
+ * English translations for testimonials data.
+ * Source of truth (German): data/testimonials.json
+ * Author names, locations, dates, and avatars are kept unchanged.
+ */
+export const testimonialsEN = [
+  {
+    id: 1,
+    product: "vitair",
+    stars: 5,
+    text: "Since I have the Vitair in my bedroom, I sleep noticeably deeper. My partner has had the same experience. A truly high-quality product.",
+    author: "Martina S.",
+    location: "Munich",
+    avatar: "/images/testimonials/martina.webp",
+    verified: true,
+    purchaseDate: "2024-11",
+  },
+  {
+    id: 2,
+    product: "vitair",
+    stars: 5,
+    text: "The design is absolutely fantastic — the Vitair looks like a piece of art. And the air quality in my office has noticeably improved.",
+    author: "Thomas K.",
+    location: "Berlin",
+    avatar: "/images/testimonials/thomas.webp",
+    verified: true,
+    purchaseDate: "2024-09",
+  },
+  {
+    id: 3,
+    product: "vitair",
+    stars: 5,
+    text: "As an allergy sufferer, I am thrilled. The air feels as fresh as after a walk in the forest. The Vitair runs around the clock at our place.",
+    author: "Dr. Julia F.",
+    location: "Hamburg",
+    avatar: "/images/testimonials/julia.webp",
+    verified: true,
+    purchaseDate: "2024-08",
+  },
+  {
+    id: 4,
+    product: "vitair",
+    stars: 5,
+    text: "My practice patients notice the difference immediately. The room air feels alive. I recommend the Vitair to anyone who values breathing quality.",
+    author: "HP Michael R.",
+    location: "Stuttgart",
+    avatar: "/images/testimonials/michael.webp",
+    verified: true,
+    purchaseDate: "2025-01",
+  },
+  {
+    id: 5,
+    product: "vitair",
+    stars: 4,
+    text: "Beautiful device, outstanding build quality. You can feel the CNC precision immediately. Only wish: an app for fan control would be perfect.",
+    author: "Stefan W.",
+    location: "Vienna",
+    avatar: "/images/testimonials/stefan.webp",
+    verified: true,
+    purchaseDate: "2025-02",
+  },
+  {
+    id: 6,
+    product: "preventair",
+    stars: 5,
+    text: "We have been using the predecessor version in our clinic for years. The results with COPD patients are remarkable. We are eagerly awaiting the Preventair.",
+    author: "Dr. med. Anke L.",
+    location: "Freiburg",
+    avatar: "/images/testimonials/anke.webp",
+    verified: false,
+    purchaseDate: null,
+  },
+] as const;

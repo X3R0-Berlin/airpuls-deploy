@@ -4,10 +4,13 @@ import { useState, useEffect } from "react";
 import { ShoppingBag } from "lucide-react";
 import { useCart } from "@/lib/cart-context";
 import { motion, AnimatePresence } from "motion/react";
+import { useLanguage } from "@/lib/i18n/context";
+import { useCurrency } from "@/lib/currency-context";
 
 interface StickyCartBarProps {
   productName: string;
   price: number;
+  priceChf?: number;
   priceDisplay: string;
   slug: string;
   image: string;
@@ -18,14 +21,17 @@ interface StickyCartBarProps {
 export function StickyCartBar({
   productName,
   price,
+  priceChf,
   priceDisplay,
   slug,
   image,
   inStock,
   comingSoon,
 }: StickyCartBarProps) {
+  const { t } = useLanguage();
   const [visible, setVisible] = useState(false);
   const { addItem } = useCart();
+  const { currencyCode, getPriceForCurrency, formatPrice } = useCurrency();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,13 +44,20 @@ export function StickyCartBar({
 
   if (comingSoon || !inStock) return null;
 
-  const monthlyPrice = Math.ceil(price / 100 / 12);
+  const currentPrice = getPriceForCurrency(price, priceChf);
+  const monthlyPrice = Math.ceil(currentPrice / 100 / 12);
+
+  // Use formatPrice to get the correct display string depending on locale, 
+  // falling back to priceDisplay prop if EUR but without manually handling everything.
+  // Actually, formatPrice does exactly what we need.
+  const displayString = formatPrice(price, priceChf);
 
   const handleAdd = () => {
     addItem({
       slug,
       name: productName,
       price,
+      priceChf,
       quantity: 1,
       image,
     });
@@ -68,10 +81,10 @@ export function StickyCartBar({
               </span>
               <div className="hidden sm:flex flex-col">
                 <span className="text-brand-text-dark font-serif text-lg">
-                  {priceDisplay} €
+                  {displayString}
                 </span>
                 <span className="text-brand-text-muted text-[0.65rem]">
-                  oder ab {monthlyPrice} €/Monat
+                  {t("sticky.orFrom")} {monthlyPrice} {t("sticky.perMonth")}
                 </span>
               </div>
             </div>
@@ -82,8 +95,8 @@ export function StickyCartBar({
               className="flex items-center gap-2 px-6 py-2.5 bg-[var(--brand-accent)] text-white rounded-full font-semibold text-sm hover:bg-[var(--brand-accent-glow)] transition-colors shrink-0 cursor-pointer"
             >
               <ShoppingBag className="w-4 h-4" />
-              <span className="hidden sm:inline">In den Warenkorb</span>
-              <span className="sm:hidden">Kaufen</span>
+              <span className="hidden sm:inline">{t("sticky.addToCart")}</span>
+              <span className="sm:hidden">{t("sticky.buy")}</span>
             </button>
           </div>
         </motion.div>

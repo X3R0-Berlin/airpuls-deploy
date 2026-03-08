@@ -7,6 +7,7 @@ import { brand } from "@/lib/brand";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { Input } from "@/components/ui/input";
+import { useLanguage } from "@/lib/i18n/context";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -14,6 +15,7 @@ export default function KontaktPage() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [status, setStatus] = useState<Status>("idle");
   const [feedback, setFeedback] = useState("");
+  const { t } = useLanguage();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -45,7 +47,7 @@ export default function KontaktPage() {
       }
     } catch {
       setStatus("error");
-      setFeedback("Verbindungsfehler. Bitte versuche es erneut.");
+      setFeedback(t("contact.connectionError"));
       setTimeout(() => setStatus("idle"), 4000);
     }
   };
@@ -53,20 +55,20 @@ export default function KontaktPage() {
   const contactInfo = [
     {
       icon: Mail,
-      label: "E-Mail",
+      label: t("contact.emailLabel"),
       value: brand.social.email,
       href: `mailto:${brand.social.email}`,
     },
     {
       icon: MapPin,
-      label: "Adresse",
-      value: "Deutschland",
+      label: t("contact.address"),
+      value: t("contact.addressValue"),
       href: null,
     },
     {
       icon: Clock,
-      label: "Antwortzeit",
-      value: "Innerhalb von 24 Stunden",
+      label: t("contact.responseTime"),
+      value: t("contact.responseTimeValue"),
       href: null,
     },
   ];
@@ -81,21 +83,20 @@ export default function KontaktPage() {
               href="/"
               className="hover:text-brand-text-dark transition-colors no-underline text-brand-text-muted"
             >
-              Startseite
+              {t("page.home")}
             </Link>
             <ChevronRight className="w-3 h-3" />
-            <span className="text-brand-text-dark">Kontakt</span>
+            <span className="text-brand-text-dark">{t("page.contact")}</span>
           </nav>
         </BlurFade>
 
         {/* Heading */}
         <BlurFade delay={0.1} inView>
           <h1 className="font-serif font-light text-[clamp(2rem,4vw,3rem)] leading-[1.15] tracking-tight text-brand-text-dark mb-4">
-            Kontakt aufnehmen
+            {t("contact.title")}
           </h1>
           <p className="text-[1rem] text-brand-text-muted mb-12 max-w-[540px]">
-            Hast du Fragen zu unseren Produkten oder deiner Bestellung? Wir sind
-            gerne für dich da.
+            {t("contact.description")}
           </p>
         </BlurFade>
 
@@ -106,7 +107,7 @@ export default function KontaktPage() {
               <div className="flex flex-col items-center justify-center py-16 text-center">
                 <CheckCircle2 className="w-12 h-12 text-brand-accent mb-4" />
                 <h3 className="font-serif text-xl text-brand-text-dark mb-2">
-                  Nachricht gesendet
+                  {t("contact.sent")}
                 </h3>
                 <p className="text-brand-text-muted text-[0.9rem] max-w-[360px]">
                   {feedback}
@@ -117,21 +118,21 @@ export default function KontaktPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
                     <label className="block text-[0.78rem] text-brand-text-muted mb-2 tracking-[0.04em]">
-                      Name
+                      {t("contact.name")}
                     </label>
                     <Input
                       name="name"
                       value={form.name}
                       onChange={handleChange}
                       required
-                      placeholder="Dein Name"
+                      placeholder={t("contact.namePlaceholder")}
                       disabled={status === "loading"}
                       className="w-full bg-transparent border-black/15 text-brand-text-dark placeholder:text-brand-text-muted rounded-xl px-4 py-3 text-[0.88rem] h-auto focus:border-brand-accent"
                     />
                   </div>
                   <div>
                     <label className="block text-[0.78rem] text-brand-text-muted mb-2 tracking-[0.04em]">
-                      E-Mail
+                      {t("contact.email")}
                     </label>
                     <Input
                       name="email"
@@ -139,7 +140,7 @@ export default function KontaktPage() {
                       value={form.email}
                       onChange={handleChange}
                       required
-                      placeholder="deine@email.de"
+                      placeholder={t("contact.emailPlaceholder")}
                       disabled={status === "loading"}
                       className="w-full bg-transparent border-black/15 text-brand-text-dark placeholder:text-brand-text-muted rounded-xl px-4 py-3 text-[0.88rem] h-auto focus:border-brand-accent"
                     />
@@ -148,14 +149,14 @@ export default function KontaktPage() {
 
                 <div>
                   <label className="block text-[0.78rem] text-brand-text-muted mb-2 tracking-[0.04em]">
-                    Betreff
+                    {t("contact.subject")}
                   </label>
                   <Input
                     name="subject"
                     value={form.subject}
                     onChange={handleChange}
                     required
-                    placeholder="Worum geht es?"
+                    placeholder={t("contact.subjectPlaceholder")}
                     disabled={status === "loading"}
                     className="w-full bg-transparent border-black/15 text-brand-text-dark placeholder:text-brand-text-muted rounded-xl px-4 py-3 text-[0.88rem] h-auto focus:border-brand-accent"
                   />
@@ -163,14 +164,14 @@ export default function KontaktPage() {
 
                 <div>
                   <label className="block text-[0.78rem] text-brand-text-muted mb-2 tracking-[0.04em]">
-                    Nachricht
+                    {t("contact.message")}
                   </label>
                   <textarea
                     name="message"
                     value={form.message}
                     onChange={handleChange}
                     required
-                    placeholder="Deine Nachricht..."
+                    placeholder={t("contact.messagePlaceholder")}
                     disabled={status === "loading"}
                     rows={6}
                     className="w-full bg-transparent border border-black/15 text-brand-text-dark placeholder:text-brand-text-muted rounded-xl px-4 py-3 text-[0.88rem] resize-none focus:outline-none focus:ring-2 focus:ring-brand-accent/30 focus:border-brand-accent transition-all disabled:opacity-50"
@@ -194,12 +195,12 @@ export default function KontaktPage() {
                     {status === "loading" ? (
                       <>
                         <Loader2 className="w-4 h-4 animate-spin" />
-                        Senden...
+                        {t("contact.sending")}
                       </>
                     ) : (
                       <>
                         <Send className="w-4 h-4" />
-                        Nachricht senden
+                        {t("contact.send")}
                       </>
                     )}
                   </span>
@@ -239,17 +240,16 @@ export default function KontaktPage() {
 
               <div className="mt-8 p-5 rounded-xl border border-black/15 bg-white">
                 <h4 className="text-[0.9rem] font-semibold text-brand-text-dark mb-2">
-                  Häufige Fragen?
+                  {t("contact.faqTitle")}
                 </h4>
                 <p className="text-[0.85rem] text-brand-text-muted leading-[1.6] mb-3">
-                  Schau zuerst in unsere FAQ — vielleicht findest du dort
-                  bereits die Antwort.
+                  {t("contact.faqDesc")}
                 </p>
                 <Link
                   href="/faq"
                   className="text-brand-accent text-[0.85rem] underline underline-offset-2 hover:text-brand-accent-glow transition-colors"
                 >
-                  Zu den FAQ
+                  {t("contact.faqLink")}
                 </Link>
               </div>
             </div>

@@ -1,0 +1,49 @@
+{
+  "metaTitle": "AIRIMPULS — Luftenergizer für Ihr Wohlbefinden",
+  "metaDescription": "Entdecken Sie die AIRIMPULS Luftenergizer: Vitair, Solitair und Preventair. Premium-Qualität aus Deutschland für bessere Raumluft.",
+  "sections": [
+    {
+      "blockType": "hero",
+      "product": "vitair",
+      "showVideo": true
+    },
+    {
+      "blockType": "marquee",
+      "speed": "normal"
+    },
+    {
+      "blockType": "features"
+    },
+    {
+      "blockType": "stats",
+      "backgroundColor": "dark"
+    },
+    {
+      "blockType": "product-showcase",
+      "product": "vitair"
+    },
+    {
+      "blockType": "detail-sections",
+      "product": "vitair"
+    },
+    {
+      "blockType": "lifestyle-gallery"
+    },
+    {
+      "blockType": "product-comparison"
+    },
+    {
+      "blockType": "product-finder"
+    },
+    {
+      "blockType": "testimonials",
+      "onlyVerified": false
+    },
+    {
+      "blockType": "affiliate-cta"
+    },
+    {
+      "blockType": "newsletter"
+    }
+  ]
+}

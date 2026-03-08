@@ -1,0 +1,38 @@
+import React from 'react'
+
+/**
+ * AIRIMPULS Logo für die Login-Seite des CMS.
+ * Ersetzt das Standard-Payload-Logo.
+ */
+export const Logo: React.FC = () => {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px' }}>
+      {/* AIRIMPULS Icon */}
+      <svg width="80" height="54" viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M707.481 101.618C721.023 101.391 737.355 103.074 750.481 106.618C770.397 111.996 794.981 124.118 806.708 128.322C837.339 135.069 870.75 116.063 863.469 77.4267C856.65 41.2455 816.98 41.6183 789.48 34.1183C765.48 30.6182 739.574 29.9875 716.48 32.6181C676.98 40.1182 627.48 63.7557 599.98 94.6182C588.004 108.059 576.12 120.572 565.98 135.618C557.48 147.118 549.98 156.618 543.98 169.618C539.48 178.118 535.48 184.618 529.98 195.618C524.981 205.118 520.98 216.5 513.98 240.5C519.48 229.5 546.98 184.5 569.831 160.83C592.682 137.16 627.981 106.618 707.481 101.618Z" fill="url(#logo_paint0)" stroke="url(#logo_paint1)" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M470.981 325C467.44 334.054 449.277 371.994 443.98 385.5C421.48 434 421.48 434 421.48 434C421.48 434 403.48 459.105 382.98 477.296C371.227 487.727 354.756 498.815 332.98 504.5C277.894 523.5 249.481 514.5 247.98 514.5C291.98 435.5 247.98 514.5 291.98 435.5C299.98 433.5 310.98 430 319.567 423.5C329.104 415.588 339.74 407.827 351.567 396C370.834 376.734 391.225 330.224 412.04 282.748C426.806 249.07 441.784 214.906 456.726 189.634C511.95 96.2327 597.904 29.765 708.877 23.5C746.2 21.3929 786.86 25.8684 822.254 38.5203C832.571 42.2084 842.479 47.0888 850.567 54.5005C853.361 57.0613 849.096 55.1037 843.767 52.6585C839.854 50.8627 835.368 48.8039 832.684 48.0787C827.988 46.8096 823.812 45.6209 819.94 44.5187C804.202 40.0391 793.491 36.9899 773.275 35.7894C758.184 34.8932 742.955 34.17 727.924 35.7894C686.757 40.2246 631.693 69.7605 603.663 99.512C589.296 114.761 561.434 148.03 551.599 169.497C545.107 180.638 543.254 184.032 538.514 192.716C536.175 197 533.134 202.572 528.486 210.996C524.963 217.382 518.082 230.928 514.92 237.495C511.474 244.651 509.275 248.613 507.207 252.338C504.329 257.524 501.705 262.251 496.329 274.494C470.981 325 496.329 274.494 470.981 325Z" fill="url(#logo_paint2)" stroke="url(#logo_paint3)" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M258 437.5C216.028 432.584 168.027 398.5 167.027 337C170.027 273 219 236.1 270.222 236.1C295.5 236.1 298.5 240.416 323.5 246.916C358.5 251.916 366.191 224.842 368.5 217.916C374 201.416 359 176.916 339.436 169.916C276 142.916 200.663 156.074 149.646 201.851C127.993 221.282 99.6282 264.049 91.5001 293.787C68.0956 379.416 131.5 465 177.5 490.5C199.5 502.695 215.5 508.5 248 514.5C272 473.5 292 435.5 292 435.5C292 435.5 281.5 439.5 258 437.5Z" fill="url(#logo_paint4)" stroke="url(#logo_paint5)" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+        <defs>
+          <linearGradient id="logo_paint0" x1="939.64" y1="23.3615" x2="520.141" y2="185.615" gradientUnits="userSpaceOnUse"><stop offset="0.01525" stopColor="#FCAA90"/><stop offset="0.32325" stopColor="#E25A43"/><stop offset="0.69712" stopColor="#AD584D"/></linearGradient>
+          <linearGradient id="logo_paint1" x1="939.64" y1="23.3615" x2="520.141" y2="185.615" gradientUnits="userSpaceOnUse"><stop offset="0.01525" stopColor="#FCAA90"/><stop offset="0.32325" stopColor="#E25A43"/><stop offset="0.69712" stopColor="#AD584D"/></linearGradient>
+          <linearGradient id="logo_paint2" x1="382.202" y1="452.807" x2="798.203" y2="32.3655" gradientUnits="userSpaceOnUse"><stop offset="0.11257" stopColor="#357868"/><stop offset="0.54251" stopColor="#6ABFC2"/><stop offset="0.91827" stopColor="#A7A692"/></linearGradient>
+          <linearGradient id="logo_paint3" x1="382.202" y1="452.807" x2="798.203" y2="32.3655" gradientUnits="userSpaceOnUse"><stop offset="0.11257" stopColor="#357868"/><stop offset="0.54251" stopColor="#6ABFC2"/><stop offset="0.91827" stopColor="#A7A692"/></linearGradient>
+          <linearGradient id="logo_paint4" x1="241.691" y1="499.561" x2="281.964" y2="209.192" gradientUnits="userSpaceOnUse"><stop offset="0.17732" stopColor="#357868"/><stop offset="0.54009" stopColor="#357B5C"/><stop offset="0.88088" stopColor="#056540"/></linearGradient>
+          <linearGradient id="logo_paint5" x1="241.691" y1="499.561" x2="281.964" y2="209.192" gradientUnits="userSpaceOnUse"><stop offset="0.17732" stopColor="#357868"/><stop offset="0.54009" stopColor="#357B5C"/><stop offset="0.88088" stopColor="#056540"/></linearGradient>
+        </defs>
+      </svg>
+      {/* Text */}
+      <div style={{ display: 'flex', alignItems: 'baseline', gap: '0' }}>
+        <span style={{ fontSize: '28px', fontWeight: 300, color: '#ffffff', letterSpacing: '2px', fontFamily: "'Segoe UI', Roboto, Helvetica, Arial, sans-serif" }}>
+          AIR
+        </span>
+        <span style={{ fontSize: '28px', fontWeight: 900, color: '#ffffff', letterSpacing: '2px', fontFamily: "'Segoe UI', Roboto, Helvetica, Arial, sans-serif" }}>
+          IMPULS
+        </span>
+      </div>
+      <span style={{ fontSize: '12px', color: '#888', letterSpacing: '3px', textTransform: 'uppercase', fontFamily: "'Segoe UI', Roboto, Helvetica, Arial, sans-serif" }}>
+        Content Management
+      </span>
+    </div>
+  )
+}

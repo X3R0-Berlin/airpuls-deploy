@@ -11,6 +11,8 @@ import { ShoppingBag, Menu, X, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { brand } from "@/lib/brand";
 import { useCart } from "@/lib/cart-context";
+import { useLanguage } from "@/lib/i18n/context";
+import { LanguageSwitcher } from "@/components/ui/language-switcher";
 import { cn } from "@/lib/utils";
 
 function NavbarLogo({ className }: { className?: string }) {
@@ -112,18 +114,19 @@ export type NavProduct = {
   comingSoon: boolean;
 };
 
-const navLinks = [
-  { href: "/produkte", label: "Produkte", isMega: true },
-  { href: "#features", label: "Vorteile", isMega: false },
-  { href: "#details", label: "Technologie", isMega: false },
-  { href: "#reviews", label: "Bewertungen", isMega: false },
-];
-
 export function Navbar({ products = [] }: { products?: NavProduct[] }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
   const { totalItems, setOpen } = useCart();
+  const { t } = useLanguage();
+
+  const navLinks = [
+    { href: "/produkte", label: t("nav.products"), isMega: true },
+    { href: "#features", label: t("nav.benefits"), isMega: false },
+    { href: "#details", label: t("nav.technology"), isMega: false },
+    { href: "#reviews", label: t("nav.reviews"), isMega: false },
+  ];
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -180,7 +183,7 @@ export function Navbar({ products = [] }: { products?: NavProduct[] }) {
           </Link>
 
           {/* Desktop nav */}
-          <ul className="hidden md:flex gap-10 items-center list-none">
+          <ul className="hidden lg:flex gap-10 items-center list-none">
             {navLinks.map((link) => (
               <li
                 key={link.href}
@@ -223,11 +226,14 @@ export function Navbar({ products = [] }: { products?: NavProduct[] }) {
 
           {/* Right: Cart + Hamburger */}
           <div className="flex items-center gap-5">
+            {/* Language Switcher — desktop */}
+            <LanguageSwitcher className="hidden lg:flex" />
+
             {/* Cart button */}
             <button
               onClick={() => setOpen(true)}
               className="relative flex items-center gap-2 text-brand-text-dark text-[0.82rem] font-medium tracking-[0.04em] cursor-pointer bg-transparent border-none"
-              aria-label="Warenkorb öffnen"
+              aria-label={t("nav.openCart")}
             >
               <ShoppingBag className="w-5 h-5" strokeWidth={1.5} />
               {totalItems > 0 && (
@@ -240,8 +246,8 @@ export function Navbar({ products = [] }: { products?: NavProduct[] }) {
             {/* Hamburger — mobile only */}
             <button
               onClick={() => setMobileOpen((v) => !v)}
-              className="md:hidden flex items-center justify-center text-brand-text-dark cursor-pointer bg-transparent border-none p-1"
-              aria-label={mobileOpen ? "Menü schließen" : "Menü öffnen"}
+              className="lg:hidden flex items-center justify-center text-brand-text-dark cursor-pointer bg-transparent border-none p-1"
+              aria-label={mobileOpen ? t("nav.closeMenu") : t("nav.openMenu")}
             >
               <AnimatePresence mode="wait" initial={false}>
                 {mobileOpen ? (
@@ -282,7 +288,7 @@ export function Navbar({ products = [] }: { products?: NavProduct[] }) {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="fixed inset-0 z-40 bg-black/40 hidden md:block"
+              className="fixed inset-0 z-40 bg-black/40 hidden lg:block"
               onClick={() => setMegaOpen(false)}
             />
 
@@ -293,7 +299,7 @@ export function Navbar({ products = [] }: { products?: NavProduct[] }) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.25, ease: [0.23, 1, 0.32, 1] }}
-              className="fixed left-0 right-0 z-40 hidden md:block"
+              className="fixed left-0 right-0 z-40 hidden lg:block"
               style={{ top: scrolled ? "56px" : "72px" }}
               onMouseEnter={cancelClose}
               onMouseLeave={closeMegaDelayed}
@@ -321,7 +327,7 @@ export function Navbar({ products = [] }: { products?: NavProduct[] }) {
                           {/* Coming Soon Overlay */}
                           {product.comingSoon && (
                             <div className="absolute top-3 right-3 px-2.5 py-1 bg-[var(--brand-waldrot)] text-white text-[0.65rem] font-semibold rounded-full tracking-[0.06em]">
-                              Coming Soon
+                              {t("nav.comingSoon")}
                             </div>
                           )}
                         </div>
@@ -344,7 +350,7 @@ export function Navbar({ products = [] }: { products?: NavProduct[] }) {
                       className="inline-flex items-center gap-2 text-[0.82rem] text-brand-text-muted no-underline hover:text-brand-accent transition-colors duration-300 tracking-[0.04em]"
                       onClick={() => setMegaOpen(false)}
                     >
-                      Alle Produkte ansehen
+                      {t("nav.allProducts")}
                       <ChevronRight className="w-3.5 h-3.5" />
                     </Link>
                   </div>
@@ -366,7 +372,7 @@ export function Navbar({ products = [] }: { products?: NavProduct[] }) {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="fixed inset-0 z-40 bg-black/50 md:hidden"
+              className="fixed inset-0 z-40 bg-black/50 lg:hidden"
               onClick={closeMobile}
             />
 
@@ -377,7 +383,7 @@ export function Navbar({ products = [] }: { products?: NavProduct[] }) {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 28, stiffness: 260 }}
-              className="fixed top-0 right-0 bottom-0 z-40 w-[300px] md:hidden flex flex-col bg-white border-l border-[var(--brand-border-light)]"
+              className="fixed top-0 right-0 bottom-0 z-40 w-[300px] lg:hidden flex flex-col bg-white border-l border-[var(--brand-border-light)]"
             >
               {/* Drawer top spacer (matches navbar height) */}
               <div className="h-[72px] shrink-0 border-b border-[var(--brand-border-light)]" />
@@ -391,7 +397,7 @@ export function Navbar({ products = [] }: { products?: NavProduct[] }) {
                   transition={{ delay: 0.06 }}
                 >
                   <p className="text-[0.68rem] tracking-[0.2em] uppercase text-brand-text-muted mb-3">
-                    Produkte
+                    {t("nav.products")}
                   </p>
                   <div className="space-y-1 mb-6">
                     {products.map((product, i) => (
@@ -420,7 +426,7 @@ export function Navbar({ products = [] }: { products?: NavProduct[] }) {
                               {product.name}
                             </p>
                             <p className="text-[0.72rem] text-brand-text-muted truncate">
-                              {product.comingSoon ? "Coming Soon" : product.subtitle}
+                              {product.comingSoon ? t("nav.comingSoon") : product.subtitle}
                             </p>
                           </div>
                           <ChevronRight className="w-3.5 h-3.5 text-brand-text-muted opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
@@ -435,7 +441,7 @@ export function Navbar({ products = [] }: { products?: NavProduct[] }) {
                     onClick={closeMobile}
                     className="block text-[0.8rem] text-brand-accent no-underline mb-6 px-2 hover:text-brand-accent-glow transition-colors"
                   >
-                    Alle Produkte ansehen →
+                    {t("nav.allProductsArrow")}
                   </Link>
                 </motion.div>
 
@@ -475,12 +481,12 @@ export function Navbar({ products = [] }: { products?: NavProduct[] }) {
                 {/* Footer links in mobile menu */}
                 <div className="mt-10 space-y-3">
                   <p className="text-[0.68rem] tracking-[0.2em] uppercase text-brand-text-muted">
-                    Rechtliches
+                    {t("nav.legal")}
                   </p>
                   {[
-                    { href: "/impressum", label: "Impressum" },
-                    { href: "/datenschutz", label: "Datenschutz" },
-                    { href: "/agb", label: "AGB" },
+                    { href: "/impressum", label: t("nav.impressum") },
+                    { href: "/datenschutz", label: t("nav.datenschutz") },
+                    { href: "/agb", label: t("nav.agb") },
                   ].map((link) => (
                     <Link
                       key={link.href}
@@ -494,14 +500,17 @@ export function Navbar({ products = [] }: { products?: NavProduct[] }) {
                 </div>
               </nav>
 
-              {/* Contact CTA at bottom */}
-              <div className="p-6 border-t border-[var(--brand-border-light)]">
+              {/* Language Switcher + Contact CTA at bottom */}
+              <div className="p-6 border-t border-[var(--brand-border-light)] space-y-4">
+                <div className="flex justify-center">
+                  <LanguageSwitcher />
+                </div>
                 <Link
                   href="/kontakt"
                   onClick={closeMobile}
                   className="block w-full text-center py-3 rounded-full bg-brand-accent text-white text-[0.85rem] font-semibold no-underline hover:bg-brand-accent-glow transition-colors"
                 >
-                  Kontakt
+                  {t("nav.contact")}
                 </Link>
               </div>
             </motion.div>

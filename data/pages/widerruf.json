@@ -1,0 +1,19 @@
+{
+  "slug": "widerruf",
+  "title": "Widerrufsbelehrung",
+  "status": "published",
+  "headerStyle": "light",
+  "showBreadcrumb": true,
+  "sections": [
+    {
+      "blockType": "richtext",
+      "maxWidth": "prose",
+      "backgroundColor": "transparent"
+    }
+  ],
+  "seo": {
+    "metaTitle": "Widerruf | AIRIMPULS",
+    "metaDescription": "Widerrufsbelehrung und Widerrufsformular.",
+    "noIndex": false
+  }
+}

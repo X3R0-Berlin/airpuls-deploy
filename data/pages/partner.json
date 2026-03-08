@@ -1,0 +1,39 @@
+{
+  "slug": "partner",
+  "title": "Partnerprogramm",
+  "status": "published",
+  "subtitle": "Werden Sie AIRIMPULS Partner",
+  "description": "Verdienen Sie bis zu 10% Provision als Kunde, Therapeut oder Creator.",
+  "headerStyle": "accent",
+  "showBreadcrumb": true,
+  "sections": [
+    {
+      "blockType": "affiliate-tiers",
+      "showBenefits": true
+    },
+    {
+      "blockType": "stats-bar",
+      "backgroundColor": "accent"
+    },
+    {
+      "blockType": "testimonials",
+      "onlyVerified": false
+    },
+    {
+      "blockType": "cta-banner",
+      "heading": "Jetzt Partner werden",
+      "description": "Registrieren Sie sich kostenlos und starten Sie sofort.",
+      "buttonText": "Anmelden",
+      "buttonLink": "/kontakt",
+      "style": "accent"
+    },
+    {
+      "blockType": "newsletter"
+    }
+  ],
+  "seo": {
+    "metaTitle": "Partnerprogramm | AIRIMPULS",
+    "metaDescription": "Werden Sie AIRIMPULS Partner und verdienen Sie bis zu 10% Provision. Drei Stufen: Kunde, Therapeut, Creator.",
+    "noIndex": false
+  }
+}

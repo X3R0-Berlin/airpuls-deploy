@@ -4,6 +4,8 @@ import "./globals.css";
 import { brand } from "@/lib/brand";
 import { getAllProducts } from "@/lib/products";
 import { CartProvider } from "@/lib/cart-context";
+import { LanguageProvider } from "@/lib/i18n/context";
+import { CurrencyProvider } from "@/lib/currency-context";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
@@ -54,9 +56,9 @@ export const metadata: Metadata = {
     url: siteUrl,
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/products/vitair/hero.webp",
         width: 1200,
-        height: 630,
+        height: 1200,
         alt: `${brand.name} — ${brand.tagline}`,
       },
     ],
@@ -65,7 +67,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: brand.seo.titleTemplate.replace("%s", brand.tagline),
     description: brand.seo.defaultDescription,
-    images: ["/images/og-image.jpg"],
+    images: ["/images/products/vitair/hero.webp"],
+  },
+  alternates: {
+    canonical: siteUrl,
   },
   robots: {
     index: true,
@@ -83,7 +88,6 @@ const organizationSchema = {
   logo: `${siteUrl}/images/Airimpuls_Logo.svg`,
   email: brand.social.email,
   description: brand.seo.defaultDescription,
-  sameAs: [],
 };
 
 export default function RootLayout({
@@ -113,17 +117,27 @@ export default function RootLayout({
       <body
         className={`${cormorant.variable} ${dmSans.variable} font-sans antialiased`}
       >
-        <CartProvider>
-          <ScrollProgress />
-          <Navbar products={navProducts} />
-          <main>{children}</main>
-          <Footer />
-          <CartPanel />
-          <CookieBanner />
-          <Suspense fallback={null}>
-            <AffiliateTracker />
-          </Suspense>
-        </CartProvider>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[200] focus:px-4 focus:py-2 focus:bg-brand-accent focus:text-white focus:rounded-lg focus:text-sm focus:font-semibold"
+        >
+          Zum Inhalt springen
+        </a>
+        <LanguageProvider>
+          <CurrencyProvider>
+            <CartProvider>
+              <ScrollProgress />
+              <Navbar products={navProducts} />
+              <main id="main-content">{children}</main>
+              <Footer />
+              <CartPanel />
+              <CookieBanner />
+              <Suspense fallback={null}>
+                <AffiliateTracker />
+              </Suspense>
+            </CartProvider>
+          </CurrencyProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

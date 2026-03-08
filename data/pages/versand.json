@@ -1,0 +1,28 @@
+{
+  "slug": "versand",
+  "title": "Versand & Lieferung",
+  "status": "published",
+  "description": "Informationen zu Versandkosten, Lieferzeiten und Versandarten.",
+  "headerStyle": "light",
+  "showBreadcrumb": true,
+  "sections": [
+    {
+      "blockType": "richtext",
+      "maxWidth": "prose",
+      "backgroundColor": "transparent"
+    },
+    {
+      "blockType": "faq-section",
+      "categories": "Versand",
+      "layout": "accordion"
+    },
+    {
+      "blockType": "newsletter"
+    }
+  ],
+  "seo": {
+    "metaTitle": "Versand & Lieferung | AIRIMPULS",
+    "metaDescription": "Versandkosten, Lieferzeiten und Versandarten für AIRIMPULS Produkte.",
+    "noIndex": false
+  }
+}

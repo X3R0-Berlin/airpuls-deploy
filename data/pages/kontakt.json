@@ -1,0 +1,26 @@
+{
+  "slug": "kontakt",
+  "title": "Kontakt",
+  "status": "published",
+  "subtitle": "Wir sind für Sie da",
+  "description": "Haben Sie Fragen zu unseren Produkten oder Ihrer Bestellung? Schreiben Sie uns — wir antworten innerhalb von 24 Stunden.",
+  "headerStyle": "light",
+  "showBreadcrumb": true,
+  "sections": [
+    {
+      "blockType": "contact-form",
+      "showContactInfo": true
+    },
+    {
+      "blockType": "faq-section",
+      "heading": "Häufig gestellte Fragen",
+      "categories": "Bestellung,Versand",
+      "layout": "accordion"
+    }
+  ],
+  "seo": {
+    "metaTitle": "Kontakt | AIRIMPULS",
+    "metaDescription": "Kontaktieren Sie AIRIMPULS — wir antworten innerhalb von 24 Stunden auf Ihre Anfrage.",
+    "noIndex": false
+  }
+}

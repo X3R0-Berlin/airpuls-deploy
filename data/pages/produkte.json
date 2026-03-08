@@ -1,0 +1,31 @@
+{
+  "slug": "produkte",
+  "title": "Produkte",
+  "status": "published",
+  "subtitle": "Alle AIRIMPULS Produkte",
+  "description": "Entdecke alle AIRIMPULS Luftenergizer — natürliche Energie für dein Zuhause.",
+  "headerStyle": "light",
+  "showBreadcrumb": true,
+  "sections": [
+    {
+      "blockType": "product-grid",
+      "columns": "3",
+      "showPrices": true,
+      "showDescription": true
+    },
+    {
+      "blockType": "comparison-table"
+    },
+    {
+      "blockType": "product-finder"
+    },
+    {
+      "blockType": "newsletter"
+    }
+  ],
+  "seo": {
+    "metaTitle": "Produkte | AIRIMPULS",
+    "metaDescription": "Entdecke alle AIRIMPULS Produkte — natürliche Energie für dein Zuhause.",
+    "noIndex": false
+  }
+}

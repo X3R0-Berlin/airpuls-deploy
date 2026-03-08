@@ -5,10 +5,8 @@ export interface BrandConfig {
   logoParts: { main: string; accent: string };
   logoImage: string;
   logoInverse: string;
-  logoMono: string;
   logoIcon: string;
   tagline: string;
-  designer: string;
   companyLegal: string;
   language: string;
   currency: { code: string; symbol: string; locale: string };

@@ -47,8 +47,11 @@ export interface Product {
   designer: string;
   price: number;
   priceDisplay: string;
+  priceChf?: number;
+  priceDisplayChf?: string;
   currency: string;
   taxNote: string;
+  taxNoteChf?: string;
   freeShipping: boolean;
   inStock: boolean;
   comingSoon?: boolean;

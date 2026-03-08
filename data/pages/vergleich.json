@@ -1,0 +1,29 @@
+{
+  "slug": "vergleich",
+  "title": "Produktvergleich",
+  "status": "published",
+  "subtitle": "Welches Gerät passt zu Ihnen?",
+  "description": "Vergleichen Sie Vitair, Solitair und Preventair — finden Sie das richtige Gerät für Ihre Bedürfnisse.",
+  "headerStyle": "light",
+  "showBreadcrumb": true,
+  "sections": [
+    {
+      "blockType": "comparison-table"
+    },
+    {
+      "blockType": "product-finder"
+    },
+    {
+      "blockType": "testimonials",
+      "onlyVerified": false
+    },
+    {
+      "blockType": "newsletter"
+    }
+  ],
+  "seo": {
+    "metaTitle": "Produktvergleich | AIRIMPULS",
+    "metaDescription": "Vergleichen Sie Vitair, Solitair und Preventair — finden Sie das richtige Gerät für Ihre Bedürfnisse.",
+    "noIndex": false
+  }
+}

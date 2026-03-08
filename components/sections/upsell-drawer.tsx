@@ -3,6 +3,7 @@
 import { Plus, Disc, Wind, ShieldPlus } from "lucide-react";
 import { useCart } from "@/lib/cart-context";
 import { BlurFade } from "@/components/ui/blur-fade";
+import { useCurrency } from "@/lib/currency-context";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   disc: Disc,
@@ -15,6 +16,7 @@ interface BundleItem {
   name: string;
   description: string;
   price: number;
+  priceChf?: number;
   priceDisplay: string;
   icon: string;
   image: string | null;
@@ -34,6 +36,7 @@ export function UpsellDrawer({
   currentProduct: string;
 }) {
   const { addItem } = useCart();
+  const { formatPrice } = useCurrency();
 
   const relevantItems = bundles.items.filter((item) =>
     item.forProducts.includes(currentProduct)
@@ -46,6 +49,7 @@ export function UpsellDrawer({
       slug: item.slug,
       name: item.name,
       price: item.price,
+      priceChf: item.priceChf,
       quantity: 1,
       image: "",
     });
@@ -83,7 +87,7 @@ export function UpsellDrawer({
                 {/* Price + Add */}
                 <div className="flex items-center gap-2 shrink-0">
                   <span className="text-[var(--brand-text-dark)] text-sm font-medium">
-                    {item.priceDisplay} €
+                    {formatPrice(item.price, item.priceChf)}
                   </span>
                   <button
                     onClick={() => handleAdd(item)}

@@ -1,0 +1,31 @@
+{
+  "slug": "faq",
+  "title": "Häufig gestellte Fragen",
+  "status": "published",
+  "subtitle": "Wir helfen Ihnen gerne weiter",
+  "description": "Hier finden Sie Antworten auf die häufigsten Fragen zu unseren Produkten, Bestellungen und dem Versand.",
+  "headerStyle": "light",
+  "showBreadcrumb": true,
+  "sections": [
+    {
+      "blockType": "faq-section",
+      "layout": "accordion"
+    },
+    {
+      "blockType": "cta-banner",
+      "heading": "Noch Fragen?",
+      "description": "Kontaktieren Sie uns — wir helfen Ihnen gerne weiter.",
+      "buttonText": "Kontakt aufnehmen",
+      "buttonLink": "/kontakt",
+      "style": "accent"
+    },
+    {
+      "blockType": "newsletter"
+    }
+  ],
+  "seo": {
+    "metaTitle": "FAQ | AIRIMPULS",
+    "metaDescription": "Häufig gestellte Fragen zu Produkten, Bestellung, Versand und Rückgabe.",
+    "noIndex": false
+  }
+}

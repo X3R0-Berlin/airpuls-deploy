@@ -3,4 +3,4 @@ Allow: /
 Disallow: /api/
 Disallow: /_next/
 
-Sitemap: https://airimpuls.de/sitemap.xml
+Sitemap: https://airimpuls.com/sitemap.xml

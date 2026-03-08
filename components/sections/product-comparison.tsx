@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Check, X } from "lucide-react";
 import { BlurFade } from "@/components/ui/blur-fade";
 import type { Product } from "@/lib/products";
+import { useLanguage } from "@/lib/i18n/context";
 
 interface ComparisonFeature {
   label: string;
@@ -26,6 +27,7 @@ export function ProductComparison({
   data: ComparisonData;
   products: Product[];
 }) {
+  const { t } = useLanguage();
   const orderedProducts = data.products
     .map((slug) => products.find((p) => p.slug === slug))
     .filter(Boolean) as Product[];
@@ -37,7 +39,7 @@ export function ProductComparison({
         <BlurFade delay={0} inView>
           <div className="text-center mb-14">
             <span className="text-[0.7rem] tracking-[0.25em] uppercase text-brand-accent font-medium">
-              Produktvergleich
+              {t("comparison.tag")}
             </span>
             <h2 className="font-serif text-[clamp(2rem,4vw,3rem)] font-light text-brand-text-dark mt-3">
               {data.heading}
@@ -76,7 +78,7 @@ export function ProductComparison({
                         <p className="font-serif text-lg text-brand-text-dark">
                           {product.comingSoon ? (
                             <span className="text-brand-accent text-sm font-sans">
-                              Coming Soon
+                              {t("product.comingSoon")}
                             </span>
                           ) : (
                             <>{product.priceDisplay} €</>
@@ -139,7 +141,7 @@ export function ProductComparison({
                             : "border border-[var(--brand-border-light)] text-brand-text-dark hover:bg-black/5"
                         }`}
                       >
-                        {product.comingSoon ? "Mehr erfahren" : "Jetzt kaufen"}
+                        {product.comingSoon ? t("comparison.learnMore") : t("comparison.buyNow")}
                       </Link>
                     </td>
                   ))}

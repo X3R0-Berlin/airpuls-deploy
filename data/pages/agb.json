@@ -1,0 +1,19 @@
+{
+  "slug": "agb",
+  "title": "Allgemeine Geschäftsbedingungen",
+  "status": "published",
+  "headerStyle": "light",
+  "showBreadcrumb": true,
+  "sections": [
+    {
+      "blockType": "richtext",
+      "maxWidth": "prose",
+      "backgroundColor": "transparent"
+    }
+  ],
+  "seo": {
+    "metaTitle": "AGB | AIRIMPULS",
+    "metaDescription": "Allgemeine Geschäftsbedingungen der AIRIMPULS GmbH.",
+    "noIndex": false
+  }
+}

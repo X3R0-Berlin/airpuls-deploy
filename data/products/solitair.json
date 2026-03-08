@@ -20,24 +20,66 @@
   "images": {
     "hero": "hero.webp",
     "gallery": [
-      { "file": "front.webp", "alt": "Solitair Frontansicht" },
-      { "file": "vortex.webp", "alt": "Solitair Drei-Viertel-Ansicht" },
-      { "file": "hero.webp", "alt": "Solitair Draufsicht Wasser-Vortex" },
-      { "file": "detail.webp", "alt": "Solitair LED-Vortex Detail" },
-      { "file": "rueckseite.webp", "alt": "Solitair Rückansicht" },
-      { "file": "ambient.webp", "alt": "Solitair im Schlafzimmer" },
-      { "file": "lifestyle.webp", "alt": "Solitair im Wohnzimmer" }
+      {
+        "file": "front.webp",
+        "alt": "Solitair Frontansicht"
+      },
+      {
+        "file": "vortex.webp",
+        "alt": "Solitair Drei-Viertel-Ansicht"
+      },
+      {
+        "file": "hero.webp",
+        "alt": "Solitair Draufsicht Wasser-Vortex"
+      },
+      {
+        "file": "detail.webp",
+        "alt": "Solitair LED-Vortex Detail"
+      },
+      {
+        "file": "rueckseite.webp",
+        "alt": "Solitair Rückansicht"
+      },
+      {
+        "file": "ambient.webp",
+        "alt": "Solitair im Schlafzimmer"
+      },
+      {
+        "file": "lifestyle.webp",
+        "alt": "Solitair im Wohnzimmer"
+      }
     ],
     "basePath": "/images/products/solitair"
   },
   "specs": [
-    { "label": "Anwendung", "value": "Persönliche Nutzung mit Atembrille" },
-    { "label": "Technologie", "value": "Reine Katalysator-Aktivierung" },
-    { "label": "Elektronik", "value": "Keine — maximale Nachhaltigkeit" },
-    { "label": "Gehäuse", "value": "Premium Edelstahl, gebürstet" },
-    { "label": "Abmessungen", "value": "Ø 22 cm × 38 cm Höhe" },
-    { "label": "Gewicht", "value": "4,8 kg" },
-    { "label": "Nachhaltigkeit", "value": "Extrem langlebig, wartungsfrei" }
+    {
+      "label": "Anwendung",
+      "value": "Persönliche Nutzung mit Atembrille"
+    },
+    {
+      "label": "Technologie",
+      "value": "Reine Katalysator-Aktivierung"
+    },
+    {
+      "label": "Elektronik",
+      "value": "Keine — maximale Nachhaltigkeit"
+    },
+    {
+      "label": "Gehäuse",
+      "value": "Premium Edelstahl, gebürstet"
+    },
+    {
+      "label": "Abmessungen",
+      "value": "Ø 22 cm × 38 cm Höhe"
+    },
+    {
+      "label": "Gewicht",
+      "value": "4,8 kg"
+    },
+    {
+      "label": "Nachhaltigkeit",
+      "value": "Extrem langlebig, wartungsfrei"
+    }
   ],
   "details": [
     {
@@ -78,8 +120,17 @@
     "Made in Germany"
   ],
   "trustBadges": [
-    { "icon": "shield", "text": "3 Jahre Garantie" },
-    { "icon": "truck", "text": "Kostenloser Versand" },
-    { "icon": "refresh", "text": "30 Tage Rückgabe" }
+    {
+      "icon": "shield",
+      "text": "3 Jahre Garantie"
+    },
+    {
+      "icon": "truck",
+      "text": "Kostenloser Versand"
+    },
+    {
+      "icon": "refresh",
+      "text": "30 Tage Rückgabe"
+    }
   ]
 }

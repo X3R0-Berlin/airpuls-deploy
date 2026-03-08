@@ -1,0 +1,19 @@
+{
+  "slug": "impressum",
+  "title": "Impressum",
+  "status": "published",
+  "headerStyle": "light",
+  "showBreadcrumb": true,
+  "sections": [
+    {
+      "blockType": "richtext",
+      "maxWidth": "prose",
+      "backgroundColor": "transparent"
+    }
+  ],
+  "seo": {
+    "metaTitle": "Impressum | AIRIMPULS",
+    "metaDescription": "Impressum und Anbieterkennzeichnung gemäß § 5 TMG.",
+    "noIndex": false
+  }
+}

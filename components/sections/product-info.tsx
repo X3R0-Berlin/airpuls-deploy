@@ -7,6 +7,8 @@ import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { MagneticButton } from "@/components/ui/magnetic-button";
 import { useCart } from "@/lib/cart-context";
 import type { Product } from "@/lib/products";
+import { useLanguage } from "@/lib/i18n/context";
+import { useCurrency } from "@/lib/currency-context";
 
 const trustIcons: Record<string, React.ComponentType<{ className?: string; strokeWidth?: number }>> = {
   shield: ShieldCheck,
@@ -15,14 +17,19 @@ const trustIcons: Record<string, React.ComponentType<{ className?: string; strok
 };
 
 export function ProductInfo({ product }: { product: Product }) {
+  const { t } = useLanguage();
   const [qty, setQty] = useState(1);
   const { addItem } = useCart();
+  const { currencyCode, getPriceForCurrency } = useCurrency();
+
+  const currentPrice = getPriceForCurrency(product.price, product.priceChf);
 
   const handleAddToCart = () => {
     addItem({
       slug: product.slug,
       name: `${product.name} ${product.subtitle}`,
       price: product.price,
+      priceChf: product.priceChf,
       quantity: qty,
       image: `${product.images.basePath}/${product.images.gallery[0].file}`,
     });
@@ -45,36 +52,38 @@ export function ProductInfo({ product }: { product: Product }) {
       <div className="flex items-baseline gap-4 mt-6">
         {product.comingSoon ? (
           <span className="text-brand-accent text-2xl font-semibold font-sans tracking-wide">
-            Coming Soon
+            {t("product.comingSoon")}
           </span>
         ) : (
           <>
-            <span className="text-[var(--brand-text-dark)] text-3xl font-light font-serif flex items-baseline">
+            <span className="text-[var(--brand-text-dark)] text-3xl font-light font-serif flex items-baseline gap-1">
               <NumberTicker
-                value={product.price / 100}
+                value={currentPrice / 100}
                 className="text-[var(--brand-text-dark)] text-3xl font-light font-serif"
               />
-              <span>,00 €</span>
+              <span>{currencyCode === "CHF" ? ".00 CHF" : ",00 €"}</span>
             </span>
             {product.freeShipping && (
               <span className="text-brand-accent text-xs font-medium">
-                Kostenloser Versand
+                {t("product.freeShipping")}
               </span>
             )}
           </>
         )}
       </div>
-      {product.taxNote && (
-        <p className="text-brand-text-muted text-xs mt-1">{product.taxNote}</p>
+      {(product.taxNote || product.taxNoteChf) && (
+        <p className="text-brand-text-muted text-xs mt-1">
+          {currencyCode === "CHF" && product.taxNoteChf ? product.taxNoteChf : product.taxNote}
+        </p>
       )}
       {/* Ratenzahlung-Anzeige */}
-      {!product.comingSoon && product.price > 50000 && (
+      {!product.comingSoon && currentPrice > 50000 && (
         <p className="text-brand-text-muted text-[0.8rem] mt-2">
-          oder ab{" "}
+          {t("product.orFrom")}{" "}
           <span className="text-[var(--brand-text-dark)] font-medium">
-            {Math.ceil(product.price / 100 / 12)} €/Monat
+            {Math.ceil(currentPrice / 100 / 12)} {t("product.perMonth")}
           </span>
-          {" "}· 12 Raten · 0% Finanzierung
+          {" "}· {t("product.installments")}
         </p>
       )}
 
@@ -105,17 +114,17 @@ export function ProductInfo({ product }: { product: Product }) {
         <div className="mt-8 space-y-4">
           <div className="border border-[var(--brand-border-dark)] rounded-2xl px-6 py-5 text-center">
             <p className="text-[var(--brand-text-dark)] font-semibold text-[0.95rem]">
-              Demnächst verfügbar
+              {t("product.comingSoonTitle")}
             </p>
             <p className="text-brand-text-muted text-[0.8rem] mt-1">
-              Dieses Produkt wird bald in unserem Shop erhältlich sein.
+              {t("product.comingSoonDesc")}
             </p>
           </div>
         </div>
       ) : (
         <>
           <div className="flex items-center gap-4 mt-8">
-            <span className="text-[0.85rem] text-brand-text-muted">Anzahl:</span>
+            <span className="text-[0.85rem] text-brand-text-muted">{t("product.quantity")}</span>
             <div className="flex items-center border border-[var(--brand-border-dark)] rounded-full">
               <button
                 onClick={() => qty > 1 && setQty(qty - 1)}
@@ -144,7 +153,7 @@ export function ProductInfo({ product }: { product: Product }) {
                 background="var(--brand-accent)"
               >
                 <span className="flex items-center justify-center gap-2 text-white font-semibold text-[0.9rem]">
-                  In den Warenkorb
+                  {t("product.addToCart")}
                 </span>
               </ShimmerButton>
             </MagneticButton>

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { Sun, Moon, Sparkles, Heart } from "lucide-react";
 import { BlurFade } from "@/components/ui/blur-fade";
 import type { Feature } from "@/lib/products";
+import { useLanguage } from "@/lib/i18n/context";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string; strokeWidth?: number }>> = {
   sun: Sun,
@@ -66,6 +67,7 @@ function FeatureMedia({ video, poster }: { video?: string; poster?: string }) {
 }
 
 export function Features({ features }: { features: Feature[] }) {
+  const { t } = useLanguage();
   return (
     <section
       id="features"
@@ -75,10 +77,10 @@ export function Features({ features }: { features: Feature[] }) {
         <BlurFade delay={0} inView>
           <div className="text-center mb-[clamp(3rem,6vw,5rem)]">
             <span className="inline-block text-[0.7rem] tracking-[0.25em] uppercase text-brand-accent mb-4 font-medium">
-              Vorteile
+              {t("features.tag")}
             </span>
             <h2 className="font-serif font-light text-[clamp(2rem,4vw,3.2rem)] leading-[1.2] max-w-[600px] mx-auto">
-              Das Wirkprinzip ist einfach und komplex zugleich
+              {t("features.heading")}
             </h2>
           </div>
         </BlurFade>

@@ -1,17 +1,11 @@
 import { notFound } from "next/navigation";
 import { getAllProducts, getProductBySlug, getTestimonials, getBundles } from "@/lib/products";
 import { brand } from "@/lib/brand";
-import { MarqueeBar } from "@/components/sections/marquee-bar";
-import { ProductShowcase } from "@/components/sections/product-showcase";
-import { UpsellDrawer } from "@/components/sections/upsell-drawer";
-import { DetailSection } from "@/components/sections/detail-section";
-import { Testimonials } from "@/components/sections/testimonials";
-import { Newsletter } from "@/components/sections/newsletter";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { Badge } from "@/components/ui/badge";
-import { ProductHotspots } from "@/components/sections/product-hotspots";
-import { StickyCartBar } from "@/components/ui/sticky-cart-bar";
 import Link from "next/link";
+import { ComingSoonBanner } from "./product-page-client";
+import { ProductDetailContent } from "./product-detail-content";
 
 export function generateStaticParams() {
   const products = getAllProducts();
@@ -81,13 +75,7 @@ export default async function ProductPage({
         }}
       />
       {/* Coming Soon Banner */}
-      {!product.inStock && (
-        <section className="bg-[var(--brand-accent)] py-3 text-center">
-          <p className="text-white text-sm font-sans font-medium">
-            Demnächst verfügbar — Lassen Sie sich vormerken
-          </p>
-        </section>
-      )}
+      {!product.inStock && <ComingSoonBanner />}
 
       {/* Breadcrumb */}
       <section className="bg-[var(--brand-bg-light)] pt-24 pb-4 px-4">
@@ -109,48 +97,10 @@ export default async function ProductPage({
         </div>
       </section>
 
-      <MarqueeBar items={product.marqueeItems} />
-      <ProductShowcase product={product} />
-
-      {/* Upsell / Bundle Section */}
-      {!product.comingSoon && (
-        <section className="bg-[var(--brand-bg-light)] pb-12 px-[clamp(1.5rem,4vw,4rem)]">
-          <div className="max-w-[600px] mx-auto lg:ml-[calc(50%+clamp(1rem,2.5vw,2.5rem))]">
-            <UpsellDrawer bundles={bundles} currentProduct={product.slug} />
-          </div>
-        </section>
-      )}
-
-      {/* Product Hotspots — interactive detail exploration */}
-      {product.hotspots && (
-        <ProductHotspots
-          hotspots={product.hotspots}
-          basePath={product.images.basePath}
-          productName={product.name}
-        />
-      )}
-
-      {product.details.map((detail, i) => (
-        <DetailSection
-          key={i}
-          detail={detail}
-          basePath={product.images.basePath}
-          index={i}
-        />
-      ))}
-
-      <Testimonials testimonials={allTestimonials} />
-      <Newsletter />
-
-      {/* Sticky Add-to-Cart Bar */}
-      <StickyCartBar
-        productName={product.name}
-        price={product.price}
-        priceDisplay={product.priceDisplay}
-        slug={product.slug}
-        image={`${product.images.basePath}/${product.images.gallery[0].file}`}
-        inStock={product.inStock}
-        comingSoon={product.comingSoon}
+      <ProductDetailContent
+        product={product}
+        testimonials={allTestimonials}
+        bundles={bundles}
       />
     </>
   );

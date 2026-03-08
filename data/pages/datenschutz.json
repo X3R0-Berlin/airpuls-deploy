@@ -1,0 +1,19 @@
+{
+  "slug": "datenschutz",
+  "title": "Datenschutzerklärung",
+  "status": "published",
+  "headerStyle": "light",
+  "showBreadcrumb": true,
+  "sections": [
+    {
+      "blockType": "richtext",
+      "maxWidth": "prose",
+      "backgroundColor": "transparent"
+    }
+  ],
+  "seo": {
+    "metaTitle": "Datenschutz | AIRIMPULS",
+    "metaDescription": "Datenschutzerklärung der AIRIMPULS GmbH.",
+    "noIndex": false
+  }
+}

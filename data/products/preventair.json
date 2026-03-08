@@ -20,24 +20,66 @@
   "images": {
     "hero": "front.webp",
     "gallery": [
-      { "file": "front.webp", "alt": "Preventair Frontansicht" },
-      { "file": "ambient.webp", "alt": "Preventair Drei-Viertel-Ansicht" },
-      { "file": "detail-led.webp", "alt": "Preventair Draufsicht Aktivierungskammer" },
-      { "file": "blaulicht.webp", "alt": "Preventair Vortex-Detail Nahaufnahme" },
-      { "file": "duo.webp", "alt": "Preventair Rückansicht" },
-      { "file": "hero.webp", "alt": "Preventair im Anwendungsumfeld" }
+      {
+        "file": "front.webp",
+        "alt": "Preventair Frontansicht"
+      },
+      {
+        "file": "ambient.webp",
+        "alt": "Preventair Drei-Viertel-Ansicht"
+      },
+      {
+        "file": "detail-led.webp",
+        "alt": "Preventair Draufsicht Aktivierungskammer"
+      },
+      {
+        "file": "blaulicht.webp",
+        "alt": "Preventair Vortex-Detail Nahaufnahme"
+      },
+      {
+        "file": "duo.webp",
+        "alt": "Preventair Rückansicht"
+      },
+      {
+        "file": "hero.webp",
+        "alt": "Preventair im Anwendungsumfeld"
+      }
     ],
     "basePath": "/images/products/preventair"
   },
   "specs": [
-    { "label": "Anwendung", "value": "Intensive Kurzzeit-Therapie mit Atembrille" },
-    { "label": "Sitzungsdauer", "value": "15–20 Minuten" },
-    { "label": "Abmessungen", "value": "Ø 260 mm × 150 mm Höhe" },
-    { "label": "Gewicht", "value": "4,6 kg" },
-    { "label": "Stromversorgung", "value": "12V DC — 32,4 Watt" },
-    { "label": "Gehäuse", "value": "Premium Edelstahl, gebürstet" },
-    { "label": "Erfahrung", "value": "Seit über 25 Jahren bewährt" },
-    { "label": "Status", "value": "Klinische Studie in Vorbereitung" }
+    {
+      "label": "Anwendung",
+      "value": "Intensive Kurzzeit-Therapie mit Atembrille"
+    },
+    {
+      "label": "Sitzungsdauer",
+      "value": "15–20 Minuten"
+    },
+    {
+      "label": "Abmessungen",
+      "value": "Ø 260 mm × 150 mm Höhe"
+    },
+    {
+      "label": "Gewicht",
+      "value": "4,6 kg"
+    },
+    {
+      "label": "Stromversorgung",
+      "value": "12V DC — 32,4 Watt"
+    },
+    {
+      "label": "Gehäuse",
+      "value": "Premium Edelstahl, gebürstet"
+    },
+    {
+      "label": "Erfahrung",
+      "value": "Seit über 25 Jahren bewährt"
+    },
+    {
+      "label": "Status",
+      "value": "Klinische Studie in Vorbereitung"
+    }
   ],
   "details": [
     {
@@ -91,8 +133,17 @@
     "Made in Germany"
   ],
   "trustBadges": [
-    { "icon": "shield", "text": "Medizinprodukt-Zulassung geplant" },
-    { "icon": "truck", "text": "Kostenloser Versand" },
-    { "icon": "refresh", "text": "30 Tage Rückgabe" }
+    {
+      "icon": "shield",
+      "text": "Medizinprodukt-Zulassung geplant"
+    },
+    {
+      "icon": "truck",
+      "text": "Kostenloser Versand"
+    },
+    {
+      "icon": "refresh",
+      "text": "30 Tage Rückgabe"
+    }
   ]
 }

@@ -15,6 +15,11 @@ try {
     $input = json_decode(file_get_contents('php://input'), true);
     $items = $input['items'] ?? [];
     $affiliateRef = $input['affiliateRef'] ?? null;
+    $currencyCode = strtoupper($input['currency'] ?? 'EUR');
+
+    if (!in_array($currencyCode, ['EUR', 'CHF'])) {
+        $currencyCode = 'EUR';
+    }
 
     if (empty($items) || !is_array($items)) {
         jsonError('Warenkorb ist leer');
@@ -30,23 +35,22 @@ try {
         if (!$product) {
             jsonError('Produkt "' . ($item['slug'] ?? '') . '" nicht gefunden');
         }
-        if (($item['price'] ?? 0) !== $product['price']) {
-            jsonError('Preis für "' . $product['name'] . '" stimmt nicht überein');
-        }
+
+        $targetPrice = ($currencyCode === 'CHF' && isset($product['priceChf'])) ? $product['priceChf'] : $product['price'];
 
         $imagePath = $product['images']['basePath'] . '/' . $product['images']['gallery'][0]['file'];
 
         $lineItems[] = [
             'price_data' => [
-                'currency' => 'eur',
+                'currency' => strtolower($currencyCode),
                 'product_data' => [
                     'name' => $product['name'] . ' ' . ($product['subtitle'] ?? ''),
                     'description' => mb_substr($product['description'] ?? '', 0, 200),
                     'images' => [$baseUrl . $imagePath],
                 ],
-                'unit_amount' => $product['price'],
+                'unit_amount' => $targetPrice,
             ],
-            'quantity' => (int)($item['quantity'] ?? 1),
+            'quantity' => (int) ($item['quantity'] ?? 1),
         ];
     }
 

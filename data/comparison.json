@@ -1,7 +1,11 @@
 {
   "heading": "Welches Gerät passt zu Ihnen?",
   "subheading": "Alle drei Produkte im direkten Vergleich",
-  "products": ["vitair", "solitair", "preventair"],
+  "products": [
+    "vitair",
+    "solitair",
+    "preventair"
+  ],
   "features": [
     {
       "label": "Anwendung",

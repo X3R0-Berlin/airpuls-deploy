@@ -1,14 +1,32 @@
+"use client";
+
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { BlurFade } from "@/components/ui/blur-fade";
+import { useLanguage } from "@/lib/i18n/context";
 
 interface LegalPageProps {
-  title: string;
-  lastUpdated: string;
+  title?: string;
+  titleKey?: string;
+  lastUpdated?: string;
+  lastUpdatedKey?: string;
   children: React.ReactNode;
 }
 
-export function LegalPage({ title, lastUpdated, children }: LegalPageProps) {
+export function LegalPage({
+  title,
+  titleKey,
+  lastUpdated,
+  lastUpdatedKey,
+  children,
+}: LegalPageProps) {
+  const { t } = useLanguage();
+
+  const resolvedTitle = titleKey ? t(titleKey) : title ?? "";
+  const resolvedLastUpdated = lastUpdatedKey
+    ? t(lastUpdatedKey)
+    : lastUpdated ?? "";
+
   return (
     <section className="min-h-screen pt-32 pb-20 bg-[var(--brand-bg-light)]">
       <div className="max-w-[800px] mx-auto px-[clamp(1.5rem,4vw,4rem)]">
@@ -19,20 +37,20 @@ export function LegalPage({ title, lastUpdated, children }: LegalPageProps) {
               href="/"
               className="hover:text-brand-text-dark transition-colors no-underline text-brand-text-muted"
             >
-              Startseite
+              {t("legal.home")}
             </Link>
             <ChevronRight className="w-3 h-3" />
-            <span className="text-brand-text-dark">{title}</span>
+            <span className="text-brand-text-dark">{resolvedTitle}</span>
           </nav>
         </BlurFade>
 
         {/* Heading */}
         <BlurFade delay={0.1} inView>
           <h1 className="font-serif font-light text-[clamp(2rem,4vw,3rem)] leading-[1.15] tracking-tight text-brand-text-dark mb-3">
-            {title}
+            {resolvedTitle}
           </h1>
           <p className="text-[0.8rem] text-brand-text-muted mb-12">
-            Zuletzt aktualisiert: {lastUpdated}
+            {t("legal.lastUpdated")} {resolvedLastUpdated}
           </p>
         </BlurFade>
 

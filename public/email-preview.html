@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <style>
+        /* Fallback CSS animation for email clients that support it (e.g. Apple Mail) */
+        @keyframes slowPulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.9;
+            }
+
+            50% {
+                transform: scale(1.03);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0.9;
+            }
+        }
+
+        .animated-logo {
+            animation: slowPulse 4s infinite ease-in-out;
+            display: inline-block;
+            max-width: 180px;
+            height: auto;
+        }
+
+        .static-logo {
+            display: none;
+            max-width: 180px;
+            height: auto;
+            mso-hide: all;
+        }
+
+        /* Print Fallback */
+        @media print {
+            .animated-logo {
+                display: none !important;
+            }
+
+            .static-logo {
+                display: inline-block !important;
+            }
+        }
+    </style>
+</head>
+
+<body style='margin: 0; padding: 20px; background-color: #ffffff;'>
+    <div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;'>
+        <div style='text-align: center; border-bottom: 1px solid #eee; padding-bottom: 20px; margin-bottom: 20px;'>
+
+            <!-- Outlook Static Fallback -->
+            <!--[if mso]>
+            <img src='./images/Airimpuls_Logo.png' alt='AIRIMPULS' width='180' style='width: 180px; display: block; margin: 0 auto 20px auto;' />
+            <![endif]-->
+
+            <!-- Modern Email Clients (GIF) & Print Fallback (PNG) -->
+            <!--[if !mso]><!-->
+            <div style='text-align: center; margin-bottom: 20px;'>
+                <img src='./animations/airimpuls-logo.gif' alt='AIRIMPULS' class='animated-logo' />
+                <img src='./images/Airimpuls_Logo.png' alt='AIRIMPULS' class='static-logo' />
+            </div>
+            <!--<![endif]-->
+
+            <h1 style='color: #000; margin-top: 20px; font-size: 24px;'>Vielen Dank für deine Bestellung!</h1>
+        </div>
+
+        <p>Hallo Test User,</p>
+        <p>wir haben deine Bestellung <strong>#TEST1234</strong> erhalten und bearbeiten sie schnellstmöglich. Hier ist
+            eine Übersicht deiner Artikel:</p>
+
+        <table style='width: 100%; border-collapse: collapse; margin-top: 20px; margin-bottom: 20px;'>
+            <thead>
+                <tr style='border-bottom: 2px solid #eee; text-align: left;'>
+                    <th style='padding: 10px; color: #666; font-size: 14px;'>Produkt</th>
+                    <th style='padding: 10px; color: #666; font-size: 14px;'>Menge</th>
+                    <th style='padding: 10px; color: #666; font-size: 14px; text-align: right;'>Preis</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style='border-bottom: 1px solid #eee;'>
+                    <td style='padding: 10px;'>Vitair Luftreiniger</td>
+                    <td style='padding: 10px;'>1x</td>
+                    <td style='padding: 10px; text-align: right;'>1.649,00 €</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr style='border-top: 2px solid #eee;'>
+                    <td colspan='2' style='padding: 15px 10px; font-weight: bold;'>Gesamtbetrag</td>
+                    <td style='padding: 15px 10px; font-weight: bold; text-align: right;'>1.649,00 €</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div style='background-color: #f9f9f9; padding: 15px; border-radius: 4px; margin-bottom: 20px;'>
+            <h3 style='margin-top: 0; font-size: 16px; color: #000;'>Lieferadresse</h3>
+            <p style='margin-bottom: 0;'>Musterstraße 1<br>12345 Musterstadt<br>Deutschland</p>
+        </div>
+
+        <p>Sobald dein Paket auf dem Weg ist, erhältst du eine weitere E-Mail mit einem Link zur Sendungsverfolgung.</p>
+        <br>
+        <p>Viele Grüße,<br>Dein AIRIMPULS Team</p>
+    </div>
+</body>
+
+</html>

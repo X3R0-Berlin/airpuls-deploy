@@ -8,8 +8,10 @@ import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { MagneticButton } from "@/components/ui/magnetic-button";
 import { Particles } from "@/components/ui/particles";
 import type { Product } from "@/lib/products";
+import { useLanguage } from "@/lib/i18n/context";
 
 export function Hero({ product }: { product: Product }) {
+  const { t } = useLanguage();
   return (
     <section className="relative min-h-screen grid grid-cols-1 lg:grid-cols-2 items-center pt-24 pb-12 overflow-hidden film-grain">
       {/* Subtle background glow */}
@@ -39,7 +41,7 @@ export function Hero({ product }: { product: Product }) {
         <BlurFade delay={0.15} inView>
           <h1 className="font-serif font-light text-[clamp(2.8rem,5vw,4.5rem)] leading-[1.1] tracking-tight mb-6">
             <TextAnimate animation="blurInUp" by="word" delay={0.3}>
-              Die natürliche Energie der Natur für dein Zuhause
+              {t("hero.heading")}
             </TextAnimate>
           </h1>
         </BlurFade>
@@ -60,7 +62,7 @@ export function Hero({ product }: { product: Product }) {
                 onClick={() => document.getElementById("product")?.scrollIntoView({ behavior: "smooth" })}
               >
                 <span className="flex items-center gap-2.5 text-white font-semibold text-[0.85rem] tracking-[0.04em]">
-                  Jetzt entdecken
+                  {t("hero.cta")}
                   <ArrowRight className="w-4 h-4" />
                 </span>
               </ShimmerButton>
@@ -69,7 +71,7 @@ export function Hero({ product }: { product: Product }) {
               href="#details"
               className="inline-flex items-center gap-2 px-6 py-4 bg-transparent text-brand-text-muted border border-[var(--brand-border-light)] rounded-full text-[0.85rem] no-underline hover:text-brand-text-dark hover:border-black/10 transition-all duration-300"
             >
-              Mehr erfahren
+              {t("hero.learnMore")}
             </a>
           </div>
         </BlurFade>

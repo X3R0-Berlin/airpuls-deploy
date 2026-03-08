@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence, useInView } from "motion/react";
 import { X } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/context";
 
 interface HotspotPoint {
   x: number;
@@ -26,6 +27,7 @@ export function ProductHotspots({
   basePath: string;
   productName: string;
 }) {
+  const { t } = useLanguage();
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
@@ -48,13 +50,13 @@ export function ProductHotspots({
           className="text-center mb-12"
         >
           <span className="text-[0.7rem] tracking-[0.25em] uppercase text-brand-accent font-medium">
-            Im Detail
+            {t("hotspots.tag")}
           </span>
           <h2 className="font-serif text-[clamp(2rem,4vw,3rem)] font-light text-brand-text-dark mt-3">
-            Jedes Detail mit Bedacht
+            {t("hotspots.heading")}
           </h2>
           <p className="text-brand-text-muted mt-2 text-[0.95rem]">
-            Tippen Sie auf die Punkte, um mehr zu erfahren
+            {t("hotspots.description")}
           </p>
         </motion.div>
 

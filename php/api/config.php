@@ -173,6 +173,12 @@ function sendEmail(string $to, string $subject, string $htmlBody, string $replyT
     if (class_exists('PHPMailer\PHPMailer\PHPMailer')) {
         $mail = new \PHPMailer\PHPMailer\PHPMailer(true);
         try {
+            // Check if global debug flag is set for troubleshooting
+            global $enableSmtpDebug;
+            if (isset($enableSmtpDebug) && $enableSmtpDebug) {
+                $mail->SMTPDebug = \PHPMailer\PHPMailer\SMTP::DEBUG_SERVER;
+            }
+
             $mail->isSMTP();
             $mail->Host = $smtpHost;
             $mail->SMTPAuth = true;
@@ -194,8 +200,12 @@ function sendEmail(string $to, string $subject, string $htmlBody, string $replyT
             $mail->send();
             return true;
         } catch (Exception $e) {
-            // Debug: return the exact error
-            jsonError("PHPMailer Error: {$mail->ErrorInfo}", 500);
+            error_log("PHPMailer Error: {$mail->ErrorInfo}");
+            // Only output jsonError if we are not explicitly testing dual emails via console
+            global $disableJsonError;
+            if (!isset($disableJsonError) || !$disableJsonError) {
+                jsonError("PHPMailer Error: {$mail->ErrorInfo}", 500);
+            }
             return false;
         }
     }

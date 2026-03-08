@@ -48,10 +48,39 @@ switch ($event->type) {
             $lineItems = $expanded->line_items->data ?? [];
             $items = [];
             foreach ($lineItems as $item) {
+                $imageUrl = '';
+
+                // 1. Try to get image from Stripe's product data
+                if (isset($item->price->product->images) && is_array($item->price->product->images) && count($item->price->product->images) > 0) {
+                    $imageUrl = $item->price->product->images[0];
+                }
+                // 2. Fallback to local catalog
+                else {
+                    $desc = strtolower($item->description ?? '');
+                    if (str_contains($desc, 'vitair'))
+                        $slug = 'vitair';
+                    elseif (str_contains($desc, 'forma'))
+                        $slug = 'forma';
+                    elseif (str_contains($desc, 'preventair'))
+                        $slug = 'preventair';
+                    elseif (str_contains($desc, 'solitair'))
+                        $slug = 'solitair';
+                    else
+                        $slug = '';
+
+                    if ($slug) {
+                        $localProduct = getProductBySlug($slug);
+                        if ($localProduct && isset($localProduct['images']['basePath']) && isset($localProduct['images']['gallery'][0]['file'])) {
+                            $imageUrl = 'https://airimpuls.com' . $localProduct['images']['basePath'] . '/' . $localProduct['images']['gallery'][0]['file'];
+                        }
+                    }
+                }
+
                 $items[] = [
                     'name' => $item->description ?? 'Produkt',
                     'quantity' => $item->quantity ?? 1,
                     'price' => formatEuro($item->amount_total ?? 0),
+                    'image' => $imageUrl
                 ];
             }
 
@@ -79,10 +108,20 @@ switch ($event->type) {
 
                 $itemsHtml = '';
                 foreach ($items as $it) {
+                    $imgHtml = '';
+                    if (!empty($it['image'])) {
+                        // Small, print-friendly, 60x60 object-fit: contain to not break layout
+                        $imgHtml = "<td style='padding: 10px; width: 60px;'><img src='{$it['image']}' alt='" . htmlspecialchars($it['name']) . "' style='width: 60px; height: 60px; object-fit: contain; border-radius: 4px; display: block;' /></td>";
+                    } else {
+                        // Blank cell if no image available to maintain column alignment
+                        $imgHtml = "<td style='padding: 10px; width: 60px;'></td>";
+                    }
+
                     $itemsHtml .= "
                         <tr style='border-bottom: 1px solid #eee;'>
+                            {$imgHtml}
                             <td style='padding: 10px;'>{$it['name']}</td>
-                            <td style='padding: 10px;'>{$it['quantity']}x</td>
+                            <td style='padding: 10px; text-align: center;'>{$it['quantity']}x</td>
                             <td style='padding: 10px; text-align: right;'>{$it['price']}</td>
                         </tr>
                     ";
@@ -143,8 +182,9 @@ switch ($event->type) {
                             <table style='width: 100%; border-collapse: collapse; margin-top: 20px; margin-bottom: 20px;'>
                                 <thead>
                                     <tr style='border-bottom: 2px solid #eee; text-align: left;'>
+                                        <th style='padding: 10px; color: #666; font-size: 14px; width: 60px;'></th>
                                         <th style='padding: 10px; color: #666; font-size: 14px;'>Produkt</th>
-                                        <th style='padding: 10px; color: #666; font-size: 14px;'>Menge</th>
+                                        <th style='padding: 10px; color: #666; font-size: 14px; text-align: center;'>Menge</th>
                                         <th style='padding: 10px; color: #666; font-size: 14px; text-align: right;'>Preis</th>
                                     </tr>
                                 </thead>
@@ -153,7 +193,7 @@ switch ($event->type) {
                                 </tbody>
                                 <tfoot>
                                     <tr style='border-top: 2px solid #eee;'>
-                                        <td colspan='2' style='padding: 15px 10px; font-weight: bold;'>Gesamtbetrag</td>
+                                        <td colspan='3' style='padding: 15px 10px; font-weight: bold;'>Gesamtbetrag</td>
                                         <td style='padding: 15px 10px; font-weight: bold; text-align: right;'>{$total}</td>
                                     </tr>
                                 </tfoot>

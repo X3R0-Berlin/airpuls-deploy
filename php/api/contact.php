@@ -46,19 +46,73 @@ try {
 
 // 2. Prepare Email to the shop team
 $to = 'team@airimpuls.com'; // Admin Email Receiving the Contact Form
+$baseUrl = 'https://airimpuls.com';
 
 $htmlBody = "
-    <html>
-    <body style='font-family: Arial, sans-serif; line-height: 1.6; color: #333;'>
-        <h2>Neue Kontaktanfrage über die Webseite</h2>
-        <p><strong>Von:</strong> " . htmlspecialchars($name) . " &lt;" . htmlspecialchars($email) . "&gt;</p>
-        <p><strong>Betreff:</strong> " . htmlspecialchars($subject) . "</p>
-        <hr>
-        <p><strong>Nachricht:</strong></p>
-        <p style='white-space: pre-wrap;'>" . htmlspecialchars($message) . "</p>
-    </body>
-    </html>
-    ";
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <style>
+        @keyframes slowPulse {
+            0% { transform: scale(1); opacity: 0.9; }
+            50% { transform: scale(1.03); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.9; }
+        }
+        .animated-logo {
+            animation: slowPulse 4s infinite ease-in-out;
+            display: inline-block;
+            max-width: 180px;
+            height: auto;
+        }
+        .static-logo {
+            display: none;
+            max-width: 180px;
+            height: auto;
+            mso-hide: all;
+        }
+        @media print {
+            .animated-logo { display: none !important; }
+            .static-logo { display: inline-block !important; }
+        }
+    </style>
+</head>
+<body style='margin: 0; padding: 20px; background-color: #ffffff;'>
+    <div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;'>
+        <div style='text-align: center; border-bottom: 1px solid #eee; padding-bottom: 20px; margin-bottom: 20px;'>
+            
+            <!-- Outlook Static Fallback -->
+            <!--[if mso]>
+            <img src='{$baseUrl}/images/Airimpuls_Logo.png' alt='AIRIMPULS' width='180' style='width: 180px; display: block; margin: 0 auto 20px auto;' />
+            <![endif]-->
+            
+            <!-- Modern Email Clients (GIF) & Print Fallback (PNG) -->
+            <!--[if !mso]><!-->
+            <div style='text-align: center; margin-bottom: 20px;'>
+                <img src='{$baseUrl}/animations/airimpuls-logo.gif' alt='AIRIMPULS' class='animated-logo' />
+                <img src='{$baseUrl}/images/Airimpuls_Logo.png' alt='AIRIMPULS' class='static-logo' />
+            </div>
+            <!--<![endif]-->
+
+            <h1 style='color: #000; margin-top: 20px; font-size: 24px;'>Neue Kontaktanfrage</h1>
+        </div>
+        
+        <p>Hallo AIRIMPULS Team,</p>
+        <p>es ist eine neue Anfrage über das Kontaktformular der Webseite eingegangen:</p>
+        
+        <div style='background-color: #f9f9f9; padding: 15px; border-radius: 4px; margin-bottom: 20px;'>
+            <p style='margin: 0 0 10px 0;'><strong>Von:</strong> " . htmlspecialchars($name) . " &lt;" . htmlspecialchars($email) . "&gt;</p>
+            <p style='margin: 0;'><strong>Betreff:</strong> " . htmlspecialchars($subject) . "</p>
+        </div>
+        
+        <h3 style='margin-top: 0; font-size: 16px; color: #000;'>Nachricht:</h3>
+        <div style='background-color: #ffffff; border: 1px solid #eee; padding: 15px; border-radius: 4px; margin-bottom: 20px; white-space: pre-wrap; font-family: inherit;'>" . htmlspecialchars($message) . "</div>
+        
+        <p style='color: #666; font-size: 14px;'>Du kannst direkt auf diese E-Mail antworten, um " . htmlspecialchars($name) . " zu schreiben.</p>
+    </div>
+</body>
+</html>
+";
 
 // Call the generic sendEmail function from config.php with Reply-To
 $success = sendEmail($to, $subject, $htmlBody, $email);

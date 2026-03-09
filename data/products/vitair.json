@@ -84,6 +84,14 @@
     {
       "label": "Raumgröße",
       "value": "Bis zu 40 m²"
+    },
+    {
+      "label": "Lieferumfang",
+      "value": "Gerät inkl. Lichtschirm (ohne Ladekabel)"
+    },
+    {
+      "label": "Zubehör (separat)",
+      "value": "USB-C Kabel & Netzstecker (schwarz/weiß), Ersatz-Lichtschirm"
     }
   ],
   "details": [

@@ -11,7 +11,6 @@ interface StickyCartBarProps {
   productName: string;
   price: number;
   priceChf?: number;
-  priceDisplay: string;
   slug: string;
   image: string;
   inStock: boolean;
@@ -22,7 +21,6 @@ export function StickyCartBar({
   productName,
   price,
   priceChf,
-  priceDisplay,
   slug,
   image,
   inStock,
@@ -31,7 +29,7 @@ export function StickyCartBar({
   const { t } = useLanguage();
   const [visible, setVisible] = useState(false);
   const { addItem } = useCart();
-  const { currencyCode, getPriceForCurrency, formatPrice } = useCurrency();
+  const { getPriceForCurrency, formatPrice } = useCurrency();
 
   useEffect(() => {
     const handleScroll = () => {

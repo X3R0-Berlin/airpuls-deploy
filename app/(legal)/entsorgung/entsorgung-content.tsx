@@ -18,7 +18,7 @@ export function EntsorgungContent() {
                     Electrical and electronic equipment that has become waste is referred to as WEEE. Owners of WEEE must dispose of it separately from unsorted municipal waste. In particular, WEEE does not belong in household waste, but in special collection and return systems.
                 </p>
 
-                <h2>2. Meaning of the Symbol "Crossed-out Wheeled Bin"</h2>
+                <h2>2. Meaning of the Symbol &quot;Crossed-out Wheeled Bin&quot;</h2>
                 <p>
                     The symbol of a crossed-out wheeled bin, regularly depicted on electrical and electronic equipment, indicates that the respective device must be collected separately from unsorted municipal waste at the end of its service life.
                 </p>
@@ -53,7 +53,7 @@ export function EntsorgungContent() {
                 Elektro- und Elektronikgeräte, die zu Abfall geworden sind, werden als Altgeräte bezeichnet. Besitzer von Altgeräten haben diese einer vom unsortierten Siedlungsabfall getrennten Erfassung zuzuführen. Altgeräte gehören insbesondere nicht in den Hausmüll, sondern in spezielle Sammel- und Rückgabesysteme.
             </p>
 
-            <h2>2. Bedeutung des Symbols „durchgestrichene Mülltonne“</h2>
+            <h2>2. Bedeutung des Symbols &bdquo;durchgestrichene Mülltonne&ldquo;</h2>
             <p>
                 Das auf den Elektro- und Elektronikgeräten regelmäßig abgebildete Symbol einer durchgestrichenen Mülltonne weist darauf hin, dass das jeweilige Gerät am Ende seiner Lebensdauer getrennt vom unsortierten Siedlungsabfall zu erfassen ist.
             </p>

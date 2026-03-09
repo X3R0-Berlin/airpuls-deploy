@@ -80,6 +80,14 @@
     {
       "label": "Status",
       "value": "Klinische Studie in Vorbereitung"
+    },
+    {
+      "label": "Lieferumfang",
+      "value": "Gerät (ohne Ladekabel/Lichtschirm)"
+    },
+    {
+      "label": "Zubehör (separat)",
+      "value": "USB-C Kabel (schwarz/weiß), Selbstbau-Maskenkit, Ersatzschläuche, Ersatz-Glasbehälter"
     }
   ],
   "details": [

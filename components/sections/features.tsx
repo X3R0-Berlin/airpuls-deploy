@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Sun, Moon, Sparkles, Heart } from "lucide-react";
+import { Sparkles, Sun, Moon, Heart } from "lucide-react";
 import { BlurFade } from "@/components/ui/blur-fade";
+import { MagicCard } from "@/components/ui/magic-card";
+import { cn } from "@/lib/utils";
 import type { Feature } from "@/lib/products";
 import { useLanguage } from "@/lib/i18n/context";
 
@@ -85,31 +87,43 @@ export function Features({ features }: { features: Feature[] }) {
           </div>
         </BlurFade>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0.5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
           {features.map((feature, i) => {
             const Icon = iconMap[feature.icon] || Sparkles;
 
             return (
-              <BlurFade key={feature.id} delay={i * 0.1} inView>
-                <div className="relative overflow-hidden bg-white h-full">
+              <BlurFade
+                key={feature.id}
+                delay={i * 0.15}
+                className={cn(
+                  "h-full w-full",
+                  i === 0 || i === 3 ? "md:col-span-2" : "md:col-span-1",
+                  i === 0 ? "md:row-span-2" : "md:row-span-1"
+                )}
+                inView
+              >
+                <MagicCard
+                  className="w-full h-full flex flex-col justify-end bg-white border border-[var(--brand-border-light)] overflow-hidden rounded-2xl"
+                  gradientColor="rgba(53,120,104,0.08)"
+                >
                   {/* Video or poster fallback — fills entire card */}
                   {(feature.video || feature.poster) && (
                     <FeatureMedia video={feature.video} poster={feature.poster} />
                   )}
 
                   {/* Content */}
-                  <div className="relative z-10 p-[clamp(2rem,3vw,3rem)]">
-                    <div className="w-12 h-12 rounded-2xl bg-[var(--brand-bg-cream)] flex items-center justify-center mb-6">
+                  <div className="relative z-10 p-[clamp(2rem,3vw,3rem)] mt-auto bg-gradient-to-t from-white via-white/90 to-transparent">
+                    <div className="w-12 h-12 rounded-2xl bg-[var(--brand-bg-cream)] flex items-center justify-center mb-6 shadow-sm">
                       <Icon className="w-5 h-5 text-brand-accent" strokeWidth={1.5} />
                     </div>
-                    <h3 className="font-serif text-xl font-normal mb-3 text-[var(--brand-text-dark)]">
+                    <h3 className="font-serif text-2xl font-normal mb-3 text-[var(--brand-text-dark)]">
                       {feature.title}
                     </h3>
-                    <p className="text-[0.9rem] leading-[1.7] text-[var(--brand-text-muted)]">
+                    <p className="text-[1rem] leading-[1.6] text-[var(--brand-text-muted)] max-w-lg">
                       {feature.description}
                     </p>
                   </div>
-                </div>
+                </MagicCard>
               </BlurFade>
             );
           })}

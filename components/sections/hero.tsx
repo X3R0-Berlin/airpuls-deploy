@@ -7,6 +7,7 @@ import { TextAnimate } from "@/components/ui/text-animate";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { MagneticButton } from "@/components/ui/magnetic-button";
 import { Particles } from "@/components/ui/particles";
+import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import type { Product } from "@/lib/products";
 import { useLanguage } from "@/lib/i18n/context";
 
@@ -32,9 +33,11 @@ export function Hero({ product }: { product: Product }) {
       {/* Content */}
       <div className="relative z-10 px-[clamp(2rem,6vw,8rem)] py-[clamp(2rem,5vw,6rem)] text-center lg:text-left">
         <BlurFade delay={0} inView>
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-[var(--brand-border-light)] rounded-full text-[0.7rem] tracking-[0.15em] uppercase text-brand-text-muted mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-[var(--brand-border-light)] rounded-full text-[0.7rem] tracking-[0.15em] uppercase text-brand-text-muted mb-8 transition-all hover:bg-neutral-100 dark:hover:bg-neutral-800">
             <span className="w-1.5 h-1.5 bg-brand-accent rounded-full animate-pulse" />
-            {product.heroTagline}
+            <AnimatedShinyText className="inline-flex items-center justify-center">
+              <span>✨ {product.heroTagline}</span>
+            </AnimatedShinyText>
           </div>
         </BlurFade>
 

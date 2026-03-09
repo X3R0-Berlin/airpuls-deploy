@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { Lens } from "@/components/ui/lens";
 import type { ProductImage } from "@/lib/products";
 
 export function ProductGallery({
@@ -14,28 +15,38 @@ export function ProductGallery({
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isZoomed, setIsZoomed] = useState(false);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    setPosition({ x, y });
+  };
 
   return (
     <div className="sticky top-24">
       {/* Main Image */}
       <div
         className={cn(
-          "relative aspect-square bg-[var(--brand-bg-cream)] rounded-2xl overflow-hidden mb-4 cursor-zoom-in transition-all duration-500",
-          isZoomed && "cursor-zoom-out"
+          "relative aspect-square bg-[var(--brand-bg-cream)] rounded-2xl mb-4 cursor-crosshair transition-all duration-500",
         )}
-        onClick={() => setIsZoomed(!isZoomed)}
+        onMouseEnter={() => setIsZoomed(true)}
+        onMouseLeave={() => setIsZoomed(false)}
+        onMouseMove={handleMouseMove}
       >
-        <Image
-          src={`${basePath}/${images[activeIndex].file}`}
-          alt={images[activeIndex].alt}
-          fill
-          className={cn(
-            "object-contain p-8 transition-transform duration-500",
-            isZoomed && "scale-[1.15]"
-          )}
-          sizes="(max-width: 1024px) 100vw, 50vw"
-          priority
-        />
+        <Lens position={position} isHovering={isZoomed} zoomFactor={1.7}>
+          <Image
+            src={`${basePath}/${images[activeIndex].file}`}
+            alt={images[activeIndex].alt}
+            fill
+            className={cn(
+              "object-contain p-8 w-full h-full"
+            )}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            priority
+          />
+        </Lens>
       </div>
 
       {/* Thumbnails */}

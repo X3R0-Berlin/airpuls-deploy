@@ -6,6 +6,7 @@ import { useCart } from "@/lib/cart-context";
 import { motion, AnimatePresence } from "motion/react";
 import { useLanguage } from "@/lib/i18n/context";
 import { useCurrency } from "@/lib/currency-context";
+import { BorderBeam } from "@/components/ui/border-beam";
 
 interface StickyCartBarProps {
   productName: string;
@@ -105,14 +106,24 @@ export function StickyCartBar({
                 <span className="whitespace-nowrap">{t("product.comingSoon")}</span>
               </button>
             ) : (
-              <button
-                onClick={handleAdd}
-                className="flex items-center gap-2 px-6 py-2.5 bg-[var(--brand-accent)] text-white rounded-full font-semibold text-sm hover:bg-[var(--brand-accent-glow)] transition-colors shrink-0 cursor-pointer"
-              >
-                <ShoppingBag className="w-4 h-4" />
-                <span className="hidden sm:inline">{t("sticky.addToCart")}</span>
-                <span className="sm:hidden">{t("sticky.buy")}</span>
-              </button>
+              <div className="relative inline-flex h-full w-full items-center justify-center rounded-full">
+                <button
+                  onClick={handleAdd}
+                  className="flex items-center gap-2 px-6 py-2.5 bg-[var(--brand-accent)] text-white rounded-full font-semibold text-sm hover:bg-[var(--brand-accent-glow)] transition-colors shrink-0 cursor-pointer overflow-hidden z-20"
+                >
+                  <ShoppingBag className="w-4 h-4" />
+                  <span className="hidden sm:inline">{t("sticky.addToCart")}</span>
+                  <span className="sm:hidden">{t("sticky.buy")}</span>
+                </button>
+                <BorderBeam
+                  size={40}
+                  duration={3}
+                  delay={9}
+                  borderWidth={1.5}
+                  colorFrom="#6ABFC2"
+                  colorTo="#EEF0F2"
+                />
+              </div>
             )}
           </div>
         </motion.div>

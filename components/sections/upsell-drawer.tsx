@@ -1,6 +1,6 @@
 "use client";
 
-import { Plus, Disc, Wind, ShieldPlus } from "lucide-react";
+import { Plus, Disc, Wind, ShieldPlus, PlugZap, Cable, Sun, Wrench, Waves, Beaker } from "lucide-react";
 import { useCart } from "@/lib/cart-context";
 import { BlurFade } from "@/components/ui/blur-fade";
 import { useCurrency } from "@/lib/currency-context";
@@ -9,6 +9,12 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   disc: Disc,
   wind: Wind,
   "shield-plus": ShieldPlus,
+  plug: PlugZap,
+  cable: Cable,
+  sun: Sun,
+  wrench: Wrench,
+  waves: Waves,
+  beaker: Beaker,
 };
 
 interface BundleItem {

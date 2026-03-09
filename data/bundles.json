@@ -36,6 +36,105 @@
       "forProducts": [
         "vitair"
       ]
+    },
+    {
+      "slug": "usb-c-kabel-schwarz",
+      "name": "USB-C Kabel (Schwarz)",
+      "description": "Hochwertiges USB-C Ladekabel für alle Modelle",
+      "price": 1900,
+      "priceDisplay": "19,00",
+      "icon": "cable",
+      "forProducts": [
+        "vitair",
+        "solitair",
+        "preventair"
+      ]
+    },
+    {
+      "slug": "usb-c-kabel-weiss",
+      "name": "USB-C Kabel (Weiß)",
+      "description": "Hochwertiges USB-C Ladekabel für alle Modelle",
+      "price": 1900,
+      "priceDisplay": "19,00",
+      "icon": "cable",
+      "forProducts": [
+        "vitair",
+        "solitair",
+        "preventair"
+      ]
+    },
+    {
+      "slug": "netzstecker-schwarz",
+      "name": "Netzstecker (Schwarz)",
+      "description": "Premium USB-C Netzstecker",
+      "price": 2900,
+      "priceDisplay": "29,00",
+      "icon": "plug",
+      "forProducts": [
+        "vitair",
+        "solitair",
+        "preventair"
+      ]
+    },
+    {
+      "slug": "netzstecker-weiss",
+      "name": "Netzstecker (Weiß)",
+      "description": "Premium USB-C Netzstecker",
+      "price": 2900,
+      "priceDisplay": "29,00",
+      "icon": "plug",
+      "forProducts": [
+        "vitair",
+        "solitair",
+        "preventair"
+      ]
+    },
+    {
+      "slug": "ersatz-lichtschirm",
+      "name": "Ersatz-Lichtschirm",
+      "description": "Ersatz-Lichtschirm für den Vitair Luftenergizer",
+      "price": 4900,
+      "priceDisplay": "49,00",
+      "icon": "sun",
+      "forProducts": [
+        "vitair"
+      ]
+    },
+    {
+      "slug": "selbstbau-maskenkit",
+      "name": "Selbstbau-Maskenkit",
+      "description": "DIY Maskenkit für die persönliche Anwendung",
+      "price": 3900,
+      "priceDisplay": "39,00",
+      "icon": "wrench",
+      "forProducts": [
+        "solitair",
+        "preventair"
+      ]
+    },
+    {
+      "slug": "ersatzschlaeuche",
+      "name": "Ersatzschläuche",
+      "description": "Hochwertige Ersatzschläuche für die Atembrille",
+      "price": 2900,
+      "priceDisplay": "29,00",
+      "icon": "waves",
+      "forProducts": [
+        "solitair",
+        "preventair"
+      ]
+    },
+    {
+      "slug": "ersatz-glasbehaelter",
+      "name": "Ersatz-Glasbehälter (250ml)",
+      "description": "250ml Premium-Glasbehälter",
+      "price": 5900,
+      "priceDisplay": "59,00",
+      "icon": "beaker",
+      "forProducts": [
+        "solitair",
+        "preventair"
+      ]
     }
   ]
 }

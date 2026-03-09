@@ -75,15 +75,24 @@ export function StickyCartBar({
         >
           <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
             {/* Product info */}
-            <div className="flex items-center gap-3 min-w-0">
+            <div className="flex items-center gap-3 sm:gap-4 min-w-0">
+              {image && (
+                <div className="relative w-10 h-10 shrink-0 rounded bg-white border border-[var(--brand-border-light)] overflow-hidden">
+                  <img
+                    src={image}
+                    alt={productName}
+                    className="w-full h-full object-contain p-0.5"
+                  />
+                </div>
+              )}
               <span className="font-serif text-brand-text-dark text-lg font-light truncate">
                 {productName}
               </span>
               <div className="hidden sm:flex flex-col">
-                <span className="text-brand-text-dark font-serif text-lg">
+                <span className="text-brand-text-dark font-serif text-lg leading-tight">
                   {displayString}
                 </span>
-                <span className="text-brand-text-muted text-[0.65rem]">
+                <span className="text-brand-text-muted text-[0.65rem] leading-none">
                   {t("sticky.orFrom")} {monthlyPrice} {t("sticky.perMonth")}
                 </span>
               </div>

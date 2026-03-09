@@ -33,6 +33,7 @@ const en: TranslationDict = {
   "footer.datenschutz": "Privacy Policy",
   "footer.agb": "Terms & Conditions",
   "footer.widerruf": "Cancellation Policy",
+  "footer.entsorgung": "Disposal Info (WEEE)",
   "footer.allRights": "All rights reserved.",
 
   // ── Cart Panel ──

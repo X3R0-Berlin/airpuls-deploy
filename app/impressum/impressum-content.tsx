@@ -39,6 +39,11 @@ export function ImpressumContent() {
           <mark>[PLATZHALTER]</mark>
         </p>
 
+        <h2>WEEE Registration Number</h2>
+        <p>
+          WEEE-Reg.-Nr. DE <mark>[PLATZHALTER]</mark>
+        </p>
+
         <h2>Responsible for content according to Section 55(2) RStV</h2>
         <p>
           Jörg Klemm<br />
@@ -132,6 +137,11 @@ export function ImpressumContent() {
       <p>
         Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG:<br />
         <mark>[PLATZHALTER]</mark>
+      </p>
+
+      <h2>WEEE-Registrierungsnummer</h2>
+      <p>
+        WEEE-Reg.-Nr. DE <mark>[PLATZHALTER]</mark>
       </p>
 
       <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>

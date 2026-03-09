@@ -51,6 +51,7 @@ export function Footer() {
               { label: t("footer.datenschutz"), href: "/datenschutz" },
               { label: t("footer.agb"), href: "/agb" },
               { label: t("footer.widerruf"), href: "/widerruf" },
+              { label: t("footer.entsorgung"), href: "/entsorgung" },
             ]}
           />
         </div>

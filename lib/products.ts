@@ -58,6 +58,7 @@ export interface Product {
   maxQuantity: number;
   featured: boolean;
   description: string;
+  dataSheet?: string;
   heroTagline: string;
   heroHeading: string;
   heroDescription: string;

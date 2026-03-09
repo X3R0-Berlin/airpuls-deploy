@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Minus, Plus, ShieldCheck, Truck, RefreshCw } from "lucide-react";
+import { Minus, Plus, ShieldCheck, Truck, RefreshCw, FileText } from "lucide-react";
 import { NumberTicker } from "@/components/ui/number-ticker";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { MagneticButton } from "@/components/ui/magnetic-button";
@@ -108,6 +108,21 @@ export function ProductInfo({ product }: { product: Product }) {
           </div>
         ))}
       </div>
+
+      {/* Data Sheet Download */}
+      {product.dataSheet && (
+        <div className="mt-8 flex">
+          <a
+            href={product.dataSheet}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-2 px-5 py-2.5 rounded-full border border-[var(--brand-border-dark)] text-brand-text-muted hover:text-[var(--brand-text-dark)] hover:bg-[var(--brand-border-light)] transition-all text-[0.85rem] font-medium"
+          >
+            <FileText className="w-4 h-4 text-[var(--brand-accent)] group-hover:scale-110 transition-transform" />
+            {t("product.downloadDataSheet") || "Datenblatt (PDF)"}
+          </a>
+        </div>
+      )}
 
       {/* Quantity & Add to Cart — only for purchasable products */}
       {product.comingSoon ? (

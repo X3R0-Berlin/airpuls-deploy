@@ -93,7 +93,6 @@ export function ProductDetailContent({
         productName={localizedProduct.name}
         price={localizedProduct.price}
         priceChf={localizedProduct.priceChf}
-        priceDisplay={localizedProduct.priceDisplay}
         slug={localizedProduct.slug}
         image={`${localizedProduct.images.basePath}/${localizedProduct.images.gallery[0].file}`}
         inStock={localizedProduct.inStock}

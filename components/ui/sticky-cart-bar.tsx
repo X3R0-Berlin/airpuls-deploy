@@ -42,7 +42,7 @@ export function StickyCartBar({
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  if (comingSoon || !inStock) return null;
+  if (!inStock && !comingSoon) return null;
 
   const currentPrice = getPriceForCurrency(price, priceChf);
   const monthlyPrice = Math.ceil(currentPrice / 100 / 12);
@@ -99,14 +99,23 @@ export function StickyCartBar({
             </div>
 
             {/* CTA */}
-            <button
-              onClick={handleAdd}
-              className="flex items-center gap-2 px-6 py-2.5 bg-[var(--brand-accent)] text-white rounded-full font-semibold text-sm hover:bg-[var(--brand-accent-glow)] transition-colors shrink-0 cursor-pointer"
-            >
-              <ShoppingBag className="w-4 h-4" />
-              <span className="hidden sm:inline">{t("sticky.addToCart")}</span>
-              <span className="sm:hidden">{t("sticky.buy")}</span>
-            </button>
+            {comingSoon ? (
+              <button
+                disabled
+                className="flex items-center gap-2 px-6 py-2.5 bg-gray-100 text-gray-400 rounded-full font-semibold text-sm cursor-not-allowed shrink-0 border border-gray-200"
+              >
+                <span className="whitespace-nowrap">{t("product.comingSoon")}</span>
+              </button>
+            ) : (
+              <button
+                onClick={handleAdd}
+                className="flex items-center gap-2 px-6 py-2.5 bg-[var(--brand-accent)] text-white rounded-full font-semibold text-sm hover:bg-[var(--brand-accent-glow)] transition-colors shrink-0 cursor-pointer"
+              >
+                <ShoppingBag className="w-4 h-4" />
+                <span className="hidden sm:inline">{t("sticky.addToCart")}</span>
+                <span className="sm:hidden">{t("sticky.buy")}</span>
+              </button>
+            )}
           </div>
         </motion.div>
       )}

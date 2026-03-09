@@ -11,8 +11,8 @@
       "label": "Anwendung",
       "values": {
         "vitair": "Raumluft-Aktivierung",
-        "solitair": "Persönliche Atembrille",
-        "preventair": "Professionelle Therapie"
+        "solitair": "Persönliche Anwendung",
+        "preventair": "Professionelle Intensivanwendung"
       }
     },
     {
@@ -20,7 +20,7 @@
       "values": {
         "vitair": "Zuhause & Büro",
         "solitair": "Bewusste Anwender",
-        "preventair": "Therapeuten & Kliniken"
+        "preventair": "Professionelle Anwender"
       }
     },
     {

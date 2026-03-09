@@ -2,7 +2,7 @@
   "slug": "preventair",
   "name": "Preventair",
   "collection": "AIRIMPULS Collection",
-  "subtitle": "Professionelles Therapiegerät",
+  "subtitle": "Professionelles System zur Atemluft-Vitalisierung",
   "designer": "Jörg Klemm",
   "price": 699900,
   "priceDisplay": "ab 6.999,00",
@@ -13,11 +13,11 @@
   "comingSoon": true,
   "maxQuantity": 0,
   "featured": false,
-  "description": "Der PREVENTAIR ist ein professionelles Therapiegerät für die intensive Kurzzeit-Anwendung mit Atembrille. Seit über 25 Jahren als Therapiegerät bewährt, aktiviert er Sauerstoff für die gezielte Inhalation. Klinische Studien für die Zulassung als Medizinprodukt sind in Vorbereitung.",
+  "description": "Der PREVENTAIR ist ein professionelles Anwendungsgerät für die intensive Kurzzeit-Anwendung mit Atembrille. Seit über 25 Jahren bewährt, aktiviert er Sauerstoff für die gezielte Inhalation. Klinische Studien für die zukünftige Zulassung als Medizinprodukt sind in Vorbereitung (aktuell klassifiziert als reines Wellness-Gerät zur Vitalisierung).",
   "dataSheet": "/downloads/datenblatt-preventair.pdf",
   "heroTagline": "Coming Soon — Klinische Studie in Vorbereitung",
-  "heroHeading": "Professionelle<br/><em>Atemtherapie</em><br/>seit 25 Jahren bewährt",
-  "heroDescription": "PREVENTAIR — das professionelle Therapiegerät für intensive Sauerstoff-Aktivierung. Anwendung mit Atembrille in 15–20 Minuten. Bewährt seit über 25 Jahren.",
+  "heroHeading": "Professionelle<br/><em>Atemluft-Anwendung</em><br/>seit 25 Jahren bewährt",
+  "heroDescription": "PREVENTAIR — das professionelle System für intensive Sauerstoff-Aktivierung. Anwendung mit Atembrille in 15–20 Minuten. Bewährt seit über 25 Jahren.",
   "images": {
     "hero": "front.webp",
     "gallery": [
@@ -51,7 +51,7 @@
   "specs": [
     {
       "label": "Anwendung",
-      "value": "Intensive Kurzzeit-Therapie mit Atembrille"
+      "value": "Intensive Kurzzeit-Anwendung mit Atembrille"
     },
     {
       "label": "Sitzungsdauer",
@@ -84,14 +84,14 @@
   ],
   "details": [
     {
-      "tag": "Therapie",
-      "heading": "Professionelle Atemtherapie — seit über 25 Jahren bewährt",
-      "text": "Der PREVENTAIR ist für die intensive Kurzzeit-Anwendung mit Atembrille konzipiert. In 15–20 Minuten Sitzungen aktiviert das Gerät Sauerstoff gezielt für die Inhalation. Als Therapiegerät hat sich diese Technologie seit über 25 Jahren in der Praxis bewährt — bei chronischen Lungenerkrankungen (COPD) und Stoffwechselstörungen wie Diabetes mellitus.",
+      "tag": "Anwendung",
+      "heading": "Die Kraft der Kurzzeit-Anwendung",
+      "text": "Der PREVENTAIR ist für die intensive Kurzzeit-Anwendung mit Atembrille konzipiert. In 15–20 Minuten Sitzungen aktiviert das Gerät Sauerstoff gezielt für die Inhalation. Diese Technologie hat sich zur Steigerung des allgemeinen Wohlbefindens, der Leistungsfähigkeit und der Vitalität seit über 25 Jahren in der Praxis bewährt.",
       "image": "detail-led.webp",
       "bullets": [
         "Intensive Kurzzeit-Anwendung: 15–20 Minuten pro Sitzung",
         "Gezielte Inhalation über professionelle Atembrille",
-        "Bewährt bei COPD und Stoffwechselstörungen",
+        "Bewährt zur Steigerung von Vitalität und Wohlbefinden",
         "Klinische Vorstudie mit Vorgängergeräten gestartet"
       ],
       "reverse": false,
@@ -113,20 +113,20 @@
     {
       "tag": "Qualität",
       "heading": "Präzision in jedem Detail — jedes Gerät ein Unikat",
-      "text": "Jeder PREVENTAIR wird in sorgfältiger Handarbeit gefertigt. Das gebürstete Edelstahlgehäuse und die präzise eingepasste Aktivierungskammer machen jedes Gerät zu einem Präzisionsinstrument. Materialien und Verarbeitung entsprechen dem professionellen Anspruch eines Therapiegeräts.",
+      "text": "Jeder PREVENTAIR wird in sorgfältiger Handarbeit gefertigt. Das gebürstete Edelstahlgehäuse und die präzise eingepasste Aktivierungskammer machen jedes Gerät zu einem Präzisionsinstrument. Materialien und Verarbeitung entsprechen dem professionellen Anspruch eines High-End-Systems.",
       "image": "ambient.webp",
       "bullets": [
         "Sorgfältige Handmontage in Deutschland",
         "Premium-Edelstahlgehäuse",
-        "Medizinprodukt-Zulassung in Vorbereitung",
-        "Klinische Studie für COPD-Patienten geplant"
+        "Studie für Zertifizierung in Vorbereitung",
+        "Wartungsfreie Technologie"
       ],
       "reverse": false
     }
   ],
   "marqueeItems": [
     "Coming Soon",
-    "Professionelles Therapiegerät",
+    "Professionelles System",
     "25 Jahre bewährt",
     "Atembrille-Anwendung",
     "Klinische Studie geplant",
@@ -136,7 +136,7 @@
   "trustBadges": [
     {
       "icon": "shield",
-      "text": "Medizinprodukt-Zulassung geplant"
+      "text": "Studie für Zertifizierung geplant"
     },
     {
       "icon": "truck",

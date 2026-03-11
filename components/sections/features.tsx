@@ -16,7 +16,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string; strokeWi
 };
 
 /* ── Video/Poster Background ──────────────────────────── */
-function FeatureMedia({ video, poster }: { video?: string; poster?: string }) {
+function FeatureMedia({ video, poster, isHero }: { video?: string; poster?: string; isHero?: boolean }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [showVideo, setShowVideo] = useState(false);
   const [canPlayVideo, setCanPlayVideo] = useState(false);
@@ -62,8 +62,13 @@ function FeatureMedia({ video, poster }: { video?: string; poster?: string }) {
             }`}
         />
       )}
-      {/* Gradient overlay — lighter top to show image, stronger bottom for text contrast */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-white/50 to-white/75" />
+      {/* Gradient overlay — hero card gets lighter overlay so image is fully visible */}
+      <div className={cn(
+        "absolute inset-0",
+        isHero
+          ? "bg-gradient-to-b from-transparent via-white/20 to-white/60"
+          : "bg-gradient-to-b from-white/30 via-white/50 to-white/75"
+      )} />
     </div>
   );
 }
@@ -87,7 +92,7 @@ export function Features({ features }: { features: Feature[] }) {
           </div>
         </BlurFade>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+        <div className="grid gap-6 bento-grid">
           {features.map((feature, i) => {
             const Icon = iconMap[feature.icon] || Sparkles;
 
@@ -95,24 +100,25 @@ export function Features({ features }: { features: Feature[] }) {
               <BlurFade
                 key={feature.id}
                 delay={i * 0.15}
-                className={cn(
-                  "h-full w-full",
-                  i === 0 || i === 3 ? "md:col-span-2" : "md:col-span-1",
-                  i === 0 ? "md:row-span-2" : "md:row-span-1"
-                )}
+                className={cn("w-full h-auto flex flex-col", `bento-item-${i}`)}
                 inView
               >
                 <MagicCard
-                  className="w-full h-full flex flex-col justify-end bg-white border border-[var(--brand-border-light)] overflow-hidden rounded-2xl"
+                  className="w-full flex-1 flex flex-col justify-end bg-white border border-[var(--brand-border-light)] overflow-hidden rounded-2xl"
                   gradientColor="rgba(53,120,104,0.08)"
                 >
                   {/* Video or poster fallback — fills entire card */}
                   {(feature.video || feature.poster) && (
-                    <FeatureMedia video={feature.video} poster={feature.poster} />
+                    <FeatureMedia video={feature.video} poster={feature.poster} isHero={i === 0} />
                   )}
 
                   {/* Content */}
-                  <div className="relative z-10 p-[clamp(2rem,3vw,3rem)] mt-auto bg-gradient-to-t from-white via-white/90 to-transparent">
+                  <div className={cn(
+                    "relative z-10 p-[clamp(2rem,3vw,3rem)] mt-auto",
+                    i === 0
+                      ? "bg-gradient-to-t from-white/80 via-white/50 to-transparent"
+                      : "bg-gradient-to-t from-white via-white/90 to-transparent"
+                  )}>
                     <div className="w-12 h-12 rounded-2xl bg-[var(--brand-bg-cream)] flex items-center justify-center mb-6 shadow-sm">
                       <Icon className="w-5 h-5 text-brand-accent" strokeWidth={1.5} />
                     </div>

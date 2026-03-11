@@ -102,7 +102,7 @@ export function MagicCard({
           opacity: gradientOpacity,
         }}
       />
-      <div className="relative">{children}</div>
+      <div className="h-full w-full flex-1 flex flex-col z-10">{children}</div>
     </div>
   )
 }

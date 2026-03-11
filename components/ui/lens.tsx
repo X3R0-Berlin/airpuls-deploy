@@ -19,7 +19,7 @@ export function Lens({
     isHovering = false,
 }: LensProps) {
     return (
-        <div className="relative overflow-hidden z-10">
+        <div className="absolute inset-0 overflow-hidden z-10">
             {children}
             <AnimatePresence>
                 {isHovering && (

@@ -100,11 +100,11 @@ export function Features({ features }: { features: Feature[] }) {
               <BlurFade
                 key={feature.id}
                 delay={i * 0.15}
-                className={cn("w-full h-auto flex flex-col", `bento-item-${i}`)}
+                className={cn("h-full w-full flex flex-col", `bento-item-${i}`)}
                 inView
               >
                 <MagicCard
-                  className="w-full flex-1 flex flex-col justify-end bg-white border border-[var(--brand-border-light)] overflow-hidden rounded-2xl"
+                  className="h-full w-full grow flex flex-col bg-white border border-[var(--brand-border-light)] overflow-hidden rounded-2xl"
                   gradientColor="rgba(53,120,104,0.08)"
                 >
                   {/* Video or poster fallback — fills entire card */}

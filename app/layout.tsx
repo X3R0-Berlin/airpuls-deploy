@@ -56,19 +56,19 @@ export const metadata: Metadata = {
     url: siteUrl,
     images: [
       {
-        url: "/images/products/vitair/hero.webp",
+        url: "/images/Airimpuls_Logo.png",
         width: 1200,
-        height: 1200,
-        alt: `${brand.name} — ${brand.tagline}`,
+        height: 630,
+        alt: `${brand.name} Logo`,
       },
     ],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: brand.seo.titleTemplate.replace("%s", brand.tagline),
-    description: brand.seo.defaultDescription,
-    images: ["/images/products/vitair/hero.webp"],
-  },
+    twitter: {
+      card: "summary_large_image",
+      title: brand.seo.titleTemplate.replace("%s", brand.tagline),
+      description: brand.seo.defaultDescription,
+      images: ["/images/Airimpuls_Logo.png"],
+    },
   alternates: {
     canonical: siteUrl,
   },
